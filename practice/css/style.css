@@ -1,23 +1,14 @@
-/* h2の文字色をまとめて赤に指定 */
+/* h2の文字色を赤に変更 */
 h2 {
-    color: red;
-}
-
-/* .yellow-fontがついた要素の文字色を黄色に指定。こちらの方が優先されます */
-.yellow-font {
-    color: yellow;
-    font-size: 20px;
-}
-
-h3 {
     color: blue;
-    font-size: 20px;
+    font-size: 36px;
 }
 
-.important {
-    font-weight: bold;
+img {
+    width: 300px;
+    height: auto;
 }
 
-.contents>p {
-    color: red;
+img:hover {
+    opacity: 0.1;
 }
