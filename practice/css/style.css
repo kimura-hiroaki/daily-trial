@@ -1,14 +1,5 @@
-/* h2の文字色を赤に変更 */
-h2 {
-    color: blue;
-    font-size: 36px;
-}
-
-img {
-    width: 300px;
-    height: auto;
-}
-
-img:hover {
-    opacity: 0.1;
+body {
+    color: #082B48;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
 }
