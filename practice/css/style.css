@@ -58,3 +58,94 @@ header {
     font-weight: 600;
     line-height: 36px;
 }
+
+/* section共通クラス */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* about */
+.about-left {
+    float: left;
+    width: 48%;
+}
+
+.about-right {
+    float: right;
+    width: 48%;
+}
+
+/* course */
+.course {
+    background-color: #e3fcf4;
+}
+
+.course-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-item {
+    width: 30%;
+}
+
+/* contact */
+.contact-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    width: 600px;
+    border: 3px solid #d8d8d8;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+/* input[type="email"],input[type="text"]みたいな書き方ができる */
+/* inputは属性まで指定してcssをあてられる */
+
+.btn {
+    padding: 20px 60px;
+    display: inline-block;
+    background-color: #082B48;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-register {
+    background-color: #ec6d64;
+    display: block;
+    margin: auto;
+}
+
+/* footer */
+footer {
+    background-color: #082B48;
+    color: #FFF;
+    padding: 20px 0;
+}
+
+.copyright {
+    font-size: 12px;
+    float: right;
+}
