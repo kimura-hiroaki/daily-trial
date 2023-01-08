@@ -1,0 +1,168 @@
+/* all */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #082B48;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+}
+
+a {
+    color: #082B48;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* header */
+/* .header-left {
+    position: relative;
+    top: 20px;
+} */
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+}
+
+/* top */
+.top {
+    background-image: url(../img/main-vsual-nontitle.png);
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+}
+
+.top-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* about */
+.about {
+    padding: 60px 0;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.about-left {
+    width: 48%;
+}
+
+.about-right {
+    width: 48%;
+}
+
+/* course */
+.course {
+    background-color: #e3fcf4;
+    padding: 60px 0;
+}
+
+.course-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.course-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.course-card {
+    display: block;
+    width: 30%;
+}
+
+/* contact */
+.contact {
+    padding: 60px 0;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    display: block;
+    width: 600px;
+    border: 3px solid #d8d8d8;
+    font-size: 18px;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 999px;
+}
+
+.btn {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #ec6d64;
+    padding: 20px 60px;
+    margin: auto;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: #082B48;
+    padding: 20px 0;
+}
+
+.fotter-copyright {
+    font-size: 12px;
+    color: #FFF;
+    text-align: right;
+}
