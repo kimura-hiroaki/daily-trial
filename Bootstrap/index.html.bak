@@ -49,35 +49,32 @@
             </div>
         </div>
     </nav>
-    <section class="top py-5">
-        <div class="container">
-            <h1 class="text-center text-white display-3 font-weight-bold">Bootstrap</h1>
-            <p class="text-center text-white lead">Build and customize with Sass, utilize prebuilt grid system and
-                components,
-                and bring
-                projects to life with powerful JavaScript plugins.</p>
+
+    <section class="top py-5 text-white">
+        <div class="container py-5">
+            <h1 class="text-center display-3 font-weight-bold mb-3">Bootstrap</h1>
+            <p class="text-center lead">Build and customize with Sass, utilize prebuilt grid system and components, and
+                bring projects to
+                life with powerful JavaScript plugins.</p>
         </div>
     </section>
+
     <section class="about py-5">
         <div class="container">
             <h2>ABOUT</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <p>
-                        Build and customize with Sass, utilize prebuilt grid system and components, and bring
-                        projects
-                        to
-                        life with powerful JavaScript plugins.
-                    </p>
-                    <button type="button" class="btn btn-danger btn-lg">Read More</button>
+                <div class="col-md-6 mb-5">
+                    <p>Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to
+                        life with powerful JavaScript plugins.</p>
+                    <button class="btn btn-danger btn-lg">Read More</button>
                 </div>
                 <div class="col-md-6">
-                    <img src="./img/about.png" class="w-100" alt="#">
+                    <img src="./img/about.png" class="w-100" alt="about">
                 </div>
             </div>
         </div>
     </section>
-    <section class="service py-5 bg-light">
+    <section class="service bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-3">Service</h2>
             <div class="card-deck">
@@ -85,7 +82,7 @@
                     <img src="./img/beginner.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Beginner</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
@@ -112,16 +109,16 @@
             </div>
         </div>
     </section>
-    <section class="plan py-5">
+    <section class="plans py-5">
+        <h2 class="text-center mb-3">Plans</h2>
         <div class="container">
-            <h2 class="text-center mb-3">Plan</h2>
             <div class="row row-cols-1 row-cols-md-3">
                 <div class="col mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="text-center">Beginner</h3>
+                            <h3 class="card-title text-center">Beginner</h3>
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-primary text-center display-4">$25</li>
+                                <li class="list-group-item display-4 text-center list-group-item-primary">$25</li>
                                 <li class="list-group-item text-center">A second item</li>
                                 <li class="list-group-item text-center">A third item</li>
                                 <li class="list-group-item text-center">A fourth item</li>
@@ -133,9 +130,9 @@
                 <div class="col mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="text-center">Standard</h3>
+                            <h3 class="card-title text-center">Standard</h3>
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-primary text-center display-4">$40</li>
+                                <li class="list-group-item display-4 text-center list-group-item-primary">$40</li>
                                 <li class="list-group-item text-center">A second item</li>
                                 <li class="list-group-item text-center">A third item</li>
                                 <li class="list-group-item text-center">A fourth item</li>
@@ -147,9 +144,9 @@
                 <div class="col mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="text-center">Advance</h3>
+                            <h3 class="card-title text-center">Advace</h3>
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-primary text-center display-4">$70</li>
+                                <li class="list-group-item display-4 text-center list-group-item-primary">$70</li>
                                 <li class="list-group-item text-center">A second item</li>
                                 <li class="list-group-item text-center">A third item</li>
                                 <li class="list-group-item text-center">A fourth item</li>
@@ -190,9 +187,9 @@
             </form>
         </div>
     </section>
-    <footer class="bg-dark py-3">
+    <footer class="py-3 bg-dark">
         <div class="container">
-            <p class="text-right text-white m-0">Bootstrap</p>
+            <p class="text-white text-right m-0">Bootstrap</p>
         </div>
     </footer>
     <!-- Optional JavaScript; choose one of the two! -->
