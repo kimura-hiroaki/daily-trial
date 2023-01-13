@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* all */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #082B48;
+}
+
+a {
+    color: #082B48;
+}
+
+a:hover {
+    opacity: 0.7;
+    color: #082B48;
+}
+
+/* header */
+header h1 {
+    font-size: 24px;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* top */
+.top {
+    background-image: url(../img/main-vsual-nontitle.png);
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.top h1 {
+    font-size: 48px;
+}
+
+.top p {
+    font-size: 18px;
+}
+
+/* course */
+.course {
+    background-color: #e3fcf4;
+}
+
+/* footer */
+footer {
+    background-color: #082B48;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* スマホ用 */
+@media screen and (max-width:767px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    /* top */
+    .top h1 {
+        font-size: 32px;
+    }
+
+    .top p {
+        font-size: 14px;
+    }
+
+    /* footer */
+    footer p {
+        font-size: 10px;
+    }
+}

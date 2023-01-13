@@ -4,3 +4,7 @@
     background-image: url(../img/top.png);
     background-size: cover;
 }
+
+.top h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
