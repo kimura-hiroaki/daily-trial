@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- meta -->
-    <meta name="description" content="デスクリプションです">
+    <meta name="description" content="HM-WecCreateのポートフォリオサイトです">
     <!-- ogp -->
     <!-- favicon -->
     <!-- <link rel="icon" href="./favicon.ico"> -->
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-    <title>My Portfolio</title>
+    <title>HM-WecCreate Portfolio ～チームのポートフォリオサイト～</title>
     <!-- css -->
     <link rel="stylesheet" href="./Asset/css/reset.css">
     <link rel="stylesheet" href="./Asset/css/toppage.css">
@@ -32,10 +32,10 @@
                 <div class="header_right">
                     <nav class="hader_nav">
                         <ul class="header_nav_ul">
-                            <li class="header_nav_item"><a href="">About Me</a></li>
-                            <li class="header_nav_item"><a href="">Service</a></li>
-                            <li class="header_nav_item"><a href="">Portfolio</a></li>
-                            <li class="header_nav_item"><a href="">Contact</a></li>
+                            <li class="header_nav_item"><a href="#link1">About Me</a></li>
+                            <li class="header_nav_item"><a href="#link2">Service</a></li>
+                            <li class="header_nav_item"><a href="#link3">Portfolio</a></li>
+                            <li class="header_nav_item"><a href="#link4">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,18 +48,25 @@
             <p class="top_subtitle">ポートフォリオをご覧いただきありがとうございます！</p>
         </div>
     </section>
+    <a id="link1"></a>
     <section class="about">
         <div class="container">
             <h2 class="section_title">About Me</h2>
             <p class="section_subtitle">わたしについて</p>
             <div class="about_wrapper card_frame">
                 <div class="about_left">
-                    <img class="about_headshot" src="./Asset/img/back0000.JPG" alt="headshot">
-                    <img class="about_twitter-icon" src="./Asset/img/twitter.svg" alt="twitter-icon">
+                    <img class="about_headshot" src="./Asset/img/headshot.JPG" alt="headshot">
+                    <a href="https://twitter.com/hiroaki_web" target="_blank"><img class="about_twitter-icon"
+                            src="./Asset/img/twitter.svg" alt="twitter-icon"></a>
                 </div>
                 <div class="about_right">
                     <h3 class="about_name">Hiroaki Kimura</h3>
-                    <p class="about_profile">北海道旭川市でホームページ制作を行っております。</p>
+                    <p class="about_profile">
+                        神奈川県在住<br>
+                        現在、Webコーダーとしてフリーランスで活動<br>
+                        お客様に寄り添ったホームページ制作が得意です<span>&#x2728;</span><br>
+                        普段は東証プライムメーカーでソフトウェアエンジニアとして従事<br>
+                    </p>
                     <p class="about_introduction">お客様に寄り添ったホームページ制作が得意です。理想のホームページを一緒に作っていきましょう！</p>
                     <h4 class="about_policy_title">制作へのこだわり</h4>
                     <p class="about_policy">ホームページで実現したい目的をしっかりとお伺いさせていただき、お客様の理想を叶えるホームページ制作を一緒に目指してまいります。</p>
@@ -72,6 +79,7 @@
             </div>
         </div>
     </section>
+    <a id="link2"></a>
     <section class="service">
         <div class="container">
             <h2 class="section_title">Service</h2>
@@ -95,6 +103,7 @@
             </div>
         </div>
     </section>
+    <a id="link3"></a>
     <section class="work">
         <div class="container">
             <h2 class="section_title">Portfolio</h2>
@@ -104,30 +113,55 @@
                     <img class="work_item_image" src="./Asset/img/portfolio1.png" alt="portfolio1">
                     <h3 class="work_item_name">LP html/css</h3>
                     <p class="work_item_explain">オーダーメイドで作成したホームページです。お客様の要望に応じてサイト構成を検討しご満足いただけるホームページとなりました。</p>
-                    <p class="work_item_link"><a href="">サイトを見る</a></p>
+                    <p class="work_item_link"><a href="#">サイトを見る</a></p>
                 </div>
                 <div class="work_right card_frame">
                     <img class="work_item_image" src="./Asset/img/portfolio2.png" alt="portfolio2">
                     <h3 class="work_item_name">LP html/css/Bootstrap</h3>
                     <p class="work_item_explain">オーダーメイドで作成したホームページです。お客様の要望に応じてサイト構成を検討しご満足いただけるホームページとなりました。</p>
-                    <p class="work_item_link"><a href="">サイトを見る</a></p>
+                    <p class="work_item_link"><a href="#">サイトを見る</a></p>
                 </div>
             </div>
         </div>
     </section>
+    <a id="link4"></a>
     <section class="contact">
         <div class="container">
             <h2 class="section_title">Contact</h2>
             <p class="section_subtitle">お問い合わせ</p>
-            <p class="contact_text">「メール」または「Twitter」よりお気軽にご相談ください</p>
+            <p class="contact_text">「お問い合わせフォーム」、「メール」または「Twitter」よりお気軽にご相談ください</p>
+            <div class="form-wrapper">
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScypl2dxDHS93yvUf5J0-JwkJcVdiUA7JA9FDf5E_yaw-_QhA/formResponse"
+                    id="form" target="_blank">
+                    <div class="box">
+                        <label for="name">お名前</label>
+                        <input type="text" name="entry.2005620554" id="name" placeholder="お名前" required>
+                    </div>
+                    <div class="box">
+                        <label for="mail">メールアドレス</label>
+                        <input type="mail" name="entry.1045781291" id="mail" placeholder="メールアドレス" required>
+                    </div>
+                    <div class="box">
+                        <textarea name="entry.839337160" id="" cols="30" rows="10"
+                            placeholder="自由記述"></textarea><!-- /# -->
+                    </div>
+                    <input type="submit" class="submit-btn">
+                </form>
+                <p class="end-message">お問い合わせありがとうございました</p>
+                <p class="false-message">送信失敗です</p>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script src="./Asset/js/toppage_form.js"></script>
             <div class="contact_wrapper">
                 <div class="contact_left">
-                    <img class="contact_item_image" src="./Asset/img/mail.svg" alt="mail">
-                    <p><a href="" class="contact_item_link">hmkimura_webcreate@gmail.com</a></p>
+                    <a href="#"><img class="contact_item_image" src="./Asset/img/mail.svg" alt="mail"></a>
+                    <p><a href="#" class="contact_item_link">info@example.com</a></p>
                 </div>
                 <div class="contact_right">
-                    <img class="contact_item_image" src="./Asset/img/twitter.svg" alt="">
-                    <p><a href="" class="contact_item_link">@hiroaki_web</a></p>
+                    <a href="https://twitter.com/hiroaki_web" target="_blank"><img class="contact_item_image"
+                            src="./Asset/img/twitter.svg" alt=""></a>
+                    <p><a href="https://twitter.com/hiroaki_web" class="contact_item_link">@hiroaki_web</a></p>
                 </div>
             </div>
         </div>
