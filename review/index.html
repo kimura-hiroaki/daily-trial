@@ -10,6 +10,7 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,13 +23,20 @@
                 <nav class="header-nav">
                     <ul class="header-nav-ul">
                         <li class="header-nav-item"><a href="#">デイトラとは</a></li>
-                        <li class="header-nav-item"><a href="#">コース一覧</a></li>
+                        <li class="header-nav-item header_nav_item_course"><a href="#">コース一覧</a>
+                            <ul class="header_toggle">
+                                <li><a href="#">初級</a></li>
+                                <li><a href="#">中級</a></li>
+                                <li><a href="#">上級</a></li>
+                            </ul>
+                        </li>
                         <li class="header-nav-item"><a href="#">お問い合わせ</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+    <script src="./js/menudrawer.js"></script>
     <section class="top">
         <div class="container">
             <h2 class="top-title">
@@ -89,6 +97,10 @@
             <p class="fotter-copyright">Copyright(C) 2020 東京フリーランス ALL Rights Reserved.</p>
         </div>
     </footer>
+    <div class="scroll_top">
+        <p>Top</p>
+    </div>
+    <script src="./js/scrolltop.js"></script>
 </body>
 
 </html>
