@@ -1,0 +1,26 @@
+.lists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.lists li {
+  width: 25%;
+  text-align: center;
+}
+.lists li a {
+  color: #333;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  text-decoration: none;
+}
+.lists li a:hover {
+  color: #de1e32;
+}
+.lists li a.active {
+  font-size: 18px;
+  color: #de1e32;
+}/*# sourceMappingURL=stylesheet.css.map */

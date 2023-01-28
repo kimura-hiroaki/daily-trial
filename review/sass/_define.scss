@@ -1,0 +1,20 @@
+// 変数の定義
+$base_color: #082B48;
+
+// mixinの定義
+@mixin button() {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #ec6d64;
+    padding: 20px 60px;
+    margin: auto;
+    border: none;
+    border-radius: 4px;
+}
+
+// functionの定義
+@function activeFontSize($base_size, $plus_size ) {
+    @return $base_size +$plus_size;
+}
