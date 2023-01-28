@@ -1,0 +1,18 @@
+@use "define";
+
+/* footer */
+footer {
+    background-color: define.$base_color;
+    padding: 20px 0;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #FFF;
+    text-align: right;
+
+    @include define.mq(sp) {
+        font-size: 10px;
+        text-align: center;
+    }
+}

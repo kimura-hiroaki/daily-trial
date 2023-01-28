@@ -1,0 +1,72 @@
+@use "define";
+
+/* all */
+body {
+    font-family: Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+    color: define.$base_color;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+}
+
+a {
+    color: define.$base_color;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.scroll_top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #082B48;
+    border-radius: 999px;
+    background-color: rgb(0, 076, 113, 0.3);
+    cursor: pointer;
+}
+
+.botton_hide {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.botton_appear {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.expansion_card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(128, 128, 128, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.expansion_card_image {
+    width: 80%;
+}

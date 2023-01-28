@@ -82,6 +82,11 @@ header {
   }
 }
 
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .header-nav {
   line-height: 36px;
 }
@@ -162,13 +167,13 @@ header {
     font-size: 24px;
   }
 }
-.about-warp {
+.about-wrap {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 @media screen and (max-width: 767px) {
-  .about-warp {
+  .about-wrap {
     flex-wrap: wrap;
   }
 }

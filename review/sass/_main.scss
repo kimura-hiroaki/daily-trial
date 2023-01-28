@@ -1,0 +1,157 @@
+@use "define";
+
+/* top */
+.top {
+    background-image: url(../img/main-vsual-nontitle.png);
+    background-size: cover;
+    padding: 80px 0;
+
+    &-title {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @include define.mq(sp) {
+            font-size: 32px;
+        }
+    }
+
+    &-subtitle {
+        font-size: 18px;
+        text-align: center;
+
+        @include define.mq(sp) {
+            font-size: 14px;
+        }
+    }
+}
+
+/* about */
+.about {
+    padding: 80px 0;
+
+    &-title {
+        font-size: define.activeFontSize(define.$base_font_size, 24px);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include define.mq(sp) {
+            font-size: 24px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        @include define.mq(sp) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-left {
+        width: 48%;
+
+        @include define.mq(sp) {
+            width: 100%;
+        }
+    }
+
+    &-right {
+        width: 48%;
+
+        @include define.mq(sp) {
+            width: 100%;
+            font-size: 14px;
+        }
+    }
+}
+
+/* course */
+.course {
+    background-color: #e3fcf4;
+    padding: 80px 0;
+
+    &-title {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include define.mq(sp) {
+            font-size: 24px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        @include define.mq(sp) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-card {
+        display: block;
+        width: 30%;
+
+        @include define.mq(sp) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* contact */
+.contact {
+    padding: 80px 0;
+
+    &-title {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include define.mq(sp) {
+            font-size: 24px;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        margin-bottom: 20px;
+
+        @include define.mq(sp) {
+            font-size: 14px;
+        }
+    }
+}
+
+input[type="email"] {
+    display: block;
+    width: 600px;
+    border: 3px solid #d8d8d8;
+    font-size: 18px;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 999px;
+
+    @include define.mq(sp) {
+        width: 100%;
+    }
+}
+
+.btn {
+    @include define.button();
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+}
