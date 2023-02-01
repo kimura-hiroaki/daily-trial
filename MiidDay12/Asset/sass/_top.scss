@@ -1,0 +1,28 @@
+.top {
+    background-image: url(../img/mainvisual.png);
+    background-size: cover;
+    text-align: center;
+    padding: 184px 0;
+
+    &_title {
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    &_subtitle {
+        padding-top: 32px;
+        padding-bottom: 40px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &_button {
+        background-color: #3F51B5;
+        width: 384px;
+        height: 72px;
+        border-radius: 8px;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
