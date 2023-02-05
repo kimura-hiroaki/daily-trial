@@ -1,4 +1,5 @@
 @use "define";
+@use "mixin";
 
 // all
 body {
@@ -20,4 +21,40 @@ a {
     // inheritは親の要素を引き継ぐ
     color: inherit;
     text-decoration: none;
+}
+
+.section_title_area {
+    height: 86px;
+}
+
+.section_title {
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 14px;
+
+    &:after {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        content: '';
+        width: 60px;
+        height: 4px;
+        /*下線の太さ*/
+        background: define.$color_main;
+        /*下線の色*/
+    }
+
+    @include mixin.mq(sp) {
+        font-size: 26px;
+        padding-bottom: 8px;
+
+        &:after {
+            bottom: -8px;
+            width: 42px;
+            height: 3px;
+        }
+    }
 }
