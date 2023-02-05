@@ -1,15 +1,23 @@
+@use "define";
+
 // all
 body {
-    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #fff;
+    color: define.$color_text;
 }
 
 .container {
     max-width: 1200px;
-    width: 90%;
+    width: 100%;
+    height: inherit;
     margin: auto;
 }
 
 a {
-    color: #FFFFFF;
+    // inheritは親の要素を引き継ぐ
+    color: inherit;
     text-decoration: none;
 }
