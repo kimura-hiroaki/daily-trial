@@ -5,7 +5,7 @@
     position: relative;
     margin: auto;
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -80,7 +80,7 @@
     color: #FFFFFF;
     position: relative;
 
-    &:before {
+    &::before {
         content: "";
         position: absolute;
         border: 18px solid transparent;
@@ -97,7 +97,7 @@
     position: relative;
     border-bottom: 2px solid #3F51B5;
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         bottom: -2px;
@@ -115,7 +115,7 @@
     margin-top: 50px;
     position: relative;
 
-    &:before {
+    &::before {
         content: "";
         position: absolute;
         top: 50%;
@@ -135,7 +135,7 @@
     text-align: center;
     position: relative;
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -144,5 +144,191 @@
         width: 50px;
         height: 4px;
         background: #3F51B5;
+    }
+}
+
+.pat12 {
+    width: 475px;
+    padding-left: 20px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 15px;
+        height: 8px;
+        border-left: 4px solid #3F51B5;
+        border-bottom: 4px solid #3F51B5;
+        transform: rotate(-45deg);
+    }
+}
+
+.pat13 {
+    width: 475px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 200px;
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+        border: 3px solid #3F51B5;
+        border-radius: 50%;
+        background-color: #fff;
+        content: "";
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 215px;
+        width: 10px;
+        height: 10px;
+        border-bottom: 4px solid #3F51B5;
+        transform: rotate(45deg);
+    }
+}
+
+.pat14 {
+    width: 475px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 25%;
+        width: 3px;
+        height: 35px;
+        background: #3F51B5;
+        transform: rotate(-15deg);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 75%;
+        width: 3px;
+        height: 35px;
+        background: #3F51B5;
+        transform: rotate(15deg);
+    }
+}
+
+// .pat15 {
+//     width: 475px;
+//     margin: auto;
+//     margin-top: 50px;
+//     text-align: center;
+//     position: relative;
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 45%;
+//         left: 0;
+//         width: 130px;
+//         height: 3px;
+//         background: #3F51B5;
+//     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: 45%;
+//         right: 0;
+//         width: 130px;
+//         height: 3px;
+//         background: #3F51B5;
+//     }
+// }
+
+.pat15 {
+    width: 475px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #3F51B5;
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        padding: 0 10px;
+    }
+}
+
+.pat16 {
+    width: 475px;
+    margin: auto;
+    margin-top: 50px;
+    display: inline-block;
+
+    .stripe {
+        padding: 8px 10px 8px 10px;
+        // background-image: linear-gradient(
+        //         /* 回転する角度 */
+        //         -45deg,
+        //         /* 1色目が終わる位置 */
+        //         #7385E9 25%,
+        //         /* 2色目の開始位置 */
+        //         #A7BAFF 25%,
+        //         /* 2色目が終わる位置 */
+        //         #A7BAFF 50%,
+        //         #7385E9 50%,
+        //         #7385E9 75%,
+        //         #A7BAFF 75%,
+        //         #A7BAFF 100%);
+        // /* 背景のサイズ */
+        // background-size: 30px 30px;
+        background: repeating-linear-gradient(-45deg, #A7BAFF 0 15px, #7385E9 15px 30px);
+    }
+}
+
+.pat17 {
+    // width: 475px;
+    padding: 4px 4px 2px 4px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    display: inline-block;
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 18px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: repeating-linear-gradient(-45deg, #A7BAFF 0 15px, #7385E9 15px 30px);
     }
 }

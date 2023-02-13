@@ -14,7 +14,17 @@ body {
     max-width: 1200px;
     width: 100%;
     height: inherit;
-    margin: auto;
+    margin: 0 auto;
+
+    @include mixin.mq(tab) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include mixin.mq(sp) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 
 a {
