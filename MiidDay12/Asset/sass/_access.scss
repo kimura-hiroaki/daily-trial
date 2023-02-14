@@ -1,0 +1,84 @@
+@use "mixin";
+
+.access {
+    padding-top: 85px;
+    padding-bottom: 120px;
+
+    @include mixin.mq(sp) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    &_map {
+        width: 800px;
+        max-width: 100%;
+        margin: 60px auto 0 auto;
+
+        &_frame {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 50%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &_adress {
+            display: flex;
+            margin-top: 16px;
+
+            &_title {
+                width: 108px;
+                font-weight: bold;
+            }
+        }
+
+        &_route {
+            display: flex;
+
+            &_title {
+                width: 108px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &_button {
+        margin-top: 30px;
+        text-align: center;
+
+
+        a {
+            display: block;
+            margin: 0 auto;
+            // display: inline-block;
+            color: #FFFFFF;
+            font-weight: bold;
+            width: 304px;
+            height: 56px;
+            // text-align: center;
+            line-height: 56px;
+            border-radius: 8px;
+            background-color: #3F51B5;
+            box-shadow: 0 3px 6px rgba(#000, 0.16);
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../img/button-arrow.png) no-repeat center center / contain;
+                top: 50%;
+                right: 18px;
+                width: 17px;
+                height: 16px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
