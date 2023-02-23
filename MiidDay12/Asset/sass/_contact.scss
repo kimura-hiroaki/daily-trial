@@ -1,0 +1,279 @@
+@use "mixin";
+@use "define";
+
+.contact {
+    padding-top: 85px;
+    padding-bottom: 120px;
+    background-color: #EFEFEF;
+
+    @include mixin.mq(sp) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    &_wrap {
+        width: 800px;
+        max-width: 100%;
+        margin: 60px auto 0 auto;
+        padding: 60px;
+        background-color: #fff;
+
+        @include mixin.mq(sp) {
+            padding: 20px;
+        }
+    }
+
+    &_box {
+        display: flex;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
+
+        &:not(:first-child) {
+            margin-top: 60px;
+
+            @include mixin.mq(sp) {
+                margin-top: 20px;
+            }
+        }
+
+        &_label {
+            width: 160px;
+            text-align: left;
+            font-weight: bold;
+
+            @include mixin.mq(sp) {
+                width: 100%;
+            }
+
+            label {
+                &.is_reqired {
+                    display: inline-block;
+                    position: relative;
+
+                    &::after {
+                        content: "必須";
+                        position: absolute;
+                        top: calc(100% + 8px);
+                        left: 0;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: define.$color_accent;
+                        border-radius: 4px;
+                        text-align: center;
+                        padding: 2px 8px;
+                        line-height: 1;
+
+                        @include mixin.mq(sp) {
+                            top: 50%;
+                            left: calc(100% + 8px);
+                            transform: translateY(-50%);
+                            width: 44px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_text {
+            width: calc(100% - 160px);
+
+            @include mixin.mq(sp) {
+                width: 100%;
+            }
+
+            [type="text"] {
+                box-shadow: none;
+                border: 1px solid #707070;
+                background-color: #FFF;
+                padding: 10px 16px;
+                appearance: none;
+                border-radius: 0;
+                color: inherit;
+                font-family: inherit;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            [type="email"] {
+                box-shadow: none;
+                border: 1px solid #707070;
+                background-color: #FFF;
+                padding: 10px 16px;
+                appearance: none;
+                border-radius: 0;
+                color: inherit;
+                font-family: inherit;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            select {
+                box-shadow: none;
+                border: 1px solid #707070;
+                background-color: #FFF;
+                padding: 10px 16px;
+                appearance: none;
+                border-radius: 0;
+                color: inherit;
+                font-family: inherit;
+                font-size: 14px;
+                width: 100%;
+                background: #fff url(../img/select-arrow.png) no-repeat right 12px center / 17px 14px;
+            }
+
+            textarea {
+                box-shadow: none;
+                border: 1px solid #707070;
+                background-color: #FFF;
+                padding: 10px 16px;
+                appearance: none;
+                border-radius: 0;
+                color: inherit;
+                font-family: inherit;
+                font-size: 14px;
+                width: 100%;
+                height: 240px;
+                resize: none; //高さを伸ばすを消す
+            }
+        }
+    }
+
+    &_radio {
+        margin-top: 32px;
+
+        @include mixin.mq(sp) {
+            margin-top: 20px;
+        }
+
+        /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
+        span {
+            cursor: pointer;
+            display: inline-block;
+            padding-left: 26px;
+            position: relative;
+            margin-right: 36px;
+
+            @include mixin.mq(sp) {
+                margin-right: 20px;
+            }
+
+            /* 擬似要素beforeとafterを共通でセット */
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            /* beforeをラジオボタンの枠として利用するため、デザインを適用する */
+            &::before {
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: #FFF;
+                border: 1px solid #707070;
+                border-radius: 50%;
+            }
+
+            /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+    デフォルトのチェックマークはopacity:0で透明にしておく*/
+            &::after {
+                left: 5px;
+                width: 10px;
+                height: 10px;
+                background: define.$color_main;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+
+        /* 非表示にしたデフォルトのラジオボタンにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+        [type="radio"]:checked+span {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_policy {
+        text-align: center;
+        margin-top: 64px;
+
+        @include mixin.mq(sp) {
+            margin-top: 30px;
+        }
+
+        /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
+        span {
+            cursor: pointer;
+            display: inline-block;
+            padding-left: 49px;
+            position: relative;
+
+            /* 擬似要素beforeとafterを共通でセット */
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            /* beforeをcheckboxの枠として利用するため、デザインを適用する */
+            &::before {
+                left: 0;
+                width: 25px;
+                height: 25px;
+                background: #FFF;
+                border: 1px solid #707070;
+            }
+
+            /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+                    デフォルトのチェックマークはopacity:0で透明にしておく*/
+            &::after {
+                left: 0;
+                width: 25px;
+                height: 25px;
+                background: transparent url(../img/checkbox.png) no-repeat center center / contain;
+                opacity: 0;
+            }
+
+            a {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+        /* 非表示にしたデフォルトのチェックボックスにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+        [type="checkbox"]:checked+span {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_submit {
+        text-align: center;
+        margin-top: 30px;
+
+        @include mixin.mq(sp) {
+            margin-top: 20px;
+        }
+
+        [type="submit"] {
+            background: define.$color_main url(../img/button-arrow.png) no-repeat right 12px center / 17px 16px;
+            width: 304px;
+            display: inline-block;
+            font-weight: bold;
+            color: #FFF;
+            padding: 14px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(#000, 0.16);
+            appearance: none;
+            font-family: inherit;
+        }
+    }
+}

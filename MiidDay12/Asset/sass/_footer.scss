@@ -1,0 +1,138 @@
+@use "mixin";
+
+.footer {
+    color: #FFFFFF;
+    background: linear-gradient(to bottom, #666666, #333333);
+    padding-top: 60px;
+    padding-bottom: 24px;
+
+    @include mixin.mq(sp) {
+        padding-top: 30px;
+        padding-bottom: 12px;
+    }
+
+    &_wrap {
+        display: flex;
+        flex-wrap: nowrap;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
+    }
+
+    &_left {
+        width: 205px;
+        margin-right: auto;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &_image {
+            width: 205px;
+            height: 40px;
+
+            @include mixin.mq(sp) {
+                margin: 0 auto;
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        dl {
+            width: 205px;
+
+            @include mixin.mq(sp) {
+                margin: 0 auto;
+            }
+        }
+
+        &_adress {
+            display: flex;
+            font-size: 14px;
+            margin-top: 32px;
+
+            @include mixin.mq(sp) {
+                margin-top: 16px;
+            }
+        }
+
+        &_tel {
+            display: flex;
+            font-size: 14px;
+            margin-top: 14px;
+
+            @include mixin.mq(sp) {
+                padding: auto;
+            }
+        }
+    }
+
+    &_center {
+        width: 384px;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            margin: 16px auto 0 auto;
+        }
+
+        &_ul {
+            display: flex;
+            margin: 0 auto;
+
+            @include mixin.mq(sp) {
+                justify-content: center;
+            }
+
+            &_item {
+                &:not(:first-child) {
+                    margin-left: 40px;
+
+                    @include mixin.mq(sp) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &_right {
+        width: 122px;
+        margin-left: auto;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            margin: 16px auto 0 auto;
+        }
+
+        &_sns {
+            display: flex;
+            justify-content: flex-end;
+
+            @include mixin.mq(sp) {
+                justify-content: center;
+            }
+
+            &_icon {
+                width: 30px;
+
+                &:not(:first-child) {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+
+    &_copyright {
+        margin-top: 40px;
+        font-size: 14px;
+        text-align: center;
+
+        @include mixin.mq(sp) {
+            margin-top: 20px;
+        }
+    }
+}

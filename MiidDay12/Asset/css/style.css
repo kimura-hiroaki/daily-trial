@@ -177,6 +177,14 @@ a {
   }
 }
 
+.totop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 60px;
+  height: 60px;
+}
+
 .header {
   background-color: #3F51B5;
   height: 100px;
@@ -623,4 +631,401 @@ a {
   width: 17px;
   height: 16px;
   transform: translateY(-50%);
+}
+
+.contact {
+  padding-top: 85px;
+  padding-bottom: 120px;
+  background-color: #EFEFEF;
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+.contact_wrap {
+  width: 800px;
+  max-width: 100%;
+  margin: 60px auto 0 auto;
+  padding: 60px;
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .contact_wrap {
+    padding: 20px;
+  }
+}
+.contact_box {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .contact_box {
+    display: block;
+  }
+}
+.contact_box:not(:first-child) {
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .contact_box:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+.contact_box_label {
+  width: 160px;
+  text-align: left;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .contact_box_label {
+    width: 100%;
+  }
+}
+.contact_box_label label.is_reqired {
+  display: inline-block;
+  position: relative;
+}
+.contact_box_label label.is_reqired::after {
+  content: "必須";
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #E81919;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px 8px;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .contact_box_label label.is_reqired::after {
+    top: 50%;
+    left: calc(100% + 8px);
+    transform: translateY(-50%);
+    width: 44px;
+  }
+}
+.contact_box_text {
+  width: calc(100% - 160px);
+}
+@media screen and (max-width: 767px) {
+  .contact_box_text {
+    width: 100%;
+  }
+}
+.contact_box_text [type=text] {
+  box-shadow: none;
+  border: 1px solid #707070;
+  background-color: #FFF;
+  padding: 10px 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+}
+.contact_box_text [type=email] {
+  box-shadow: none;
+  border: 1px solid #707070;
+  background-color: #FFF;
+  padding: 10px 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+}
+.contact_box_text select {
+  box-shadow: none;
+  border: 1px solid #707070;
+  background-color: #FFF;
+  padding: 10px 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  background: #fff url(../img/select-arrow.png) no-repeat right 12px center/17px 14px;
+}
+.contact_box_text textarea {
+  box-shadow: none;
+  border: 1px solid #707070;
+  background-color: #FFF;
+  padding: 10px 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  height: 240px;
+  resize: none;
+}
+.contact_radio {
+  margin-top: 32px;
+  /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
+  /* 非表示にしたデフォルトのラジオボタンにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+}
+@media screen and (max-width: 767px) {
+  .contact_radio {
+    margin-top: 20px;
+  }
+}
+.contact_radio span {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 26px;
+  position: relative;
+  margin-right: 36px;
+  /* 擬似要素beforeとafterを共通でセット */
+  /* beforeをラジオボタンの枠として利用するため、デザインを適用する */
+  /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+  デフォルトのチェックマークはopacity:0で透明にしておく*/
+}
+@media screen and (max-width: 767px) {
+  .contact_radio span {
+    margin-right: 20px;
+  }
+}
+.contact_radio span::before, .contact_radio span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact_radio span::before {
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #FFF;
+  border: 1px solid #707070;
+  border-radius: 50%;
+}
+.contact_radio span::after {
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #3F51B5;
+  border-radius: 50%;
+  opacity: 0;
+}
+.contact_radio [type=radio]:checked + span::after {
+  opacity: 1;
+}
+.contact_policy {
+  text-align: center;
+  margin-top: 64px;
+  /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
+  /* 非表示にしたデフォルトのチェックボックスにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+}
+@media screen and (max-width: 767px) {
+  .contact_policy {
+    margin-top: 30px;
+  }
+}
+.contact_policy span {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 49px;
+  position: relative;
+  /* 擬似要素beforeとafterを共通でセット */
+  /* beforeをcheckboxの枠として利用するため、デザインを適用する */
+  /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+          デフォルトのチェックマークはopacity:0で透明にしておく*/
+}
+.contact_policy span::before, .contact_policy span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact_policy span::before {
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: #FFF;
+  border: 1px solid #707070;
+}
+.contact_policy span::after {
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: transparent url(../img/checkbox.png) no-repeat center center/contain;
+  opacity: 0;
+}
+.contact_policy span a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.contact_policy [type=checkbox]:checked + span::after {
+  opacity: 1;
+}
+.contact_submit {
+  text-align: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .contact_submit {
+    margin-top: 20px;
+  }
+}
+.contact_submit [type=submit] {
+  background: #3F51B5 url(../img/button-arrow.png) no-repeat right 12px center/17px 16px;
+  width: 304px;
+  display: inline-block;
+  font-weight: bold;
+  color: #FFF;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: inherit;
+}
+
+.footer {
+  color: #FFFFFF;
+  background: linear-gradient(to bottom, #666666, #333333);
+  padding-top: 60px;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 12px;
+  }
+}
+.footer_wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .footer_wrap {
+    display: block;
+  }
+}
+.footer_left {
+  width: 205px;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .footer_left {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.footer_left_image {
+  width: 205px;
+  height: 40px;
+}
+@media screen and (max-width: 767px) {
+  .footer_left_image {
+    margin: 0 auto;
+  }
+}
+.footer_left_image img {
+  display: block;
+}
+.footer_left dl {
+  width: 205px;
+}
+@media screen and (max-width: 767px) {
+  .footer_left dl {
+    margin: 0 auto;
+  }
+}
+.footer_left_adress {
+  display: flex;
+  font-size: 14px;
+  margin-top: 32px;
+}
+@media screen and (max-width: 767px) {
+  .footer_left_adress {
+    margin-top: 16px;
+  }
+}
+.footer_left_tel {
+  display: flex;
+  font-size: 14px;
+  margin-top: 14px;
+}
+@media screen and (max-width: 767px) {
+  .footer_left_tel {
+    padding: auto;
+  }
+}
+.footer_center {
+  width: 384px;
+}
+@media screen and (max-width: 767px) {
+  .footer_center {
+    width: 100%;
+    margin: 16px auto 0 auto;
+  }
+}
+.footer_center_ul {
+  display: flex;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .footer_center_ul {
+    justify-content: center;
+  }
+}
+.footer_center_ul_item:not(:first-child) {
+  margin-left: 40px;
+}
+@media screen and (max-width: 767px) {
+  .footer_center_ul_item:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+.footer_right {
+  width: 122px;
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .footer_right {
+    width: 100%;
+    margin: 16px auto 0 auto;
+  }
+}
+.footer_right_sns {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .footer_right_sns {
+    justify-content: center;
+  }
+}
+.footer_right_sns_icon {
+  width: 30px;
+}
+.footer_right_sns_icon:not(:first-child) {
+  margin-left: 16px;
+}
+.footer_copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .footer_copyright {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
