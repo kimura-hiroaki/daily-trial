@@ -79,6 +79,10 @@
                 height: 16px;
                 transform: translateY(-50%);
             }
+
+            &:hover {
+                transform: rotateX(360deg);
+            }
         }
     }
 }

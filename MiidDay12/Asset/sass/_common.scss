@@ -31,6 +31,7 @@ a {
     // inheritは親の要素を引き継ぐ
     color: inherit;
     text-decoration: none;
+    transition: all 0.3s ease 0s;
 }
 
 .section_title_area {
@@ -75,4 +76,15 @@ a {
     bottom: 24px;
     width: 60px;
     height: 60px;
+
+    @include mixin.mq(sp) {
+        right: 16px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    a:hover {
+        opacity: 0.6;
+    }
 }

@@ -95,6 +95,10 @@
                         margin-left: 20px;
                     }
                 }
+
+                a:hover {
+                    opacity: 0.6;
+                }
             }
         }
     }
@@ -121,6 +125,14 @@
 
                 &:not(:first-child) {
                     margin-left: 16px;
+                }
+
+                img {
+                    transition: all 0.3s ease 0s;
+                }
+
+                img:hover {
+                    transform: scale(1.1);
                 }
             }
         }

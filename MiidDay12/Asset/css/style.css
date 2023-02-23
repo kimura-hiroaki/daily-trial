@@ -140,6 +140,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: all 0.3s ease 0s;
 }
 
 .section_title_area {
@@ -184,11 +185,28 @@ a {
   width: 60px;
   height: 60px;
 }
+@media screen and (max-width: 767px) {
+  .totop {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.totop a:hover {
+  opacity: 0.6;
+}
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   background-color: #3F51B5;
   height: 100px;
   text-align: center;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
 }
 .header_wrap {
   display: flex;
@@ -235,14 +253,15 @@ a {
   bottom: -8px;
   left: 0;
   content: "";
-  width: 100%;
-  height: 0px;
+  width: 0;
   /*下線の太さ*/
-  background: #E81919;
+  height: 2px;
   /*下線の色*/
+  background: #E81919;
+  transition: all 0.3s ease 0s;
 }
 .header_menu:hover:after {
-  height: 2px;
+  width: 100%;
 }
 
 .top {
@@ -250,7 +269,13 @@ a {
   height: 600px;
   background-image: url(../img/mainvisual.png);
   background-size: cover;
+  margin-top: 100px;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .top {
+    height: 400px;
+  }
 }
 .top_section {
   position: absolute;
@@ -264,10 +289,20 @@ a {
   font-size: 64px;
   font-weight: bold;
 }
+@media screen and (max-width: 767px) {
+  .top_section_title {
+    font-size: 32px;
+  }
+}
 .top_section_subtitle {
   margin-top: 5px;
   font-size: 24px;
   font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .top_section_subtitle {
+    font-size: 16px;
+  }
 }
 .top_section_button {
   margin-top: 30px;
@@ -279,6 +314,17 @@ a {
   font-size: 24px;
   font-weight: bold;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.3s ease 0s;
+}
+@media screen and (max-width: 767px) {
+  .top_section_button {
+    width: 240px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+.top_section_button:hover {
+  transform: scale(1.1);
 }
 
 .card {
@@ -407,6 +453,9 @@ a {
   background-color: #666666;
   border-radius: 4px;
 }
+.news_line_li_label a:hover {
+  opacity: 0.6;
+}
 .news_line_li_label2 a {
   display: inline-block;
   width: 80px;
@@ -418,6 +467,9 @@ a {
   background-color: #3F51B5;
   border-radius: 4px;
 }
+.news_line_li_label2 a:hover {
+  opacity: 0.6;
+}
 .news_line_li_label3 a {
   display: inline-block;
   width: 80px;
@@ -428,6 +480,9 @@ a {
   font-weight: bold;
   background-color: #E81919;
   border-radius: 4px;
+}
+.news_line_li_label3 a:hover {
+  opacity: 0.6;
 }
 .news_line_li_text {
   width: calc(100% - 185px);
@@ -446,6 +501,9 @@ a {
   text-align: left;
   line-height: 1.25;
 }
+.news_line_li_text a:hover {
+  opacity: 0.6;
+}
 .news_more {
   margin-top: 36px;
   text-align: center;
@@ -460,6 +518,7 @@ a {
   font-weight: bold;
   position: relative;
   padding-right: 14px;
+  transition: all 0.3s ease 0s;
 }
 .news_more a::after {
   content: "";
@@ -470,6 +529,10 @@ a {
   transform: translateY(-50%);
   width: 7px;
   height: 11px;
+  transition: all 0.3s ease 0s;
+}
+.news_more a:hover::after {
+  right: -10px;
 }
 
 .price {
@@ -561,6 +624,9 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
+.price_table_note a:hover {
+  color: #E81919;
+}
 
 .access {
   padding-top: 85px;
@@ -631,6 +697,9 @@ a {
   width: 17px;
   height: 16px;
   transform: translateY(-50%);
+}
+.access_button a:hover {
+  transform: rotateX(360deg);
 }
 
 .contact {
@@ -870,12 +939,16 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
+.contact_policy span a:hover {
+  color: #E81919;
+}
 .contact_policy [type=checkbox]:checked + span::after {
   opacity: 1;
 }
 .contact_submit {
   text-align: center;
   margin-top: 30px;
+  transition: all 0.3s ease 0s;
 }
 @media screen and (max-width: 767px) {
   .contact_submit {
@@ -895,6 +968,10 @@ a {
      -moz-appearance: none;
           appearance: none;
   font-family: inherit;
+  transition: all 0.3s ease 0s;
+}
+.contact_submit [type=submit]:hover {
+  transform: rotateZ(5deg);
 }
 
 .footer {
@@ -994,6 +1071,9 @@ a {
     margin-left: 20px;
   }
 }
+.footer_center_ul_item a:hover {
+  opacity: 0.6;
+}
 .footer_right {
   width: 122px;
   margin-left: auto;
@@ -1018,6 +1098,12 @@ a {
 }
 .footer_right_sns_icon:not(:first-child) {
   margin-left: 16px;
+}
+.footer_right_sns_icon img {
+  transition: all 0.3s ease 0s;
+}
+.footer_right_sns_icon img:hover {
+  transform: scale(1.1);
 }
 .footer_copyright {
   margin-top: 40px;

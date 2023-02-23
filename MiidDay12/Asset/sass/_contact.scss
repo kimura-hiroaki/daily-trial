@@ -244,6 +244,10 @@
             a {
                 font-weight: bold;
                 text-decoration: underline;
+
+                &:hover {
+                    color: define.$color_accent;
+                }
             }
         }
 
@@ -258,6 +262,7 @@
     &_submit {
         text-align: center;
         margin-top: 30px;
+        transition: all 0.3s ease 0s;
 
         @include mixin.mq(sp) {
             margin-top: 20px;
@@ -274,6 +279,11 @@
             box-shadow: 0 3px 6px rgba(#000, 0.16);
             appearance: none;
             font-family: inherit;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                transform: rotateZ(5deg);
+            }
         }
     }
 }
