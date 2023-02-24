@@ -3,8 +3,7 @@
 
 // all
 body {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", sans-serif;
-    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif, sans-serif;
     line-height: 1.6;
     background: #fff;
     color: define.$color_text;
@@ -39,6 +38,8 @@ a {
 }
 
 .section_title {
+    font-family: define.$font_english;
+    font-weight: bold;
     position: relative;
     text-align: center;
     font-size: 48px;

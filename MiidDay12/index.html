@@ -14,19 +14,17 @@
     <!-- <link rel="icon" href="./favicon.ico"> -->
 
     <!-- font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
-        rel="stylesheet"> -->
-
+        rel="stylesheet">
     <!-- title -->
     <title>中級Day12-17デザインカンプ</title>
-
+    <!-- javascript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- css -->
     <!-- <link rel="stylesheet" href="./Asset/css/reset.css"> -->
     <link rel="stylesheet" href="./Asset/css/style.css">
-    <!-- javascript -->
-
 </head>
 
 <body>
@@ -54,14 +52,51 @@
             </div>
         </div>
     </header>
-    <section class="top">
-        <div class="container">
-            <div class="top_section">
-                <h1 class="top_section_title">一番伝えたいことを書く</h1>
-                <p class="top_section_subtitle">リードリードリード</p>
-                <button class="top_section_button" type="submit">お問い合わせ</button>
+    <!-- Slider main container -->
+    <section class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="top">
+                    <div class="container">
+                        <div class="top_section">
+                            <h2 class="top_section_title">一番伝えたいことを書く1</h2>
+                            <p class="top_section_subtitle">リードリードリード</p>
+                            <button class="top_section_button" type="submit">お問い合わせ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top">
+                    <div class="container">
+                        <div class="top_section">
+                            <h2 class="top_section_title">一番伝えたいことを書く2</h2>
+                            <p class="top_section_subtitle">リードリードリード</p>
+                            <button class="top_section_button" type="submit">お問い合わせ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top">
+                    <div class="container">
+                        <div class="top_section">
+                            <h2 class="top_section_title">一番伝えたいことを書く3</h2>
+                            <p class="top_section_subtitle">リードリードリード</p>
+                            <button class="top_section_button" type="submit">お問い合わせ</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </section>
     <section class="card">
         <div class="container">
@@ -109,44 +144,46 @@
             <div class="section_title_area">
                 <h2 class="section_title">News</h2>
             </div>
-            <article class="news_line">
-                <li class="news_line_li">
-                    <div class="news_line_li_meta">
-                        <div class="news_line_li_date">2019-01-30</div>
-                        <div class="news_line_li_label"><a href="">ラベル１</a></div>
-                    </div>
-                    <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
-                </li>
-                <li class="news_line_li">
-                    <div class="news_line_li_meta">
-                        <div class="news_line_li_date">2019-01-30</div>
-                        <div class="news_line_li_label2"><a href="">ラベル2</a></div>
-                    </div>
-                    <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
-                </li>
-                <li class="news_line_li">
-                    <div class="news_line_li_meta">
-                        <div class="news_line_li_date">2019-01-30</div>
-                        <div class="news_line_li_label3"><a href="">ラベル3</a></div>
-                    </div>
-                    <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
-                </li>
-                <li class="news_line_li">
-                    <div class="news_line_li_meta">
-                        <div class="news_line_li_date">2019-01-30</div>
-                        <div class="news_line_li_label"><a href="">ラベル１</a></div>
-                    </div>
-                    <div class="news_line_li_text"><a
-                            href="">ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
-                </li>
-                <li class="news_line_li">
-                    <div class="news_line_li_meta">
-                        <div class="news_line_li_date">2019-01-30</div>
-                        <div class="news_line_li_label"><a href="">ラベル１</a></div>
-                    </div>
-                    <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
-                </li>
-            </article>
+            <div class="news_line">
+                <ul>
+                    <li class="news_line_li">
+                        <div class="news_line_li_meta">
+                            <div class="news_line_li_date">2019-01-30</div>
+                            <div class="news_line_li_label"><a href="">ラベル１</a></div>
+                        </div>
+                        <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
+                    </li>
+                    <li class="news_line_li">
+                        <div class="news_line_li_meta">
+                            <div class="news_line_li_date">2019-01-30</div>
+                            <div class="news_line_li_label2"><a href="">ラベル2</a></div>
+                        </div>
+                        <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
+                    </li>
+                    <li class="news_line_li">
+                        <div class="news_line_li_meta">
+                            <div class="news_line_li_date">2019-01-30</div>
+                            <div class="news_line_li_label3"><a href="">ラベル3</a></div>
+                        </div>
+                        <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
+                    </li>
+                    <li class="news_line_li">
+                        <div class="news_line_li_meta">
+                            <div class="news_line_li_date">2019-01-30</div>
+                            <div class="news_line_li_label"><a href="">ラベル１</a></div>
+                        </div>
+                        <div class="news_line_li_text"><a
+                                href="">ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
+                    </li>
+                    <li class="news_line_li">
+                        <div class="news_line_li_meta">
+                            <div class="news_line_li_date">2019-01-30</div>
+                            <div class="news_line_li_label"><a href="">ラベル１</a></div>
+                        </div>
+                        <div class="news_line_li_text"><a href="">ニュースニュースニュースニュースニュースニュースニュースニュース</a></div>
+                    </li>
+                </ul>
+            </div>
             <div class="news_more"> <a href="">more</a></div>
         </div>
     </section>
@@ -233,7 +270,7 @@
                         <div class="contact_box">
                             <dt class="contact_box_label"><label for="prefecture">お問い合わせ種別</label></dt>
                             <dd class="contact_box_text">
-                                <select name="" id="prefecture">
+                                <select name="prefecture" id="prefecture">
                                     <option value="">選択してください</option>
                                     <option value="">北海道</option>
                                     <option value="">青森県</option>
@@ -325,6 +362,8 @@
             <img src="./Asset/img/totop.png" alt="#">
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./Asset/js/slider.js"></script>
 </body>
 
 </html>
