@@ -186,6 +186,7 @@ a {
   bottom: 24px;
   width: 60px;
   height: 60px;
+  opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .totop {
@@ -196,7 +197,7 @@ a {
   }
 }
 .totop a:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .header {
