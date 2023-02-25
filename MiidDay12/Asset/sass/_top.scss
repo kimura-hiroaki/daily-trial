@@ -12,6 +12,7 @@
     // padding: 184px 0;
     @include mixin.mq(sp) {
         height: 400px;
+        margin-top: 60px;
     }
 
     position: relative;

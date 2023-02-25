@@ -13,7 +13,11 @@
     height: 100px;
     text-align: center;
     box-shadow: 0 3px 3px rgba(#000, 0.16);
+
     // padding: 30px 0 30px 0;
+    @include mixin.mq(sp) {
+        height: 60px;
+    }
 
     &_wrap {
         display: flex;
@@ -89,50 +93,3 @@
         }
     }
 }
-
-.drawer {
-    &-overlay {
-        background: rgba(0, 0, 0, 0.8)
-    }
-
-    &-nav {
-        width: 200px;
-    }
-
-    &-menu-item {
-        display: block;
-        width: 100%;
-        height: 56px;
-        color: #707070;
-        line-height: 56px;
-        padding: 0 0 0 20px;
-        text-align: left;
-        background-color: #FFF;
-        position: relative;
-        border-bottom: #707070 solid 1px;
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 24px;
-            transform: translateY(-50%);
-            width: 5px;
-            height: 8px;
-            background: url(../img/arrow-b.png) no-repeat center center / contain;
-        }
-    }
-}
-
-.drawer--right.drawer-open .drawer-hamburger {
-    right: 200px;
-}
-
-.drawer-hamburger-icon {
-    background: url(../img/batsu.png) no-repeat center center / contain;
-}
-
-// .drawer-hamburger-icon:after,
-// .drawer-hamburger-icon:before {
-//     display: none;
-// }

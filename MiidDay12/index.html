@@ -53,6 +53,25 @@
             </div>
         </div>
     </header>
+    <div class="hamburgericon">
+        <div class="hamburgericon_bars">
+            <div class="hamburgericon_bar1"></div>
+            <div class="hamburgericon_bar2"></div>
+            <div class="hamburgericon_bar3"></div>
+        </div>
+    </div>
+    <section class="drawer">
+        <div class="drawer_background"></div>
+        <nav class="drawer_nav">
+            <ul class="drawer_nav_ul">
+                <li class="drawer_nav_item"><a href="">Card</a></li>
+                <li class="drawer_nav_item"><a href="">News</a></li>
+                <li class="drawer_nav_item"><a href="">Price</a></li>
+                <li class="drawer_nav_item"><a href="">Access</a></li>
+                <li class="drawer_nav_item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
     <!-- Slider main container -->
     <section class="swiper">
         <!-- Additional required wrapper -->
@@ -364,13 +383,14 @@
         </a>
     </div>
 
-    <!-- script読み込み -->
+    <!-- script読み込み（後ろで初期化） -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./Asset/js/slider.js"></script>
-    <!-- wow.min.jsを読み込み（後ろで初期化） -->
     <script src="./Asset/js/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- 初期化 -->
     <script src="./Asset/js/init.js"></script>
+    <script src="./Asset/js/drawer.js"></script>
 </body>
 
 </html>
