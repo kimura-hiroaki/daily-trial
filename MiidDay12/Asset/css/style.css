@@ -204,7 +204,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   background-color: #3F51B5;
   height: 100px;
   text-align: center;
@@ -265,6 +265,43 @@ a {
 }
 .header_menu:hover:after {
   width: 100%;
+}
+
+.drawer-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+.drawer-nav {
+  width: 200px;
+}
+.drawer-menu-item {
+  display: block;
+  width: 100%;
+  height: 56px;
+  color: #707070;
+  line-height: 56px;
+  padding: 0 0 0 20px;
+  text-align: left;
+  background-color: #FFF;
+  position: relative;
+  border-bottom: #707070 solid 1px;
+}
+.drawer-menu-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 8px;
+  background: url(../img/arrow-b.png) no-repeat center center/contain;
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+  right: 200px;
+}
+
+.drawer-hamburger-icon {
+  background: url(../img/batsu.png) no-repeat center center/contain;
 }
 
 .top {
@@ -363,7 +400,7 @@ a {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  left: calc(50% - 600px);
+  left: calc(50% - 1200px / 2);
   background: url(../img/arrow-prev.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -381,7 +418,7 @@ a {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  right: calc(50% - 600px);
+  right: calc(50% - 1200px / 2);
   background: url(../img/arrow-next.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) and (max-width: 1199px) {

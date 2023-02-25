@@ -101,7 +101,7 @@
     width: 40px;
     height: 40px;
     margin-top: -20px; // translateY();でも可
-    left: calc(50% - #{define.$layout-width-inner / 2});
+    left: calc(50% - #{define.$layout-width-inner} / 2);
 
     @include mixin.mq(tab) {
         left: 30px;
@@ -118,7 +118,7 @@
     width: 40px;
     height: 40px;
     margin-top: -20px; // translateY();でも可
-    right: calc(50% - #{define.$layout-width-inner / 2});
+    right: calc(50% - #{define.$layout-width-inner} / 2);
 
     @include mixin.mq(tab) {
         right: 30px;

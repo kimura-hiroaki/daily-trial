@@ -1,0 +1,65 @@
+@use "define";
+@use "mixin";
+
+.hamburger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    display: none;
+    background: rgba($color: #000000, $alpha: 0.8);
+
+    &_wrap {
+        display: flex;
+    }
+
+    &_left {
+        width: calc(100% - 200px);
+
+        &_close {
+            width: 22px;
+            height: 22px;
+            margin: 20px 16px 0 auto;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    &_right {
+        width: 200px;
+
+    }
+
+    &_nav {
+        width: 100%;
+
+        &_item {
+            a {
+                display: block;
+                width: 100%;
+                height: 56px;
+                color: #707070;
+                line-height: 56px;
+                padding-left: 20px;
+                background-color: #FFF;
+                position: relative;
+                border-bottom: #707070 solid 1px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 24px;
+                    transform: translateY(-50%);
+                    width: 5px;
+                    height: 8px;
+                    background: url(../img/arrow-b.png) no-repeat center center / contain;
+                }
+            }
+
+        }
+    }
+}

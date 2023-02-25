@@ -20,9 +20,8 @@
         rel="stylesheet">
     <!-- title -->
     <title>中級Day12-17デザインカンプ</title>
-    <!-- javascript css -->
+    <!-- javascript -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./Asset/css/animate.css">
     <!-- css -->
     <!-- <link rel="stylesheet" href="./Asset/css/reset.css"> -->
     <link rel="stylesheet" href="./Asset/css/style.css">
@@ -102,37 +101,37 @@
     <section class="card">
         <div class="container">
             <div class="section_title_area">
-                <h2 class="section_title wow fadeInUp">Card</h2>
+                <h2 class="section_title">Card</h2>
             </div>
-            <div class="card_wrap wow fadeInLeft">
-                <article class="card_item" data-wow-delay=".3s">
+            <div class="card_wrap">
+                <article class="card_item">
                     <img src="./Asset/img/card-img.png" alt="card">
                     <h3 class="card_item_title">タイトルタイトル</h3>
                     <p class="card_item_text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </article>
-                <article class="card_item wow fadeInDown" data-wow-delay=".6s">
+                <article class="card_item">
                     <img src="./Asset/img/card-img.png" alt="card">
                     <h3 class="card_item_title">タイトルタイトル</h3>
                     <p class="card_item_text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </article>
-                <article class="card_item wow fadeInRight" data-wow-delay=".9s">
+                <article class="card_item">
                     <img src="./Asset/img/card-img.png" alt="card">
                     <h3 class="card_item_title">タイトルタイトル</h3>
                     <p class="card_item_text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </article>
                 <!-- </div> -->
                 <!-- <div class="card_wrap_bottom"> -->
-                <article class="card_item wow rotateInUpLeft" data-wow-delay="1.2s">
+                <article class="card_item">
                     <img src="./Asset/img/card-img.png" alt="card">
                     <h3 class="card_item_title">タイトルタイトル</h3>
                     <p class="card_item_text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </article>
-                <article class="card_item wow fadeInUp" data-wow-delay="1.5s">
+                <article class="card_item">
                     <img src="./Asset/img/card-img.png" alt="card">
                     <h3 class="card_item_title">タイトルタイトル</h3>
                     <p class="card_item_text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </article>
-                <article class="card_item wow rotateInUpRight" data-wow-delay="1.8s">
+                <article class="card_item">
                     <img src="./Asset/img/card-img.png" alt="card">
                     <h3 class="card_item_title">タイトルタイトル</h3>
                     <p class="card_item_text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -143,9 +142,9 @@
     <section class="news">
         <div class="container">
             <div class="section_title_area">
-                <h2 class="section_title wow fadeInUp">News</h2>
+                <h2 class="section_title">News</h2>
             </div>
-            <div class="news_line wow fadeInUp">
+            <div class="news_line">
                 <ul>
                     <li class="news_line_li">
                         <div class="news_line_li_meta">
@@ -190,8 +189,8 @@
     </section>
     <section class="price">
         <div class="container">
-            <h2 class="section_title wow fadeInUp">Price</h2>
-            <div class="price_wrap wow fadeInUp">
+            <h2 class="section_title">Price</h2>
+            <div class="price_wrap">
                 <div class="price_image"><img src="./Asset/img/price-img.png" alt="price_img"></div>
                 <div class="price_table">
                     <table>
@@ -228,8 +227,8 @@
     </section>
     <section class="access">
         <div class="container">
-            <h2 class="section_title wow fadeInUp">Access</h2>
-            <div class="access_map wow fadeInUp">
+            <h2 class="section_title">Access</h2>
+            <div class="access_map">
                 <div class="access_map_frame">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5454.12351554366!2d139.7361658989931!3d35.626709691444255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a5a6e148775%3A0x9a45c347f706db70!2z5ZOB5bed6aeF!5e0!3m2!1sja!2sjp!4v1676376512058!5m2!1sja!2sjp"
@@ -252,8 +251,8 @@
     </section>
     <section class="contact">
         <div class="container">
-            <h2 class="section_title wow fadeInUp">Contact</h2>
-            <div class="contact_wrap wow fadeInUp">
+            <h2 class="section_title">Contact</h2>
+            <div class="contact_wrap">
                 <form action="#" method="post">
                     <dl class="contact_form_dl">
                         <div class="contact_box">
@@ -363,14 +362,8 @@
             <img src="./Asset/img/totop.png" alt="#">
         </a>
     </div>
-
-    <!-- script読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./Asset/js/slider.js"></script>
-    <!-- wow.min.jsを読み込み（後ろで初期化） -->
-    <script src="./Asset/js/wow.min.js"></script>
-    <!-- 初期化 -->
-    <script src="./Asset/js/init.js"></script>
 </body>
 
 </html>
