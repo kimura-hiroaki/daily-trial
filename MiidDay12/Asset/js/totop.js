@@ -4,7 +4,7 @@ $(function () {
         // headerの高さ取得
         let header_height = $(".header").innerHeight();
         // 移動速度を指定（ミリ秒）
-        let speed = 0;
+        let speed = 300;
         // hrefで指定されたidを取得
         let id = $(this).attr("href");
         // idの値が#のみだったらターゲットをhtmlタグにしてトップへ戻るようにする
