@@ -257,7 +257,7 @@ a {
   margin-bottom: 8px;
   color: #FFF;
 }
-.header_menu:after {
+.header_menu::after {
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -271,6 +271,17 @@ a {
 }
 .header_menu:hover:after {
   width: 100%;
+}
+.header_menu.is-action::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: "";
+  width: 100%;
+  /*下線の太さ*/
+  height: 2px;
+  /*下線の色*/
+  background: #E81919;
 }
 
 .hamburgericon {

@@ -75,7 +75,7 @@
         margin-bottom: 8px;
         color: #FFF;
 
-        &:after {
+        &::after {
             position: absolute;
             bottom: -8px;
             left: 0;
@@ -90,6 +90,20 @@
 
         &:hover:after {
             width: 100%;
+        }
+
+        &.is-action {
+            &::after {
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                content: '';
+                width: 100%;
+                /*下線の太さ*/
+                height: 2px;
+                /*下線の色*/
+                background: define.$color_accent;
+            }
         }
     }
 }
