@@ -1,0 +1,14 @@
+@use "define";
+
+body {
+    font-family: 'Noto Serif', 'Noto Serif JP', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: define.$layout-width-inner;
+    max-width: 95%;
+}

@@ -1,0 +1,39 @@
+.header {
+    height: 70px;
+
+    &_wrap {
+        height: 70px;
+        display: flex;
+    }
+
+    &_logo {
+        margin-top: 25px;
+        margin-right: auto;
+        width: 120px;
+    }
+
+    &_nav {
+        margin: auto 0 auto auto;
+
+
+
+        &_ul {
+            display: flex;
+
+            li {
+                &:not(:first-child) {
+                    margin-left: 48px;
+                }
+            }
+
+
+        }
+
+        &_item {
+            display: block;
+
+
+
+        }
+    }
+}
