@@ -1266,15 +1266,26 @@ a {
   left: 0;
   z-index: 11;
   background: rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: display 0.3s ease 0s;
+}
+.modal.is-show {
+  display: block;
 }
 .modal_card {
   width: 900px;
-  max-width: 100%;
+  max-width: calc(100% - 20px);
   margin: 300px auto 0 auto;
   padding: 60px;
   background: #FFFFFF;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .modal_card {
+    margin-top: 150px;
+    padding: 30px;
+  }
 }
 .modal_card_title {
   display: block;
@@ -1294,9 +1305,14 @@ a {
   height: 2px;
   background: #3F51B5;
 }
+.modal_card_wrap {
+  height: 340px;
+  overflow-y: auto;
+  margin-top: 40px;
+}
 .modal_card_article {
   width: 100%;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
 }
 .modal_card_article_header {
   font-size: 20px;
@@ -1329,14 +1345,16 @@ a {
   border-radius: 8px;
   background: #3F51B5;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 .modal_card_close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -20px;
+  right: -20px;
   width: 40px;
   height: 40px;
   transform: translate(50% 50%);
+  cursor: pointer;
 }
 
 .footer {

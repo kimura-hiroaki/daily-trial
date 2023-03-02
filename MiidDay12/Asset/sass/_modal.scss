@@ -9,15 +9,26 @@
     left: 0;
     z-index: 11;
     background: rgba(#000000, 0.3);
+    display: none;
+    transition: display 0.3s ease 0s;
+
+    &.is-show {
+        display: block;
+    }
 
     &_card {
         width: 900px;
-        max-width: 100%;
+        max-width: calc(100% - 10px * 2);
         margin: 300px auto 0 auto;
         padding: 60px;
         background: #FFFFFF;
         box-shadow: 0 0 3px rgba(#000000, 0.16);
         position: relative;
+
+        @include mixin.mq(sp) {
+            margin-top: 150px;
+            padding: 30px;
+        }
 
         &_title {
             display: block;
@@ -39,9 +50,15 @@
             }
         }
 
+        &_wrap {
+            height: 340px;
+            overflow-y: auto;
+            margin-top: 40px;
+        }
+
         &_article {
             width: 100%;
-            margin: 40px auto 0 auto;
+            margin: 0 auto;
 
             &_header {
                 font-size: 20px;
@@ -78,15 +95,17 @@
             border-radius: 8px;
             background: define.$color_main;
             box-shadow: 0 3px 6px rgba(#000000, 0.16);
+            cursor: pointer;
         }
 
         &_close {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: -20px;
+            right: -20px;
             width: 40px;
             height: 40px;
             transform: translate(50% 50%);
+            cursor: pointer;
         }
     }
 }
