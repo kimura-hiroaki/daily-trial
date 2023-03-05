@@ -1,20 +1,37 @@
+@use "define";
+@use "mixin";
+
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 70px;
+    z-index: 10;
+    background: #FFFFFF;
 
     &_wrap {
         height: 70px;
         display: flex;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
     }
 
     &_logo {
-        margin-top: 25px;
+        padding-top: 25px;
         margin-right: auto;
         width: 120px;
+        height: inherit;
     }
 
     &_nav {
         margin: auto 0 auto auto;
 
+        @include mixin.mq(sp) {
+            display: none;
+        }
 
 
         &_ul {
@@ -25,15 +42,79 @@
                     margin-left: 48px;
                 }
             }
-
-
         }
 
         &_item {
             display: block;
 
-
-
+            &:hover {
+                color: define.$color_main;
+            }
         }
+    }
+}
+
+.hamburgericon {
+    position: fixed;
+    top: 22px;
+    right: 15px;
+    width: 30px;
+    height: 18px;
+    z-index: 50;
+    display: none;
+
+    @include mixin.mq(sp) {
+        display: block;
+    }
+
+    &.is-active {
+
+        .hamburgericon_bar1,
+        .hamburgericon_bar2,
+        .hamburgericon_bar3 {
+            transition: transform 1s ease 0s;
+        }
+
+        .hamburgericon_bar1 {
+            top: 50%;
+            transform: rotateZ(45deg);
+        }
+
+        .hamburgericon_bar2 {
+            display: none;
+        }
+
+        .hamburgericon_bar3 {
+            top: 50%;
+            transform: rotateZ(-45deg);
+        }
+    }
+
+    &_bars {
+        width: inherit;
+        height: inherit;
+        position: relative;
+    }
+
+    &_bar1,
+    &_bar2,
+    &_bar3 {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 0;
+        background: define.$color_main;
+    }
+
+    &_bar1 {
+        top: 0;
+    }
+
+    &_bar2 {
+        top: 8px;
+    }
+
+    &_bar3 {
+        top: 16px;
     }
 }

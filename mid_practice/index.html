@@ -25,13 +25,15 @@
     <title>sobolon</title>
 
     <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./Asset/css/animate.css">
     <link rel="stylesheet" href="./Asset/css/style.css">
     <!-- javascript -->
 
 </head>
 
 <body>
-    <header class="header">
+    <header class="header wow fadeInUp">
         <div class="container">
             <div class="header_wrap">
                 <div class="header_logo">
@@ -39,23 +41,286 @@
                 </div>
                 <nav class="header_nav">
                     <ul class="header_nav_ul">
-                        <li><a href="" class="header_nav_item">Concept</a></li>
-                        <li><a href="" class="header_nav_item">Feature</a></li>
-                        <li><a href="" class="header_nav_item">Products</a></li>
-                        <li><a href="" class="header_nav_item">News</a></li>
-                        <li><a href="" class="header_nav_item">Contact</a></li>
+                        <li><a href="#concept" class="header_nav_item">Concept</a></li>
+                        <li><a href="#feature" class="header_nav_item">Feature</a></li>
+                        <li><a href="#products" class="header_nav_item">Products</a></li>
+                        <li><a href="#news" class="header_nav_item">News</a></li>
+                        <li><a href="#contact" class="header_nav_item">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+        <div class="hamburgericon">
+            <div class="hamburgericon_bars">
+                <div class="hamburgericon_bar1"></div>
+                <div class="hamburgericon_bar2"></div>
+                <div class="hamburgericon_bar3"></div>
+            </div>
+        </div>
     </header>
-    <section class="top">
-        <div class="top_background"></div>
-        <div class="top_message">
-            <div class="top_title">“可愛い” で 地球を守る！</div>
-            <div class="top_subtitle">海洋マイクロプラスチックを素材とした ハンドメイドアクセサリー「sobolon」</div>
+    <section class="drawer">
+        <!-- <div class="drawer_background"></div> -->
+        <nav class="drawer_nav">
+            <ul class="drawer_nav_ul">
+                <li class="drawer_nav_item"><a href="#concept">Concept</a></li>
+                <li class="drawer_nav_item"><a href="#feature">Feature</a></li>
+                <li class="drawer_nav_item"><a href="#products">Products</a></li>
+                <li class="drawer_nav_item"><a href="#news">News</a></li>
+                <li class="drawer_nav_item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="humbarger">
+        <div class="humbarger_icon">
+            <div class="humbarger_icon_bars">
+                <div class="humbarger_icon_bar1"></div>
+                <div class="humbarger_icon_bar2"></div>
+                <div class="humbarger_icon_bar3"></div>
+            </div>
         </div>
     </section>
+    <section class="top">
+        <div class="container">
+            <div class="top_wrap wow fadeInUp">
+                <!-- <div class="top_background"><img src="./Asset/img/top.png" alt="top"></div> -->
+                <div class="top_background"></div>
+                <div class="top_message">
+                    <div class="top_message_title">“可愛い” で地球を守る！</div>
+                    <div class="top_message_subtitle">海洋マイクロプラスチックを素材とした<br>ハンドメイドアクセサリー「sobolon」</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="concept" class="concept section_margin">
+        <div class="container">
+            <div class="section_title wow fadeInUp">
+                <h2>Concept</h2>
+            </div>
+            <div class="concept_wrap">
+                <div class="concept_image wow fadeInUp"><img src="./Asset/img/concept-1.png" alt="concept-1"></div>
+                <div class="concept_composition wow fadeInUp">
+                    <div class="concept_composition_wrap">
+                        <div class="concept_composition_slogan">
+                            可愛くてステキなのは当たり前。<br>地球にやさしくあるのも当たり前。
+                        </div>
+                        <div class="concept_composition_text">
+                            「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feature" class="feature section_margin">
+        <div class="container">
+            <div class="section_title wow fadeInUp">
+                <h2>Feature</h2>
+            </div>
+            <div class="feature_wrap">
+                <a class="feature_card wow fadeInUp" href="#">
+                    <div class="feature_card_image"><img src="./Asset/img/feature-1.png" alt="feature-1"></div>
+                    <div class="feature_card_text">素材は海で採れた<br>マイクロプラスチック</div>
+                </a>
+                <a class="feature_card wow fadeInUp" href="#">
+                    <div class="feature_card_image"><img src="./Asset/img/feature-2.png" alt="feature-2"></div>
+                    <div class="feature_card_text">個性あふれる<br>“可愛い”デザイン</div>
+                </a>
+                <a class="feature_card wow fadeInUp" href="#">
+                    <div class="feature_card_image"><img src="./Asset/img/feature-3.png" alt="feature-3"></div>
+                    <div class="feature_card_text">世界にひとつだけの<br>一点物アクセサリー</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="policy section_margin">
+        <div class="container">
+            <div class="policy_wrap">
+                <div class="policy_composition wow fadeInUp">
+                    <div class="policy_composition_title">
+                        消費者である私たちが、<br>地球環境のためにできることは何か？
+                    </div>
+                    <div class="policy_composition_text">
+                        そんな視点からこのブランドは生まれました。<br>
+                        オシャレを楽しむ気持ちを大切にしながらも、<br>
+                        ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら…<br>
+                        その変化は少しずつ、だけども本質的に、<br>
+                        この世界をHappyに変えていくのだと、私たちは考えます。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="products section_margin">
+        <div class="container">
+            <div class="section_title wow fadeInUp">
+                <h2>Products</h2>
+            </div>
+            <div class="products_wrap">
+                <a href="#" class="products_card wow fadeInUp">
+                    <div class="products_card_image"><img src="./Asset/img/product-1.png" alt="product-1"></div>
+                    <div class="products_card_text">
+                        【しかくイヤリング】海洋マイクロプラスチックを使ったハンドメイドイヤリング(全7色)
+                    </div>
+                    <div class="products_card_price">￥3,695</div>
+                </a>
+                <a href="#" class="products_card wow fadeInUp">
+                    <div class="products_card_image"><img src="./Asset/img/product-2.png" alt="product-2"></div>
+                    <div class="products_card_text">
+                        【しかく指輪】海洋マイクロプラスチックを使ったハンドメイドアクセサリー/ゆびわ(全7色)
+                    </div>
+                    <div class="products_card_price">￥2,390</div>
+                </a>
+                <a href="#" class="products_card wow fadeInUp">
+                    <div class="products_card_image"><img src="./Asset/img/product-3.png" alt="product-3"></div>
+                    <div class="products_card_text">
+                        【ピンバッジ】海洋マイクロプラスチックを使ったsobolonオリジナルピンバッジ(全6色)
+                    </div>
+                    <div class="products_card_price">￥2,580</div>
+                </a>
+            </div>
+            <div class="wow fadeInUp"><a href="#" class="more">MORE</a></div>
+        </div>
+    </section>
+    <section id="news" class="news section_margin">
+        <div class="container">
+            <div class="section_title wow fadeInUp">
+                <h2>News</h2>
+            </div>
+            <div class="news_wrap">
+                <a class="news_card wow fadeInUp" a href="#">
+                    <div class="news_card_image"><img src="./Asset/img/news-1.png" alt="news-1"></div>
+                    <div class="news_card_composition">
+                        <div class="news_card_composition_date">2020年2月4日</div>
+                        <div class="news_card_composition_title">
+                            <h3>き業展終了！次回は2/11(火)フェスタ出店します。</h3>
+                        </div>
+                        <div class="news_card_composition_text">
+                            「き業展」2日目！大盛況に終わりました\( ˆoˆ )/来てくださったみなさん本当にありがとうございました！やっぱり、地元多治見での出店はみ…
+                        </div>
+                    </div>
+                </a>
+                <a class="news_card wow fadeInUp" a href="#">
+                    <div class="news_card_image"><img src="./Asset/img/news-2.png" alt="news-2"></div>
+                    <div class="news_card_composition">
+                        <div class="news_card_composition_date">2020年1月20日</div>
+                        <div class="news_card_composition_title">
+                            <h3>“可愛い” で 地球を守る！ 海洋マイクロプラスチックを使ったハンドメイドアクセサリー屋さん 【sobolon】</h3>
+                        </div>
+                        <div class="news_card_composition_text">
+                            こんにちは！私は、「 “可愛い” で地球を守る！」をテーマに、昨今、環境問題として話題になっている、マイクロプラスチックを使ったアクセサリー…
+                        </div>
+                    </div>
+                </a>
+                <a class="news_card wow fadeInUp" a href="#">
+                    <div class="news_card_image"><img src="./Asset/img/news-3.png" alt="news-3"></div>
+                    <div class="news_card_composition">
+                        <div class="news_card_composition_date">2020年11月23日</div>
+                        <div class="news_card_composition_title">
+                            <h3>sobolonの矛盾</h3>
+                        </div>
+                        <div class="news_card_composition_text">
+                            こんにちは！“可愛い”で 地球を守る！マイクロプラスチックアクセサリー【 sobolon 】のリーダーひなこです！sobolonを知らない…
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="wow fadeInUp"><a href="#" class="more">MORE</a></div>
+        </div>
+    </section>
+    <section class="second section_margin">
+        <div class="container">
+            <div class="second_wrap">
+                <div class="second_image wow fadeInUp"><img src="./Asset/img/concept-2.png" alt="concept-2"></div>
+                <div class="second_composition wow fadeInUp">
+                    <div class="second_composition_title">
+                        合言葉は、<br>「 “可愛い” で 地球を守る！」
+                    </div>
+                    <div class="second_composition_text">
+                        深刻化している環境問題に対して、否定や制限、禁止といった強制的な方法ではなく、明るく幸せな未来を目指して、「可愛い」「楽しい」の力を信じて、愛につながる選択を世の中に増やしていきます。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact wow fadeInUp">
+        <div class="container">
+            <div class="section_title is-blue">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact_note"><span>＊</span>は入力必須項目です</div>
+            <div class="contact_form">
+                <form action="#" method="post">
+                    <dl class="contact_form_dl">
+                        <div class="contact_box">
+                            <dt class="contact_box_label label_name"><label for="your_name"
+                                    class="is_reqired">お名前</label></dt>
+                            <dd class="contact_box_text"><input type="text" id="your_name">
+                            </dd>
+                        </div>
+                        <div class="contact_box">
+                            <dt class="contact_box_label label_email"><label for="your_email"
+                                    class="is_reqired">メールアドレス</label>
+                            </dt>
+                            <dd class="contact_box_text"><input type="email" id="your_email">
+                            </dd>
+                        </div>
+                        <div class="contact_box">
+                            <dt class="contact_box_label label_radio"><label for="radio_num"
+                                    class="is_reqired">法人/個人の選択</label>
+                            </dt>
+                            <dd class="contact_box_radio">
+                                <label>
+                                    <input class="form-radio" type="radio" name="radio_num" checked><span>法人</span>
+                                </label>
+                                <label>
+                                    <input class="form_radio" type="radio" name="radio_num"><span>個人</span>
+                                </label>
+                            </dd>
+                        </div>
+                        <div class="contact_box">
+                            <dt class="contact_box_label label_textarea"><label for="textarea">お問い合わせ内容</label></dt>
+                            <dd class="contact_box_text">
+                                <textarea name="textarea" id="textarea" style="width:100%; height:122px;"></textarea>
+                            </dd>
+                        </div>
+                    </dl>
+                    <div class="contact_policy">
+                        <label for="policy">
+                            <input id="policy" type="checkbox">
+                            <span>
+                                <a class="contact_policy_note" href="#">プライバシーポリシー</a>に同意します。
+                            </span>
+                        </label>
+                    </div>
+                    <div class="contact_submit">
+                        <input class="contact_submit_btn" type="submit" value="送信">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer wow fadeInUp">
+        <div class="footer_logo"><img src="./Asset/img/logo.png" alt="logo"></div>
+        <div class="footer_notes">
+            <div class="footer_notes_policy"><a href="#">プライバシーポリシー</a></div>
+            <div class="footer_notes_right"><a href="#">特定商取引法に基づく表記</a></div>
+        </div>
+        <div class="footer_sns">
+            <div class="footer_sns_twitter"><a href="#"><img src="./Asset/img/twitter.svg" alt="twitter"></a></div>
+            <div class="footer_sns_insta"><a href="#"><img src="./Asset/img/instagram.svg" alt="instagram"></a></div>
+            <div class="footer_sns_line"><a href="#"><img src="./Asset/img/line.svg" alt="line"></a></div>
+        </div>
+        <div class="footer_copyright">© 2020 sobolon All rights reserved</div>
+    </footer>
+
+    <!-- script読み込み（後ろで初期化） -->
+    <script src="./Asset/js/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- 初期化 -->
+    <script src="./Asset/js/wow_init.js"></script>
+    <!-- 実行 -->
+    <script src="./Asset/js/scroll.js"></script>
+    <script src="./Asset/js/drawer.js"></script>
 </body>
 
 </html>

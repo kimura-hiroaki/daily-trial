@@ -1,0 +1,323 @@
+@use "define";
+@use "mixin";
+
+$color_attention: #E7728E;
+
+.contact {
+    margin-top: 225px;
+    padding-top: 72px;
+    padding-bottom: 85px;
+    width: 100%;
+    background: url(../img/contact.png) no-repeat center center / cover;
+
+    @include mixin.mq(sp) {
+        margin-top: 96px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    &_note {
+        margin: 64px auto 24px auto;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+
+        @include mixin.mq(sp) {
+            font-weight: bold;
+        }
+
+        span {
+            color: $color_attention;
+        }
+    }
+
+    &_form {
+        width: 510px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    &_box {
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+
+        display: flex;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
+
+        &_label {
+            margin-right: auto;
+            width: 170px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 40px;
+            color: #FFFFFF;
+            text-align: center;
+            background: define.$color_main;
+            position: relative;
+
+            @include mixin.mq(sp) {
+                width: auto;
+                height: 32px;
+                font-size: 14px;
+                line-height: 32px;
+                text-align: left;
+                padding-left: 16px;
+                position: static;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                transform: translateX(100%);
+                border-style: solid;
+                border-width: 20px 0 20px 10px;
+                border-color: transparent transparent transparent define.$color_main;
+
+                @include mixin.mq(sp) {
+                    display: none;
+                    // position: static;
+                    // border-width: 0 0 0 0;
+                }
+            }
+
+            label {
+                position: relative;
+
+                &::after {
+                    content: "*";
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    color: $color_attention;
+                }
+            }
+        }
+
+        &_text {
+            width: 320px;
+            max-width: 100%;
+
+            @include mixin.mq(sp) {
+                margin-top: 3px;
+            }
+
+            [type="text"] {
+                margin-left: 10px;
+                padding: 10px 11px;
+                appearance: none;
+                font-family: inherit;
+                font-size: 18px;
+                width: 100%;
+                box-shadow: 5px 5px 15px rgba(#000, 0.16);
+                border-radius: 2px;
+                border: none;
+                background-color: #FFF;
+
+                @include mixin.mq(sp) {
+                    margin-left: 0;
+                    height: 40px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    text-align: left;
+                }
+            }
+
+            [type="email"] {
+                margin-left: 10px;
+                padding: 10px 11px;
+                appearance: none;
+                font-family: inherit;
+                font-size: 18px;
+                width: 100%;
+                box-shadow: 5px 5px 15px rgba(#000, 0.16);
+                border-radius: 2px;
+                border: none;
+                background-color: #FFF;
+
+                @include mixin.mq(sp) {
+                    margin-left: 0;
+                    height: 40px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    text-align: left;
+                }
+            }
+
+            textarea {
+                margin-left: 10px;
+                padding: 10px 11px;
+                appearance: none;
+                font-family: inherit;
+                font-size: 18px;
+                width: 100%;
+                box-shadow: 5px 5px 15px rgba(#000, 0.16);
+                border-radius: 2px;
+                border: none;
+                background-color: #FFF;
+
+                @include mixin.mq(sp) {
+                    margin-left: 0;
+                    height: 40px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    text-align: left;
+                }
+            }
+        }
+
+        &_radio {
+            width: 320px;
+            margin-left: 10px;
+            margin-right: auto;
+            display: flex;
+
+            @include mixin.mq(sp) {
+                margin-left: 0;
+            }
+
+            span {
+                display: inline-block;
+                width: 80px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border: 1px solid #FFFFFF;
+                color: define.$color_main;
+                background: #FFFFFF;
+                border-radius: 1px;
+                box-shadow: 5px 5px 15px rgba(#000, 0.16);
+            }
+
+            [type="radio"]:checked+span {
+                color: #FFFFFF;
+                background: define.$color_main;
+            }
+        }
+    }
+
+    &_policy {
+        text-align: center;
+        margin-top: 30px;
+
+        @include mixin.mq(sp) {
+            margin-top: 26px;
+        }
+
+        /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
+        span {
+            cursor: pointer;
+            display: inline-block;
+            padding-left: 30px;
+            position: relative;
+
+            /* 擬似要素beforeとafterを共通でセット */
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            /* beforeをcheckboxの枠として利用するため、デザインを適用する */
+            &::before {
+                top: 50%;
+                left: 0;
+                width: 22px;
+                height: 22px;
+                background: #FFF;
+                transform: translateY(-50%);
+                border: 1px solid define.$color_main;
+                opacity: 1;
+                transition: all 0.3s ease 0s;
+            }
+
+            /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+                    デフォルトのチェックマークはopacity:0で透明にしておく*/
+            &::after {
+                top: 4px;
+                left: 4px;
+                width: 15px;
+                height: 10px;
+                border-left: 2px solid define.$color_main;
+                border-bottom: 2px solid define.$color_main;
+                transform: rotate(-45deg);
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+            }
+
+            a {
+                text-decoration: underline;
+                color: define.$color_main;
+            }
+        }
+
+        /* 非表示にしたデフォルトのチェックボックスにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+        [type="checkbox"]:checked+span {
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_submit {
+        margin: 50px auto 0 auto;
+        text-align: center;
+
+        @include mixin.mq(sp) {
+            margin-top: 26px;
+        }
+
+        [type="submit"] {
+            width: 137px;
+            height: 47px;
+            line-height: 47px;
+            color: define.$color_main;
+            font-weight: bold;
+            background: #FFFFFF;
+            border: 1px solid define.$color_main;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                color: #FFFFFF;
+                background: define.$color_main;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+
+}
+
+.is-blue {
+    color: define.$color_main;
+}
+
+@include mixin.mq(sp) {
+    .label_name {
+        width: 83px;
+    }
+
+    .label_email {
+        width: 139px;
+    }
+
+    .label_radio {
+        width: 146px;
+    }
+
+    .label_textarea {
+        width: 156px;
+    }
+
+}

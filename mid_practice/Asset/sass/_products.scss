@@ -1,0 +1,58 @@
+@use "define";
+@use "mixin";
+
+.products {
+    &_wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
+
+        @include mixin.mq(sp) {
+            display: block;
+            margin-top: 0;
+        }
+    }
+
+    &_card {
+        display: block;
+        width: 260px;
+        margin-top: 48px;
+
+        &:not(:first-child) {
+            margin-left: 80px;
+
+            @include mixin.mq(sp) {
+                margin-left: auto;
+            }
+        }
+
+        @include mixin.mq(sp) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &_image {
+            overflow: hidden;
+
+            img {
+                transition: all 1s ease 0s;
+
+                &:hover {
+                    transform: scale(1.2, 1.2);
+                    transition: all 1s ease 0s;
+                }
+            }
+        }
+
+        &_text {
+            margin-top: 24px;
+            font-size: 14px;
+        }
+
+        &_price {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #989898;
+        }
+    }
+}

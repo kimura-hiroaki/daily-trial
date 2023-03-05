@@ -1,0 +1,54 @@
+@use "define";
+@use "mixin";
+
+.second {
+    &_wrap {
+        display: flex;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
+    }
+
+    &_composition {
+        width: calc(100% * (520 / 1200));
+        margin: auto auto auto 0;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            margin-top: 40px;
+            margin-left: auto;
+        }
+
+        &_title {
+            font-size: 28px;
+            font-weight: bold;
+
+            @include mixin.mq(sp) {
+                font-size: 24px;
+            }
+        }
+
+        &_text {
+            margin-top: 48px;
+
+            @include mixin.mq(sp) {
+                font-size: 14px;
+                margin-top: 32px;
+            }
+        }
+
+        order: 1;
+    }
+
+    &_image {
+        width: calc(100% * (600 / 1200));
+        margin-left: auto;
+        order: 2;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            margin: auto;
+        }
+    }
+}

@@ -23,6 +23,7 @@ figure,
 blockquote,
 dl,
 dd {
+    font-size: 1em;
     margin: 0;
     padding: 0;
 }
@@ -47,6 +48,7 @@ ol {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+    -webkit-text-decoration-skip: objects;
     text-decoration-skip-ink: auto;
 }
 

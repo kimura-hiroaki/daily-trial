@@ -1,0 +1,87 @@
+@use "define";
+@use "mixin";
+
+.top {
+    width: 100%;
+    margin-top: 70px;
+
+    &_wrap {
+        position: relative;
+
+        @include mixin.mq(sp) {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &_background {
+        width: 990px;
+        max-width: 100%;
+        height: 660px;
+        background: url(../img/top.png) no-repeat center center / cover;
+        margin-left: auto;
+
+        @include mixin.mq(sp) {
+            width: 345px;
+            max-width: 100%;
+            height: 414px;
+            margin: 0 auto;
+            background: url(../img/top_sp.png) no-repeat center center / cover;
+        }
+    }
+
+    &_message {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 330px;
+        height: 330px;
+        background: #FFFFFF;
+
+        @include mixin.mq(sp) {
+            position: static;
+            width: 345px;
+            max-width: 100%;
+            height: auto;
+            top: auto;
+            left: auto;
+            transform: translateY(0);
+            margin: 0 auto 0 auto;
+        }
+
+        &_title {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 160px;
+            font-size: 26px;
+            font-weight: bold;
+
+            @include mixin.mq(sp) {
+                position: static;
+                width: 100%;
+                height: auto;
+                top: auto;
+                left: auto;
+                margin-top: 40px;
+            }
+        }
+
+        &_subtitle {
+            position: absolute;
+            top: 190px;
+            left: 0;
+            width: 290px;
+
+            @include mixin.mq(sp) {
+                position: static;
+                width: 100%;
+                height: auto;
+                top: auto;
+                left: auto;
+                margin-top: 32px;
+            }
+        }
+    }
+}
