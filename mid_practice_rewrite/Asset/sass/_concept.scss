@@ -1,0 +1,64 @@
+@use "define";
+@use "mixin";
+
+.concept {
+    &_wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
+    }
+
+    &_image {
+        width: 50%;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+        }
+    }
+
+    &_composition {
+        width: calc((100% * (520 / 1200)));
+        position: relative;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            position: static;
+        }
+
+        &_wrap {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            @include mixin.mq(sp) {
+                width: 100%;
+                position: static;
+                top: auto;
+                left: auto;
+                transform: translateY(0);
+            }
+        }
+
+        &_slogan {
+            font-size: 20px;
+            font-weight: bold;
+
+            @include mixin.mq(sp) {
+                margin-top: 40px;
+            }
+        }
+
+        &_text {
+            margin-top: 40px;
+
+            @include mixin.mq(sp) {
+                margin-top: 32px;
+            }
+        }
+    }
+}

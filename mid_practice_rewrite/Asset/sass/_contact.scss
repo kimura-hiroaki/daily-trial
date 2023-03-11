@@ -57,7 +57,7 @@ $color_attention: #E7728E;
             line-height: 40px;
             color: #FFFFFF;
             text-align: center;
-            background: define.$color_main;
+            background: rgba(62, 161, 209, 0.7);
             position: relative;
 
             @include mixin.mq(sp) {
@@ -80,7 +80,7 @@ $color_attention: #E7728E;
                 transform: translateX(100%);
                 border-style: solid;
                 border-width: 20px 0 20px 10px;
-                border-color: transparent transparent transparent define.$color_main;
+                border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
 
                 @include mixin.mq(sp) {
                     display: none;
@@ -160,10 +160,12 @@ $color_attention: #E7728E;
                 font-family: inherit;
                 font-size: 18px;
                 width: 100%;
+                height: 122px;
                 box-shadow: 5px 5px 15px rgba(#000, 0.16);
                 border-radius: 2px;
                 border: none;
                 background-color: #FFF;
+                resize: vertical;
 
                 @include mixin.mq(sp) {
                     margin-left: 0;
@@ -179,28 +181,46 @@ $color_attention: #E7728E;
             width: 320px;
             margin-left: 10px;
             margin-right: auto;
-            display: flex;
 
             @include mixin.mq(sp) {
                 margin-left: 0;
             }
 
-            span {
-                display: inline-block;
-                width: 80px;
-                height: 40px;
-                text-align: center;
-                line-height: 40px;
+            &_wrap {
+                display: inline-flex;
                 border: 1px solid #FFFFFF;
-                color: define.$color_main;
-                background: #FFFFFF;
                 border-radius: 1px;
                 box-shadow: 5px 5px 15px rgba(#000, 0.16);
+            }
+
+            &_label {
+                position: relative;
+
+                &_input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+
+                span {
+                    display: block;
+                    width: 80px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    color: define.$color_main;
+                    background: #FFFFFF;
+                }
             }
 
             [type="radio"]:checked+span {
                 color: #FFFFFF;
                 background: define.$color_main;
+            }
+
+            [type="radio"]:focus-visible+span {
+                outline: -webkit-focus-ring-color auto 1px;
             }
         }
     }
@@ -213,62 +233,58 @@ $color_attention: #E7728E;
             margin-top: 26px;
         }
 
-        /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
-        span {
-            cursor: pointer;
-            display: inline-block;
-            padding-left: 30px;
+        &_label {
             position: relative;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
 
-            /* 擬似要素beforeとafterを共通でセット */
-            &::before,
-            &::after {
-                content: "";
+            &_input {
                 position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
             }
 
-            /* beforeをcheckboxの枠として利用するため、デザインを適用する */
-            &::before {
-                top: 50%;
+            /* オリジナルボタンを設置するため、paddngでテキストの左側にスペースを確保 */
+            span {
+                cursor: pointer;
+                display: inline-block;
+                position: absolute;
+                top: 0;
                 left: 0;
                 width: 22px;
                 height: 22px;
                 background: #FFF;
-                transform: translateY(-50%);
                 border: 1px solid define.$color_main;
-                opacity: 1;
                 transition: all 0.3s ease 0s;
             }
+        }
 
-            /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
-                    デフォルトのチェックマークはopacity:0で透明にしておく*/
-            &::after {
-                top: 4px;
-                left: 4px;
-                width: 15px;
-                height: 10px;
-                border-left: 2px solid define.$color_main;
-                border-bottom: 2px solid define.$color_main;
-                transform: rotate(-45deg);
-                opacity: 0;
-                transition: all 0.3s ease 0s;
-            }
-
-            a {
-                text-decoration: underline;
-                color: define.$color_main;
-            }
+        a {
+            text-decoration: underline;
+            color: define.$color_main;
         }
 
         /* 非表示にしたデフォルトのチェックボックスにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
         [type="checkbox"]:checked+span {
-            &::before {
-                opacity: 0;
-            }
+            width: 10px;
+            border-top: 0;
+            border-left: 0;
+            background: transparent;
+            transform: rotate(45deg);
+            top: -5px;
+            left: 5px;
+            outline: none;
+        }
 
-            &::after {
-                opacity: 1;
-            }
+        [type="checkbox"]:focus-visible+span {
+            outline: -webkit-focus-ring-color auto 1px;
+        }
+
+        [type="checkbox"]:focus-visible:checked+span {
+            outline: none;
         }
     }
 
@@ -290,7 +306,7 @@ $color_attention: #E7728E;
             border: 1px solid define.$color_main;
             transition: all 0.3s ease 0s;
 
-            &:hover {
+            &.is-active {
                 color: #FFFFFF;
                 background: define.$color_main;
                 border: 1px solid #FFFFFF;
@@ -320,5 +336,14 @@ $color_attention: #E7728E;
     .label_textarea {
         width: 156px;
     }
+}
 
+.contact_message {
+    margin-top: 60px;
+    text-align: center;
+    display: none;
+
+    &.is-error {
+        color: #F00;
+    }
 }

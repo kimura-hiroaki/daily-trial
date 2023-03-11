@@ -2,9 +2,16 @@
 @use "mixin";
 
 .policy {
-    width: 100%;
-    height: 484px;
-    background: url(../img/bg.png) no-repeat center center / cover;
+    @include mixin.mq(pc) {
+        padding-top: 37%;
+        background: url(../img/bg.png) no-repeat center center / contain;
+    }
+
+    @include mixin.mq(sp) {
+        padding-top: 129%;
+        background: url(../img/bg_sp.png) no-repeat center center / contain;
+    }
+
     position: relative;
 
     &::before {
@@ -14,32 +21,25 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
         background: rgba(#000, 0.12);
     }
 
-    @include mixin.mq(sp) {
-        width: 100%;
-        height: 487px;
-        background: url(../img/bg_sp.png) no-repeat center center / contain;
-    }
-
-    &_wrap {
-        width: 100%;
-        height: 487px;
-        position: relative;
-    }
+    // &_wrap {
+    //     width: 100%;
+    //     height: 487px;
+    //     position: relative;
+    // }
 
     &_composition {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 40px;
         transform: translateY(-50%);
         width: 100%;
         color: #FFFFFF;
 
         @include mixin.mq(sp) {
-            top: 182px;
+            top: 38%;
             left: 50%;
             transform: translate(-50%, 0);
             width: 340px;

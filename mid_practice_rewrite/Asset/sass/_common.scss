@@ -1,0 +1,81 @@
+@use "define";
+@use "mixin";
+
+body {
+    font-family: 'Noto Serif JP', 'Noto Serif', serif;
+    color: define.$color_text;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: define.$color_text;
+}
+
+.container {
+    width: define.$layout-width-inner;
+    max-width: calc(100% - 40px * 2);
+    margin: 0 auto;
+
+    @include mixin.mq(sp) {
+        max-width: calc(100% - 15px * 2);
+    }
+}
+
+.section_title {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+
+    @include mixin.mq(sp) {
+        font-size: 30px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 2px;
+        background: define.$color_main;
+    }
+}
+
+.section_margin {
+    margin-top: 160px;
+
+    @include mixin.mq(sp) {
+        margin-top: 96px;
+    }
+}
+
+.more {
+    display: block;
+    margin: 48px auto 0 auto;
+    color: define.$color_main;
+    width: 157px;
+    height: 46px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 46px;
+    border: 1px solid define.$color_main;
+    background: #FFFFFF;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        color: #FFFFFF;
+        background: define.$color_main;
+        border: 1px solid #FFFFFF;
+    }
+}
+
+.is-pc {
+    @include mixin.mq(sp) {
+        display: none;
+    }
+}

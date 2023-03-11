@@ -87,7 +87,7 @@
                 <!-- <div class="top_background"><img src="./Asset/img/top.png" alt="top"></div> -->
                 <div class="top_background"></div>
                 <div class="top_message">
-                    <div class="top_message_title">“可愛い” <br>で地球を守る！</div>
+                    <div class="top_message_title">“可愛い” <br class="is-pc">で地球を守る！</div>
                     <div class="top_message_subtitle">海洋マイクロプラスチックを素材とした<br>ハンドメイドアクセサリー「sobolon」</div>
                 </div>
             </div>
@@ -249,21 +249,25 @@
             <div class="section_title is-blue">
                 <h2>Contact</h2>
             </div>
-            <div class="contact_note"><span>＊</span>は入力必須項目です</div>
             <div class="contact_form">
-                <form action="#" method="post">
+                <form id="js-form"
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdeeDw5wxHR4eI3Bf8rNXwYW-0ynx_94UKg147R0l1jZZzFqQ/formResponse"
+                    method="post">
+                    <div class="contact_note"><span>＊</span>は入力必須項目です</div>
                     <dl class="contact_form_dl">
                         <div class="contact_box">
                             <dt class="contact_box_label label_name"><label for="your_name"
                                     class="is_reqired">お名前</label></dt>
-                            <dd class="contact_box_text"><input type="text" id="your_name">
+                            <dd class="contact_box_text"><input type="text" id="your_name" name="entry.1045184122"
+                                    required>
                             </dd>
                         </div>
                         <div class="contact_box">
                             <dt class="contact_box_label label_email"><label for="your_email"
                                     class="is_reqired">メールアドレス</label>
                             </dt>
-                            <dd class="contact_box_text"><input type="email" id="your_email">
+                            <dd class="contact_box_text"><input type="email" id="your_email" name="entry.156015727"
+                                    required>
                             </dd>
                         </div>
                         <div class="contact_box">
@@ -271,33 +275,47 @@
                                     class="is_reqired">法人/個人の選択</label>
                             </dt>
                             <dd class="contact_box_radio">
-                                <label>
-                                    <input class="form-radio" type="radio" name="radio_num" checked><span>法人</span>
-                                </label>
-                                <label>
-                                    <input class="form_radio" type="radio" name="radio_num"><span>個人</span>
-                                </label>
+                                <div class="contact_box_radio_wrap">
+                                    <label class="contact_box_radio_label">
+                                        <input type="radio" name="entry.1441343646"
+                                            class="contact_box_radio_label_input" value="法人" required checked>
+                                        <span>法人</span>
+                                    </label>
+                                    <label class="contact_box_radio_label">
+                                        <input type="radio" name="entry.1441343646"
+                                            class="contact_box_radio_label_input" value="個人" required>
+                                        <span>個人</span>
+                                    </label>
+                                </div>
                             </dd>
                         </div>
                         <div class="contact_box">
                             <dt class="contact_box_label label_textarea"><label for="textarea">お問い合わせ内容</label></dt>
                             <dd class="contact_box_text">
-                                <textarea name="textarea" id="textarea" style="width:100%; height:122px;"></textarea>
+                                <textarea name="entry.1091814709" id="textarea" required></textarea>
                             </dd>
                         </div>
                     </dl>
                     <div class="contact_policy">
-                        <label for="policy">
-                            <input id="policy" type="checkbox">
-                            <span>
-                                <a class="contact_policy_note" href="#">プライバシーポリシー</a>に同意します。
-                            </span>
-                        </label>
+                        <p>
+                            <label for="policy" class="contact_policy_label">
+                                <input type="checkbox" id="policy" class="contact_policy_label_input"
+                                    name="entry.134745909" value="プライバシーポリシー遵守" required>
+                                <span></span>
+                            </label>
+                            <a class="contact_policy_note" href="#" target="_blank">プライバシーポリシー</a>に同意します。
+                        </p>
                     </div>
                     <div class="contact_submit">
-                        <input class="contact_submit_btn" type="submit" value="送信">
+                        <button class="contact_submit_btn" type="submit" disabled>送信</button>
                     </div>
                 </form>
+                <div id="js-success" class="contact_message">
+                    <p>送信完了しました。ありがとうございました。</p>
+                </div>
+                <div id="js-error" class="contact_message is-error">
+                    <p>送信に失敗しました。ページを更新して再度送信してください。</p>
+                </div>
             </div>
         </div>
     </section>
@@ -325,6 +343,7 @@
     <!-- 実行 -->
     <script src="./Asset/js/scroll.js"></script>
     <script src="./Asset/js/drawer.js"></script>
+    <script src="./Asset/js/form.js"></script>
 </body>
 
 </html>
