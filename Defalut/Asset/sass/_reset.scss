@@ -23,14 +23,15 @@ figure,
 blockquote,
 dl,
 dd {
+    font-size: 1em;
     margin: 0;
     padding: 0;
 }
 
 /* Set core html defaults */
-html {
-    scroll-behavior: smooth;
-}
+// html {
+//     scroll-behavior: smooth;
+// }
 
 /* Set core body defaults */
 body {
@@ -47,6 +48,7 @@ ol {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+    -webkit-text-decoration-skip: objects;
     text-decoration-skip-ink: auto;
 }
 
@@ -89,16 +91,11 @@ textarea {
     border: none;
     border-radius: 0;
     font: inherit;
-    outline: none;
+    // outline: none;
 }
 
 textarea {
     resize: vertical;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display: none;
 }
 
 input[type="submit"],
