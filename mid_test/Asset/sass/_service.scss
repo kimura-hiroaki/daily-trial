@@ -1,0 +1,63 @@
+@use "mixin";
+@use "define";
+
+.service {
+    position: relative;
+
+    &_background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 31.25%;
+        background: #3E3E3E;
+        z-index: -10;
+    }
+
+    &_title {
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &_area {
+        padding-top: 60px;
+        width: 960px;
+        max-width: 100%;
+        margin: 0 auto 120px auto;
+
+        &_wrap {
+            margin-top: 60px;
+            display: flex;
+            background: #FFFFFF;
+        }
+
+        &_card {
+            width: calc(100% * 230 /960);
+            margin-top: 60px;
+            margin-left: calc(100% * 45 /960);
+            margin-right: calc(100% * 45 /960);
+            margin-bottom: 60px;
+
+            &_image {
+                width: 64px;
+                height: 64px;
+                margin: 0 auto;
+            }
+
+            &_title {
+                margin: 8px auto 0 auto;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: calc(4em / 20);
+                text-align: center;
+            }
+
+            &_text {
+                margin-top: 20px;
+                font-weight: 14px;
+                font-weight: 500;
+                line-height: 1.7;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use "mixin";
+@use "define";
+
+.results {
+    margin-left: 40px;
+    background: rgba(62, 62, 62, 1);
+
+    &_inner {
+        margin-left: 40px;
+    }
+
+    &_title {
+        color: #FFFFFF;
+    }
+
+    &_area {
+        padding: 60px 0;
+
+        &_wrap {
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        &_card {
+            width: 400px;
+            background: #FFFFFF;
+
+            &_content {
+                padding: 16px;
+
+                &_title {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                &_text {
+                    margin-top: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &_button {
+            margin-top: 40px;
+            display: block;
+            background: define.$color_main;
+            width: 236px;
+            height: 64px;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 62px;
+            text-align: center;
+            letter-spacing: calc(4em / 20);
+            border: 1px solid #FFFFFF;
+        }
+    }
+}

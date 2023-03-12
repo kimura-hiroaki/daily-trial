@@ -1,0 +1,77 @@
+@use "mixin";
+@use "define";
+
+.news {
+    background: define.$color_gray;
+    padding: 120px 0;
+
+    &_title {
+        text-align: center;
+    }
+
+    &_area {
+        padding: 60px 60px 40px 60px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 12px rgba(62, 62, 62, 0.2);
+
+        &_content {
+            margin-top: 60px;
+        }
+
+        &_article {
+            display: flex;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            &:first-child {
+                border-top: 1px solid #CECDCD;
+            }
+
+            border-bottom: 1px solid #CECDCD;
+
+            &_wrap {
+                display: flex;
+                width: 260px;
+            }
+
+            &_date {
+                margin-right: auto;
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: calc(0.45em / 18);
+            }
+
+            &_tag {
+                margin-left: auto;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: calc(0.35em / 14);
+                width: 120px;
+                height: 30px;
+                text-align: center;
+                line-height: 26px;
+                border: 2px solid #3B69FF;
+                border-radius: 50px;
+            }
+
+            &_text {
+                width: calc(100% - 40px - 260px);
+                margin-left: auto;
+            }
+        }
+
+        &_button {
+            margin: 40px auto 0 auto;
+            display: block;
+            color: define.$color_main;
+            width: 236px;
+            height: 64px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 62px;
+            text-align: center;
+            letter-spacing: calc(4em / 20);
+            border: 1px solid #707070;
+        }
+    }
+}

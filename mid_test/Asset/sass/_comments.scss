@@ -1,0 +1,36 @@
+@use "mixin";
+@use "define";
+
+.comments {
+    padding-bottom: 120px;
+
+    &_wrap {
+        display: flex;
+    }
+
+    &_area {
+        padding: 120px 60px;
+        width: calc(100% * 666 / 1200);
+        background: #FFFFFF;
+
+        &_card {
+            margin-top: 60px;
+            display: flex;
+
+            &_image {
+                width: 100px;
+                height: 100px;
+            }
+
+            &_text {
+                margin-left: 32px;
+                width: calc(100% - 100px - 32px);
+            }
+        }
+    }
+
+    &_image {
+        margin: auto;
+        width: calc(100% * 534 / 1200);
+    }
+}

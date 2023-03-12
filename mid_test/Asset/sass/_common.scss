@@ -1,0 +1,29 @@
+@use "mixin";
+@use "define";
+
+body {
+    font-family: 'Montserrat', 'Yu Gothic', sans-serif;
+    font-size: 16px;
+    color: define.$color_main;
+    line-height: 1.5;
+    background: define.$color_gray;
+}
+
+.container {
+    width: 1200px;
+    max-width: calc(100% - 40px * 2);
+    margin: 0 auto;
+}
+
+.section_title {
+    font-size: 36px;
+    font-weight: 600;
+
+    h2 {
+        font-weight: 600;
+    }
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+@use "mixin";
+@use "define";
+
+.main_visual {
+    padding-top: calc(100% * 648 /1280);
+    background: url(../img/mv.png) no-repeat center center / cover;
+    position: relative;
+
+    &_textarea {
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        margin-right: 40px;
+
+        &_title {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: calc(0.02em / 32);
+        }
+
+        &_text {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: calc(0.45em / 18);
+        }
+
+        &_button {
+            margin-top: 40px;
+
+
+            a {
+                display: inline-block;
+                color: rgba(255, 255, 255, 1);
+                width: 280px;
+                height: 50px;
+                border-radius: 10px;
+                box-shadow: 0px 3px 5px rgba(62, 62, 62, 0.2);
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 50px;
+                text-align: center;
+                letter-spacing: calc(0.45em / 18);
+                background: #FFAA3B;
+            }
+        }
+    }
+}
