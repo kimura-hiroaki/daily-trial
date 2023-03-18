@@ -23,6 +23,10 @@
             padding-top: 32px;
             padding-bottom: 32px;
 
+            &:hover {
+                background: #4973FF1A;
+            }
+
             &:first-child {
                 border-top: 1px solid #CECDCD;
             }
@@ -32,6 +36,7 @@
             &_wrap {
                 display: flex;
                 width: 260px;
+                align-items: center;
             }
 
             &_date {
@@ -55,8 +60,14 @@
             }
 
             &_text {
-                width: calc(100% - 40px - 260px);
-                margin-left: auto;
+                width: calc(100% - 40px - 260px - 83px);
+                margin-left: 40px;
+
+            }
+
+            &_icon {
+                margin-left: 56px;
+                margin-block: auto;
             }
         }
 
@@ -72,6 +83,13 @@
             text-align: center;
             letter-spacing: calc(4em / 20);
             border: 1px solid #707070;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                color: #FFFFFF;
+                background: define.$color_main;
+                border: 1px solid define.$color_main;
+            }
         }
     }
 }

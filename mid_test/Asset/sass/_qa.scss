@@ -1,0 +1,61 @@
+@use "mixin";
+@use "define";
+
+.qa {
+    background: url(../img/qa-bg.png) no-repeat center center / cover;
+
+    &_title {
+        padding-top: 60px;
+        text-align: center;
+    }
+
+    &_accordion {
+        margin-left: auto;
+        padding: 16px;
+        width: 612px;
+        background: #FFFFFF;
+        border-radius: 4px;
+
+        &:first-child {
+            margin-top: 60px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+
+        &_header {
+            display: flex;
+
+            &_logo {
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                border-radius: 50%;
+                background: define.$color_safe;
+                color: #FFFFFF;
+                font-weight: 600;
+            }
+
+            &_title {
+                margin-left: 16px;
+                margin-right: auto;
+                font-weight: bold;
+            }
+
+            &_icon {
+                width: 17px;
+                height: 17px;
+            }
+        }
+
+        &_answer {
+            margin-top: 16px;
+            width: 100%;
+            padding: 16px;
+            background: #3B69FF33;
+            border-radius: 4px;
+        }
+    }
+}

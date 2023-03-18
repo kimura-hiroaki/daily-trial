@@ -1,0 +1,66 @@
+@use "mixin";
+@use "define";
+
+.footer {
+    background: define.$color_main;
+    padding: 60px 0;
+
+    &_wrap {
+        width: 960px;
+        max-width: 100%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_info {
+        &_sns {
+            display: flex;
+
+            &_twitter {
+                font-size: 36px;
+                color: #E3E3E3;
+            }
+
+            &_facebook {
+                margin-left: 32px;
+                font-size: 36px;
+                color: #E3E3E3;
+            }
+        }
+
+        &_ul {
+            margin-top: 40px;
+
+            li {
+                &:not(:first-child) {
+                    margin-top: 24px;
+                }
+            }
+        }
+
+        &_item {
+            color: #FFFFFF;
+            letter-spacing: calc(0.4em / 16);
+        }
+    }
+
+    &_campany {
+        &_logo {
+            a {
+                font-size: 40px;
+                font-weight: bold;
+                color: #E3E3E3;
+            }
+        }
+
+        &_copyright {
+            margin-top: 10px;
+            font-size: 12px;
+            text-align: right;
+            color: #FFFFFF;
+            opacity: 0.6;
+            letter-spacing: calc(0.3em / 12);
+        }
+    }
+}

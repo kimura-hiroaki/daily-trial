@@ -3,6 +3,18 @@
 
 .comments {
     padding-bottom: 120px;
+    position: relative;
+
+    &_background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% * 980 / 1280);
+        // padding-top: 45%;
+        height: 576px;
+        background: define.$color_main;
+        z-index: -1;
+    }
 
     &_wrap {
         display: flex;

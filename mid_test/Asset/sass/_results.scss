@@ -54,6 +54,13 @@
             text-align: center;
             letter-spacing: calc(4em / 20);
             border: 1px solid #FFFFFF;
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                color: define.$color_main;
+                background: #FFFFFF;
+                border: 1px solid #707070;
+            }
         }
     }
 }

@@ -42,7 +42,12 @@
                 text-align: center;
                 letter-spacing: calc(0.45em / 18);
                 background: #FFAA3B;
+
+                &:hover {
+                    background: #F18900;
+                }
             }
+
         }
     }
 }
