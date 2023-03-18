@@ -90,7 +90,9 @@
                 border-bottom: 1px solid #707070;
 
                 &:hover,
-                &:active {
+                &:active,
+                &:focus,
+                &:focus-visible {
                     border-bottom: 1px solid #4973FF;
                     box-shadow: 0 5px 4px rgba(73, 115, 255, 0.5);
                 }
@@ -102,7 +104,9 @@
                 border-bottom: 1px solid #707070;
 
                 &:hover,
-                &:active {
+                &:active,
+                &:focus,
+                &:focus-visible {
                     border-bottom: 1px solid #4973FF;
                     box-shadow: 0 5px 4px rgba(73, 115, 255, 0.5);
                 }
@@ -173,6 +177,7 @@
                         height: 6px;
                         border-radius: 50%;
                         background: #3B69FF;
+                        opacity: 0;
                     }
                 }
 
@@ -189,6 +194,10 @@
                         background: #4973FF33;
                     }
                 }
+            }
+
+            [type="radio"]:checked+span::after {
+                opacity: 1;
             }
         }
     }
@@ -210,7 +219,9 @@
                 resize: vertical;
 
                 &:hover,
-                &:active {
+                &:active,
+                &:focus,
+                &:focus-visible {
                     border-bottom: 1px solid #4973FF;
                     box-shadow: 0 5px 4px rgba(73, 115, 255, 0.5);
                 }
@@ -227,7 +238,7 @@
         }
 
         &_label {
-            margin-right: 20px;
+            padding-left: 40px;
             position: relative;
             vertical-align: middle;
 
@@ -239,8 +250,6 @@
             }
 
             span {
-                cursor: pointer;
-                display: inline-block;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -253,24 +262,33 @@
                     content: "";
                     position: absolute;
                     top: 3px;
-                    left: 2px;
+                    left: 1px;
                     width: 16px;
                     height: 8px;
                     border-left: 2px solid #3B69FF;
                     border-bottom: 2px solid #3B69FF;
                     transform: rotate(-45deg);
+                    opacity: 0;
                 }
+            }
 
-                &:hover {
+            &:hover {
+                span {
                     border: 1px solid #3B69FF;
                     box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
                 }
+            }
 
-                &:active {
+            &:active {
+                span {
                     border: 1px solid #3B69FF;
                     background: #4973FF33;
                 }
             }
+        }
+
+        [type="checkbox"]:checked+span::after {
+            opacity: 1;
         }
     }
 

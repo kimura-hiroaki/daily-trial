@@ -2,10 +2,10 @@
 @use "define";
 
 .qa {
+    padding: 60px 0 120px 0;
     background: url(../img/qa-bg.png) no-repeat center center / cover;
 
     &_title {
-        padding-top: 60px;
         text-align: center;
     }
 
@@ -47,6 +47,32 @@
             &_icon {
                 width: 17px;
                 height: 17px;
+                // position: relative;
+
+                // &_bar1,
+                // &_bar2 {
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     width: 17px;
+                //     height: 2px;
+                //     background: #3B69FF;
+                //     transition: all 0.3s ease 0s;
+                // }
+
+                // &_bar2 {
+                //     transform: translate(-50%, -50%) rotate(90deg);
+                // }
+
+                // &.is-open &_bar2 {
+                //     transform: translate(-50%, -50%) rotate(0);
+                // }
+                background: url(../img/plus.svg) no-repeat center center / contain;
+
+                &.is-open {
+                    background: url(../img/minus.svg) no-repeat center center / contain;
+                }
             }
         }
 
@@ -56,6 +82,7 @@
             padding: 16px;
             background: #3B69FF33;
             border-radius: 4px;
+            display: none;
         }
     }
 }

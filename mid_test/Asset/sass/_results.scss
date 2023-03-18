@@ -15,11 +15,12 @@
 
     &_area {
         padding: 60px 0;
+        overflow: hidden;
 
         &_wrap {
-            margin-top: 60px;
-            display: flex;
-            flex-wrap: nowrap;
+            // margin-top: 60px;
+            // display: flex;
+            // flex-wrap: nowrap;
         }
 
         &_card {

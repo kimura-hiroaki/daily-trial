@@ -88,6 +88,7 @@ textarea {
   border: none;
   border-radius: 0;
   font: inherit;
+  outline: none;
 }
 
 textarea {
@@ -367,11 +368,7 @@ a {
 }
 .results_area {
   padding: 60px 0;
-}
-.results_area_wrap {
-  margin-top: 60px;
-  display: flex;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 .results_area_card {
   width: 400px;
@@ -489,10 +486,10 @@ a {
 }
 
 .qa {
+  padding: 60px 0 120px 0;
   background: url(../img/qa-bg.png) no-repeat center center/cover;
 }
 .qa_title {
-  padding-top: 60px;
   text-align: center;
 }
 .qa_accordion {
@@ -529,6 +526,10 @@ a {
 .qa_accordion_header_icon {
   width: 17px;
   height: 17px;
+  background: url(../img/plus.svg) no-repeat center center/contain;
+}
+.qa_accordion_header_icon.is-open {
+  background: url(../img/minus.svg) no-repeat center center/contain;
 }
 .qa_accordion_answer {
   margin-top: 16px;
@@ -536,6 +537,7 @@ a {
   padding: 16px;
   background: rgba(59, 105, 255, 0.2);
   border-radius: 4px;
+  display: none;
 }
 
 .access {
@@ -671,7 +673,7 @@ a {
   padding: 4px 0 4px 12px;
   border-bottom: 1px solid #707070;
 }
-.contact_box_text [type=text]:hover, .contact_box_text [type=text]:active {
+.contact_box_text [type=text]:hover, .contact_box_text [type=text]:active, .contact_box_text [type=text]:focus, .contact_box_text [type=text]:focus-visible {
   border-bottom: 1px solid #4973FF;
   box-shadow: 0 5px 4px rgba(73, 115, 255, 0.5);
 }
@@ -680,7 +682,7 @@ a {
   padding: 4px 0 4px 12px;
   border-bottom: 1px solid #707070;
 }
-.contact_box_text [type=email]:hover, .contact_box_text [type=email]:active {
+.contact_box_text [type=email]:hover, .contact_box_text [type=email]:active, .contact_box_text [type=email]:focus, .contact_box_text [type=email]:focus-visible {
   border-bottom: 1px solid #4973FF;
   box-shadow: 0 5px 4px rgba(73, 115, 255, 0.5);
 }
@@ -742,6 +744,7 @@ a {
   height: 6px;
   border-radius: 50%;
   background: #3B69FF;
+  opacity: 0;
 }
 .contact_box_radio_label:hover span {
   border: 1px solid #3B69FF;
@@ -750,6 +753,9 @@ a {
 .contact_box_radio_label:active span {
   border: 1px solid #3B69FF;
   background: rgba(73, 115, 255, 0.2);
+}
+.contact_box_radio [type=radio]:checked + span::after {
+  opacity: 1;
 }
 .contact_textareabox {
   margin-top: 32px;
@@ -765,7 +771,7 @@ a {
   border: 1px solid #707070;
   resize: vertical;
 }
-.contact_textareabox_text textarea:hover, .contact_textareabox_text textarea:active {
+.contact_textareabox_text textarea:hover, .contact_textareabox_text textarea:active, .contact_textareabox_text textarea:focus, .contact_textareabox_text textarea:focus-visible {
   border-bottom: 1px solid #4973FF;
   box-shadow: 0 5px 4px rgba(73, 115, 255, 0.5);
 }
@@ -777,7 +783,7 @@ a {
   font-weight: bold;
 }
 .contact_policy_label {
-  margin-right: 20px;
+  padding-left: 40px;
   position: relative;
   vertical-align: middle;
 }
@@ -788,8 +794,6 @@ a {
   opacity: 0;
 }
 .contact_policy_label span {
-  cursor: pointer;
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -802,20 +806,24 @@ a {
   content: "";
   position: absolute;
   top: 3px;
-  left: 2px;
+  left: 1px;
   width: 16px;
   height: 8px;
   border-left: 2px solid #3B69FF;
   border-bottom: 2px solid #3B69FF;
   transform: rotate(-45deg);
+  opacity: 0;
 }
-.contact_policy_label span:hover {
+.contact_policy_label:hover span {
   border: 1px solid #3B69FF;
   box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
 }
-.contact_policy_label span:active {
+.contact_policy_label:active span {
   border: 1px solid #3B69FF;
   background: rgba(73, 115, 255, 0.2);
+}
+.contact_policy [type=checkbox]:checked + span::after {
+  opacity: 1;
 }
 .contact_submit {
   margin-top: 40px;
