@@ -21,10 +21,11 @@
     <!-- title -->
     <title>中級最終課題LP</title>
 
+    <!-- javascript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <!-- css -->
     <link rel="stylesheet" href="./Asset/css/style.css">
-
-    <!-- javascript -->
 
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -38,13 +39,13 @@
         <div class="container">
             <nav class="header_nav">
                 <ul class="header_nav_ul">
-                    <li><a href="" class="header_nav_item">News</a></li>
-                    <li><a href="" class="header_nav_item">Service</a></li>
-                    <li><a href="" class="header_nav_item">Results</a></li>
-                    <li><a href="" class="header_nav_item">Price</a></li>
-                    <li><a href="" class="header_nav_item">Comments</a></li>
-                    <li><a href="" class="header_nav_item">FAQ</a></li>
-                    <li><a href="" class="header_nav_item">Contact</a></li>
+                    <li><a href="#news" class="header_nav_item">News</a></li>
+                    <li><a href="#service" class="header_nav_item">Service</a></li>
+                    <li><a href="#results" class="header_nav_item">Results</a></li>
+                    <li><a href="#price" class="header_nav_item">Price</a></li>
+                    <li><a href="#comments" class="header_nav_item">Comments</a></li>
+                    <li><a href="#qa" class="header_nav_item">FAQ</a></li>
+                    <li><a href="#contact" class="header_nav_item">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,14 +72,14 @@
         </section>
 
         <!-- News -->
-        <section class="news">
+        <section id="news" class="news">
             <div class="container">
                 <div class="news_area">
                     <div class="section_title news_title">
                         <h2>News</h2>
                     </div>
                     <div class="news_area_content">
-                        <a href="">
+                        <a href="#">
                             <li class="news_area_article">
                                 <div class="news_area_article_wrap">
                                     <div class="news_area_article_date">2019-02-01</div>
@@ -92,7 +93,7 @@
                                 </div>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="#">
                             <li class="news_area_article">
                                 <div class="news_area_article_wrap">
                                     <div class="news_area_article_date">2019-02-01</div>
@@ -104,7 +105,7 @@
                                 </div>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="#">
                             <li class="news_area_article">
                                 <div class="news_area_article_wrap">
                                     <div class="news_area_article_date">2019-02-01</div>
@@ -117,13 +118,13 @@
                             </li>
                         </a>
                     </div>
-                    <div><a href="" class="news_area_button">MORE</a></div>
+                    <div><a href="#" class="news_area_button">MORE</a></div>
                 </div>
             </div>
         </section>
 
         <!-- Service -->
-        <section class="service">
+        <section id="service" class="service">
             <div class="service_background"></div>
             <div class="container">
                 <div class="service_area">
@@ -161,84 +162,86 @@
         </section>
 
         <!-- Results -->
-        <section class="results">
+        <section id="results" class="results">
             <div class="results_inner">
                 <div class="results_area">
                     <div class="section_title results_title">
                         <h2>Results</h2>
                     </div>
                     <div class="swiper">
-                        <div class="results_area_wrap swiper-wrapper">
-                            <div class="results_area_card swiper-slide">
-                                <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
-                                </div>
-                                <div class="results_area_card_content">
-                                    <div class="results_area_card_content_title">
-                                        <h3>とかくに人の世は住みにくい。</h3>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="results_area_card swiper-slide">
+                                    <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
                                     </div>
-                                    <div class="results_area_card_content_text">
-                                        どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。
+                                    <div class="results_area_card_content">
+                                        <div class="results_area_card_content_title">
+                                            <h3>とかくに人の世は住みにくい。</h3>
+                                        </div>
+                                        <div class="results_area_card_content_text">
+                                            どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results_area_card swiper-slide">
+                                    <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
+                                    </div>
+                                    <div class="results_area_card_content">
+                                        <div class="results_area_card_content_title">
+                                            <h3>とかくに人の世は住みにくい。</h3>
+                                        </div>
+                                        <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
+                                            、画が出来る。意地を通せば窮屈だ。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results_area_card swiper-slide">
+                                    <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
+                                    </div>
+                                    <div class="results_area_card_content">
+                                        <div class="results_area_card_content_title">
+                                            <h3>とかくに人の世は住みにくい。</h3>
+                                        </div>
+                                        <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
+                                            、画が出来る。意地を通せば窮屈だ。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results_area_card swiper-slide">
+                                    <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
+                                    </div>
+                                    <div class="results_area_card_content">
+                                        <div class="results_area_card_content_title">
+                                            <h3>とかくに人の世は住みにくい。</h3>
+                                        </div>
+                                        <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
+                                            、画が出来る。意地を通せば窮屈だ。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results_area_card swiper-slide">
+                                    <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
+                                    </div>
+                                    <div class="results_area_card_content">
+                                        <div class="results_area_card_content_title">
+                                            <h3>とかくに人の世は住みにくい。</h3>
+                                        </div>
+                                        <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
+                                            、画が出来る。意地を通せば窮屈だ。
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="results_area_card swiper-slide">
-                                <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
-                                </div>
-                                <div class="results_area_card_content">
-                                    <div class="results_area_card_content_title">
-                                        <h3>とかくに人の世は住みにくい。</h3>
-                                    </div>
-                                    <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
-                                        、画が出来る。意地を通せば窮屈だ。
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="results_area_card swiper-slide">
-                                <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
-                                </div>
-                                <div class="results_area_card_content">
-                                    <div class="results_area_card_content_title">
-                                        <h3>とかくに人の世は住みにくい。</h3>
-                                    </div>
-                                    <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
-                                        、画が出来る。意地を通せば窮屈だ。
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="results_area_card swiper-slide">
-                                <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
-                                </div>
-                                <div class="results_area_card_content">
-                                    <div class="results_area_card_content_title">
-                                        <h3>とかくに人の世は住みにくい。</h3>
-                                    </div>
-                                    <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
-                                        、画が出来る。意地を通せば窮屈だ。
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="results_area_card swiper-slide">
-                                <div class="results_area_card_image"><img src="./Asset/img/slide1.png" alt="slide1">
-                                </div>
-                                <div class="results_area_card_content">
-                                    <div class="results_area_card_content_title">
-                                        <h3>とかくに人の世は住みにくい。</h3>
-                                    </div>
-                                    <div class="results_area_card_content_text">どこへ越しても住みにくいと悟った時、詩が生れて
-                                        、画が出来る。意地を通せば窮屈だ。
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div><a href="" class="results_area_button">VIEW ALL</a></div>
                     </div>
-                    <div><a href="" class="results_area_button">VIEW ALL</a></div>
                 </div>
             </div>
         </section>
 
         <!-- Price -->
-        <section class="price">
+        <section id="price" class="price">
             <div class="section_title price_title">
                 <h2>Price</h2>
             </div>
@@ -262,7 +265,7 @@
         </section>
 
         <!-- Comments -->
-        <section class="comments">
+        <section id="comments" class="comments">
             <div class="comments_background"></div>
             <div class="container">
                 <div class="comments_wrap">
@@ -291,7 +294,7 @@
         </section>
 
         <!-- Q&A -->
-        <section class="qa">
+        <section id="qa" class="qa">
             <div class="section_title qa_title">
                 <h2>Q &amp; A</h2>
             </div>
@@ -367,7 +370,7 @@
         </section>
 
         <!-- Access -->
-        <section class="access">
+        <section id="access" class="access">
             <div class="access_background"></div>
             <div class="container">
                 <div class="access_wrap">
@@ -393,7 +396,7 @@
         </section>
 
         <!-- Contact -->
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="container">
                 <div class="contact_area">
                     <div class="contact_area_header">
@@ -518,7 +521,7 @@
             </div>
         </div>
     </footer>
-    <div class="totop"><img src="./Asset/img/totop.svg" alt="totop"></div>
+    <a href="#" class="totop"><img src="./Asset/img/totop.svg" alt="totop"></a>
 
     <!-- script読み込み（後ろで初期化） -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
