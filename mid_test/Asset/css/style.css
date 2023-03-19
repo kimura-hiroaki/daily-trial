@@ -882,7 +882,7 @@ a {
 }
 .contact_submit [type=submit] {
   display: block;
-  background: #FFAA3B;
+  background: #B2B2B2;
   width: 173px;
   height: 50px;
   color: #FFFFFF;
@@ -893,9 +893,22 @@ a {
   letter-spacing: 0.025em;
   border-radius: 10px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: default;
 }
-.contact_submit [type=submit]:hover {
+.contact_submit [type=submit].is-active {
+  background: #FFAA3B;
+  cursor: pointer;
+}
+.contact_submit [type=submit].is-active:hover {
   background: #F18900;
+}
+
+.contact_message {
+  font-weight: 500;
+  display: none;
+}
+.contact_message.is-error {
+  color: #F00;
 }
 
 .footer {

@@ -44,7 +44,7 @@
                     <li><a href="#results" class="header_nav_item">Results</a></li>
                     <li><a href="#price" class="header_nav_item">Price</a></li>
                     <li><a href="#comments" class="header_nav_item">Comments</a></li>
-                    <li><a href="#qa" class="header_nav_item">FAQ</a></li>
+                    <li><a href="#qa" class="header_nav_item">FAQs</a></li>
                     <li><a href="#contact" class="header_nav_item">Contact</a></li>
                 </ul>
             </nav>
@@ -408,16 +408,18 @@
                         </div>
                     </div>
                     <div class="contact_form">
-                        <form action="#" method="post">
+                        <form id="js-form"
+                            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeaOHHf9qSzHNDV-Cia4rsgfQsdLEl3k5R-vKUIbXeH7-JhNA/formResponse"
+                            method="post">
                             <dl class="contact_form_dl">
                                 <div class="contact_box">
                                     <dt class="contact_box_label"><label for="prefecture">お問い合わせ種別</label></dt>
                                     <dd class="contact_box_select">
-                                        <select name="prefecture" id="prefecture">
-                                            <option value="">選択してください</option>
-                                            <option value="">WEB DESIGN</option>
-                                            <option value="">WEB CODING</option>
-                                            <option value="">CMS CUSTOMIZE</option>
+                                        <select name="entry.615562766" id="prefecture">
+                                            <option value="選択してください">選択してください</option>
+                                            <option value="WEB DESIGN">WEB DESIGN</option>
+                                            <option value="WEB CODING">WEB CODING</option>
+                                            <option value="CMS CUSTOMIZE">CMS CUSTOMIZE</option>
                                         </select>
                                     </dd>
                                 </div>
@@ -426,7 +428,8 @@
                                         <label for="your_name" class="is_reqired">氏名</label>
                                     </dt>
                                     <dd class="contact_box_text">
-                                        <input type="text" name="" id="your_name" placeholder="氏名" required>
+                                        <input type="text" name="entry.1746924551" id="your_name" placeholder="氏名"
+                                            required>
                                     </dd>
                                 </div>
                                 <div class="contact_box">
@@ -434,7 +437,8 @@
                                         <label for="your_ruby" class="is_reqired">フリガナ</label>
                                     </dt>
                                     <dd class="contact_box_text">
-                                        <input type="text" name="" id="your_ruby" placeholder="フリガナ" required>
+                                        <input type="text" name="entry.503087740" id="your_ruby" placeholder="フリガナ"
+                                            required>
                                     </dd>
                                 </div>
                                 <div class="contact_box">
@@ -442,7 +446,8 @@
                                         <label for="your_email">メールアドレス</label>
                                     </dt>
                                     <dd class="contact_box_text">
-                                        <input type="email" name="" id="your_email" placeholder="sample@gmail.com">
+                                        <input type="email" name="entry.454885011" id="your_email"
+                                            placeholder="sample@gmail.com">
                                     </dd>
                                 </div>
                                 <div class="contact_box">
@@ -451,13 +456,13 @@
                                     <dd class="contact_box_radio">
                                         <div class="contact_box_radio_wrap">
                                             <label class="contact_box_radio_label">
-                                                <input type="radio" name="entry.1441343646"
+                                                <input type="radio" name="entry.756104990"
                                                     class="contact_box_radio_label_input" value="男性" required checked>
                                                 <span></span>
                                                 男性
                                             </label>
                                             <label class="contact_box_radio_label">
-                                                <input type="radio" name="entry.1441343646"
+                                                <input type="radio" name="entry.756104990"
                                                     class="contact_box_radio_label_input" value="女性" required>
                                                 <span></span>
                                                 女性
@@ -470,15 +475,15 @@
                                         <label for="textarea">メッセージ</label>
                                     </dt>
                                     <dd class="contact_textareabox_text">
-                                        <textarea name="" id="textarea" required></textarea>
+                                        <textarea name="entry.1502693192" id="textarea"></textarea>
                                     </dd>
                                 </div>
                             </dl>
                             <div class="contact_policy">
                                 <p>
                                     <label class="contact_policy_label" for="policy">
-                                        <input class="contact_policy_label_input" type="checkbox" name="" id="policy"
-                                            required>
+                                        <input class="contact_policy_label_input" type="checkbox"
+                                            name="entry.1833175559" id="policy" value="プライバシーポリシー遵守" required>
                                         <span class="contact_policy_label_icon"></span>
                                         個人情報保護方針に同意する
                                     </label>
@@ -488,6 +493,12 @@
                                 <button class="contact_submit_btn" type="submit">送信する</button>
                             </div>
                         </form>
+                        <div id="js-success" class="contact_message">
+                            <p>送信完了しました。ありがとうございました。</p>
+                        </div>
+                        <div id="js-error" class="contact_message is-error">
+                            <p>送信に失敗しました。ページを更新して再度送信してください。</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -532,6 +543,7 @@
     <script src="./Asset/js/totop.js"></script>
     <script src="./Asset/js/accordion.js"></script>
     <script src="./Asset/js/slider.js"></script>
+    <script src="./Asset/js/form.js"></script>
 
 </body>
 
