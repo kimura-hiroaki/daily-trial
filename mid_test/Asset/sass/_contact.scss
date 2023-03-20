@@ -92,7 +92,7 @@
                 &::after {
                     position: absolute;
                     content: "必須";
-                    top: 50%;
+                    top: 58%;
                     right: -52px;
                     transform: translateY(-50%);
                     width: 40px;
@@ -104,6 +104,11 @@
                     text-align: center;
                     background: #FF4646;
                     border-radius: 2px;
+
+                    @include mixin.mq(sp) {
+                        top: 51%;
+                        right: -60px;
+                    }
                 }
             }
         }

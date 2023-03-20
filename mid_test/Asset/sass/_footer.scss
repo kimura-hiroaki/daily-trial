@@ -28,13 +28,17 @@
             }
 
             &_twitter {
-                font-size: 38px;
+                font-size: 39px;
                 color: #E3E3E3;
+
+                @include mixin.mq(sp) {
+                    font-size: 38px;
+                }
             }
 
             &_facebook {
                 margin-left: 32px;
-                font-size: 36px;
+                font-size: 39px;
                 color: #E3E3E3;
 
                 @include mixin.mq(sp) {
@@ -45,7 +49,7 @@
         }
 
         &_ul {
-            margin-top: 29px;
+            margin-top: 24px;
 
             @include mixin.mq(sp) {
                 margin-top: 26px;

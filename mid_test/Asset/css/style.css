@@ -148,6 +148,12 @@ a {
   width: 50px;
   height: 50px;
 }
+@media (max-width: 767px) {
+  .totop {
+    bottom: 13px;
+    right: 16px;
+  }
+}
 
 .is-ja {
   font-family: "游ゴシック体", "Yu Gothic";
@@ -762,9 +768,10 @@ a {
 }
 .results_area_button {
   margin-top: 100px;
+  padding-left: 3px;
   display: block;
   background: #3E3E3E;
-  width: 209px;
+  width: 289px;
   height: 64px;
   color: #FFFFFF;
   font-size: 20px;
@@ -1332,7 +1339,7 @@ a {
 .contact_box_label .is_reqired::after {
   position: absolute;
   content: "必須";
-  top: 50%;
+  top: 58%;
   right: -52px;
   transform: translateY(-50%);
   width: 40px;
@@ -1344,6 +1351,12 @@ a {
   text-align: center;
   background: #FF4646;
   border-radius: 2px;
+}
+@media (max-width: 767px) {
+  .contact_box_label .is_reqired::after {
+    top: 51%;
+    right: -60px;
+  }
 }
 .contact_box_text {
   margin-left: 60px;
@@ -1659,12 +1672,17 @@ a {
   }
 }
 .footer_info_sns_twitter {
-  font-size: 38px;
+  font-size: 39px;
   color: #E3E3E3;
+}
+@media (max-width: 767px) {
+  .footer_info_sns_twitter {
+    font-size: 38px;
+  }
 }
 .footer_info_sns_facebook {
   margin-left: 32px;
-  font-size: 36px;
+  font-size: 39px;
   color: #E3E3E3;
 }
 @media (max-width: 767px) {
@@ -1674,7 +1692,7 @@ a {
   }
 }
 .footer_info_ul {
-  margin-top: 29px;
+  margin-top: 24px;
 }
 @media (max-width: 767px) {
   .footer_info_ul {
