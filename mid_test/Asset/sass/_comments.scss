@@ -3,6 +3,11 @@
 
 .comments {
     padding-bottom: 120px;
+
+    @include mixin.mq(sp) {
+        padding-bottom: 60px;
+    }
+
     position: relative;
 
     &_background {
@@ -14,29 +19,69 @@
         height: 576px;
         background: define.$color_main;
         z-index: -1;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            height: 426px;
+        }
     }
 
     &_wrap {
         display: flex;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
     }
 
     &_area {
-        padding: 120px 60px;
+        padding: 0 60px;
+        padding-top: 128px;
+        padding-bottom: 122px;
         width: calc(100% * 666 / 1200);
         background: #FFFFFF;
 
+        @include mixin.mq(sp) {
+            padding: 0 20px;
+            padding-top: 47px;
+            padding-bottom: 38px;
+            width: 100%;
+        }
+
         &_card {
-            margin-top: 60px;
+            margin-top: 62px;
             display: flex;
 
+            @include mixin.mq(sp) {
+                margin-top: 43px;
+
+                &.is-card2 {
+                    margin-top: 34px;
+                }
+            }
+
             &_image {
+                padding-top: 3px;
                 width: 100px;
                 height: 100px;
+
+                @include mixin.mq(sp) {
+                    width: 60px;
+                    height: 60px;
+                }
             }
 
             &_text {
                 margin-left: 32px;
                 width: calc(100% - 100px - 32px);
+                font-weight: 500;
+
+                @include mixin.mq(sp) {
+                    font-size: 14px;
+                    margin-left: 20px;
+                    width: calc(100% - 60px - 20px);
+                    line-height: calc(20/14);
+                }
             }
         }
     }
@@ -44,5 +89,9 @@
     &_image {
         margin: auto;
         width: calc(100% * 534 / 1200);
+
+        @include mixin.mq(sp) {
+            display: none;
+        }
     }
 }

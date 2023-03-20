@@ -3,9 +3,9 @@ $breakpoints: (
     //スマホ
     'sp': "(max-width: 767px)",
     //タブレット
-    'tab': "(min-width: 768px) and (max-width: 1199px)",
+    'tab': "(min-width: 768px) and (max-width: 1020px)",
     //PC
-    'pc': "(min-width: 1200px)"
+    'pc': "(min-width: 1021px)"
     ) !default;
 
 //メディアクエリ用のmixinを定義。デフォ値はsp

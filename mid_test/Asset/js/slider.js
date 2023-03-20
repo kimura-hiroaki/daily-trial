@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 40,
+    spaceBetween: 20,
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
@@ -20,4 +20,9 @@ const swiper = new Swiper('.swiper-container', {
     // scrollbar: {
     //     el: '.swiper-scrollbar',
     // },
+    breakpoints: {
+        768: {
+            spaceBetween: 40
+        }
+    }
 });

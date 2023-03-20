@@ -3,7 +3,8 @@
 
 .footer {
     background: define.$color_main;
-    padding: 60px 0;
+    padding-top: 50px;
+    padding-bottom: 60px;
 
     &_wrap {
         width: 960px;
@@ -11,14 +12,23 @@
         margin-inline: auto;
         display: flex;
         justify-content: space-between;
+
+        @include mixin.mq(sp) {
+            display: block;
+            text-align: center;
+        }
     }
 
     &_info {
         &_sns {
             display: flex;
 
+            @include mixin.mq(sp) {
+                justify-content: center;
+            }
+
             &_twitter {
-                font-size: 36px;
+                font-size: 38px;
                 color: #E3E3E3;
             }
 
@@ -26,41 +36,71 @@
                 margin-left: 32px;
                 font-size: 36px;
                 color: #E3E3E3;
+
+                @include mixin.mq(sp) {
+                    margin-left: 52px;
+                    font-size: 40px;
+                }
             }
         }
 
         &_ul {
-            margin-top: 40px;
+            margin-top: 29px;
+
+            @include mixin.mq(sp) {
+                margin-top: 26px;
+                font-size: 14px;
+            }
 
             li {
                 &:not(:first-child) {
-                    margin-top: 24px;
+                    margin-top: 16px;
+
+                    @include mixin.mq(sp) {
+                        margin-top: 19px;
+                    }
                 }
             }
         }
 
         &_item {
             color: #FFFFFF;
+            font-weight: 500;
             letter-spacing: calc(0.4em / 16);
         }
     }
 
     &_campany {
+        margin-top: 5px;
+
+        @include mixin.mq(sp) {
+            margin-top: 32px;
+        }
+
         &_logo {
             a {
                 font-size: 40px;
                 font-weight: bold;
                 color: #E3E3E3;
+
+                @include mixin.mq(sp) {
+                    font-size: 32px;
+                }
             }
         }
 
         &_copyright {
-            margin-top: 10px;
+            margin-top: 3px;
             font-size: 12px;
             text-align: right;
             color: #FFFFFF;
             opacity: 0.6;
             letter-spacing: calc(0.3em / 12);
+
+            @include mixin.mq(sp) {
+                margin-top: 5px;
+                text-align: center;
+            }
         }
     }
 }

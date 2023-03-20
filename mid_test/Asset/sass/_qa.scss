@@ -2,8 +2,12 @@
 @use "define";
 
 .qa {
-    padding: 60px 0 120px 0;
+    padding: 68px 0 120px 0;
     background: url(../img/qa-bg.png) no-repeat center center / cover;
+
+    @include mixin.mq(sp) {
+        padding: 47px 0 60px 0;
+    }
 
     &_title {
         text-align: center;
@@ -16,16 +20,29 @@
         background: #FFFFFF;
         border-radius: 4px;
 
+        @include mixin.mq(sp) {
+            width: 100%;
+        }
+
         &:first-child {
-            margin-top: 60px;
+            margin-top: 67px;
+
+            @include mixin.mq(sp) {
+                margin-top: 45px;
+            }
         }
 
         &:not(:first-child) {
             margin-top: 32px;
+
+            @include mixin.mq(sp) {
+                margin-top: 24px;
+            }
         }
 
         &_header {
             display: flex;
+            align-items: center;
 
             &_logo {
                 width: 24px;
@@ -42,11 +59,13 @@
                 margin-left: 16px;
                 margin-right: auto;
                 font-weight: bold;
+                letter-spacing: calc(0.4em / 16);
+                line-height: 24px;
             }
 
             &_icon {
                 width: 17px;
-                height: 17px;
+                height: 24px;
                 // position: relative;
 
                 // &_bar1,
@@ -79,10 +98,25 @@
         &_answer {
             margin-top: 16px;
             width: 100%;
-            padding: 16px;
+            padding: 0 16px;
+            padding-top: 13px;
+            padding-bottom: 11px;
             background: #3B69FF33;
             border-radius: 4px;
             display: none;
+            font-weight: 500;
+
+            @include mixin.mq(sp) {
+                font-size: 14px;
+                padding: 0 12px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                line-height: calc(20/14);
+            }
+
+            &.is-answer2 {
+                margin-top: 12px;
+            }
         }
     }
 }

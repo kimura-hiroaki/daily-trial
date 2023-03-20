@@ -12,6 +12,11 @@
         padding-top: 31.25%;
         background: #3E3E3E;
         z-index: -10;
+
+        @include mixin.mq(sp) {
+            padding-top: 0;
+            height: 480px;
+        }
     }
 
     &_title {
@@ -20,43 +25,97 @@
     }
 
     &_area {
-        padding-top: 60px;
+        padding-top: 68px;
         width: 960px;
         max-width: 100%;
         margin: 0 auto 120px auto;
 
+        @include mixin.mq(sp) {
+            padding-top: 47px;
+            margin-bottom: 95px;
+        }
+
         &_wrap {
-            margin-top: 60px;
+            margin-top: 66px;
             display: flex;
             background: #FFFFFF;
+
+            @include mixin.mq(sp) {
+                margin-top: 44px;
+                display: block;
+            }
         }
 
         &_card {
             width: calc(100% * 230 /960);
-            margin-top: 60px;
+            margin-top: 71px;
             margin-left: calc(100% * 45 /960);
             margin-right: calc(100% * 45 /960);
             margin-bottom: 60px;
 
+            @include mixin.mq(sp) {
+                &:first-child {
+                    margin-top: 0;
+                    padding-top: 52px;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 0;
+                    padding-top: 46px;
+                }
+
+                width: calc(100% - 32px);
+                margin-left: 16px;
+                margin-right: 16px;
+                margin-bottom: 0;
+            }
+
             &_image {
                 width: 64px;
-                height: 64px;
+                height: 59px;
                 margin: 0 auto;
+                padding: auto;
+
+                img {
+                    width: 50px;
+                    height: 44px;
+                    margin: auto;
+                    padding: auto;
+                }
             }
 
             &_title {
-                margin: 8px auto 0 auto;
-                font-size: 20px;
-                font-weight: 600;
-                letter-spacing: calc(4em / 20);
-                text-align: center;
+                margin: 0 auto 0 auto;
+                padding-left: 1px;
+
+                @include mixin.mq(sp) {
+                    margin-top: 2px;
+                    padding-left: 5px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: calc(28/20);
+                    letter-spacing: calc(4em / 20);
+                    text-align: center;
+
+                    @include mixin.mq(sp) {
+                        line-height: calc(24/20);
+                    }
+                }
             }
 
             &_text {
-                margin-top: 20px;
-                font-weight: 14px;
+                margin-top: 14px;
+                font-size: 14px;
                 font-weight: 500;
                 line-height: 1.7;
+
+                @include mixin.mq(sp) {
+                    margin-top: 15px;
+                    line-height: calc(24/14);
+                }
             }
         }
     }

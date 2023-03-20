@@ -2,7 +2,7 @@
 @use "define";
 
 body {
-    font-family: 'Montserrat', 'Yu Gothic', sans-serif;
+    font-family: 'Montserrat', '游ゴシック体', sans-serif;
     font-size: 16px;
     color: define.$color_main;
     line-height: 1.5;
@@ -13,14 +13,21 @@ body {
     width: 1200px;
     max-width: calc(100% - 40px * 2);
     margin: 0 auto;
+
+    @include mixin.mq(sp) {
+        max-width: calc(100% - 16px * 2);
+    }
 }
 
 .section_title {
-    font-size: 36px;
-    font-weight: 600;
-
     h2 {
+        font-size: 36px;
         font-weight: 600;
+        line-height: calc(36/44);
+
+        @include mixin.mq(sp) {
+            font-size: 30px;
+        }
     }
 }
 
@@ -30,8 +37,12 @@ a {
 
 .totop {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 70px;
-    height: 70px;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+.is-ja {
+    font-family: '游ゴシック体', 'Yu Gothic';
 }

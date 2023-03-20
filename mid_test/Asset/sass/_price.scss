@@ -2,16 +2,26 @@
 @use "define";
 
 .price {
-    padding: 120px 0;
+    padding-top: 128px;
+    padding-bottom: 116px;
+
+    @include mixin.mq(sp) {
+        padding: 47px 0 56px 0;
+    }
 
     &_title {
         text-align: center;
     }
 
     &_wrap {
-        margin: 60px auto 0 auto;
-        width: 940px;
+        margin: 67px auto 0 auto;
+        width: 960px;
         max-width: calc(100% - 40px * 2);
+
+        @include mixin.mq(sp) {
+            margin: 45px auto 0 auto;
+            max-width: calc(100% - 16px * 2);
+        }
     }
 
     &_table {
@@ -23,12 +33,22 @@
             height: 60px;
             font-size: 24px;
 
+            @include mixin.mq(sp) {
+                font-size: 20px;
+                height: 55px;
+            }
+
             th {
                 width: 260px;
                 background: define.$color_main;
                 color: #FFFFFF;
                 font-weight: 600;
                 border: 1px solid #707070;
+
+                @include mixin.mq(sp) {
+                    width: 100px;
+                    font-size: 20px;
+                }
             }
 
             td {
@@ -38,13 +58,22 @@
                 color: define.$color_main;
                 font-weight: 600;
                 border: 1px solid #707070;
+
+                @include mixin.mq(sp) {
+                    padding-left: 20px;
+                    width: calc(100% - 100px);
+                }
             }
         }
     }
 
     &_note {
-        margin-top: 12px;
+        margin-top: 10px;
         font-size: 12px;
         font-weight: 500;
+
+        @include mixin.mq(sp) {
+            margin-top: 6px;
+        }
     }
 }
