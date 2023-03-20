@@ -304,7 +304,10 @@ a {
     padding-top: 222px;
     padding-bottom: 230px;
     position: static;
-    background: url(../img/mv.png) no-repeat top left/cover;
+    background: url(../img/mv.png);
+    background-size: cover;
+    background-position: 22% 0%;
+    background-repeat: no-repeat;
   }
 }
 .main_visual_textarea {
@@ -324,6 +327,11 @@ a {
   font-weight: bold;
   letter-spacing: 0.000625em;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main_visual_textarea_title {
+    font-size: 24px;
+  }
+}
 @media (max-width: 767px) {
   .main_visual_textarea_title {
     font-size: 24px;
@@ -337,6 +345,11 @@ a {
   font-weight: bold;
   letter-spacing: 0.025em;
   line-height: 1.5555555556;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main_visual_textarea_text {
+    font-size: 14px;
+  }
 }
 @media (max-width: 767px) {
   .main_visual_textarea_text {
@@ -985,6 +998,12 @@ a {
   width: 55.5%;
   background: #FFFFFF;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .comments_area {
+    padding-top: 64px;
+    padding-bottom: 61px;
+  }
+}
 @media (max-width: 767px) {
   .comments_area {
     padding: 0 20px;
@@ -1200,6 +1219,11 @@ a {
   letter-spacing: 0.1em;
   border: 1px solid #FFFFFF;
   transition: all 0.3s ease 0s;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .access_area_button {
+    width: 200px;
+  }
 }
 @media (max-width: 767px) {
   .access_area_button {

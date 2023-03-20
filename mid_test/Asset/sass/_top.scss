@@ -10,7 +10,10 @@
         padding-top: 222px;
         padding-bottom: 230px;
         position: static;
-        background: url(../img/mv.png) no-repeat top left / cover;
+        background: url(../img/mv.png);
+        background-size: cover;
+        background-position: 22% 0%;
+        background-repeat: no-repeat;
     }
 
     &_textarea {
@@ -29,6 +32,10 @@
             font-weight: bold;
             letter-spacing: calc(0.02em / 32);
 
+            @include mixin.mq(tab) {
+                font-size: 24px;
+            }
+
             @include mixin.mq(sp) {
                 font-size: 24px;
                 letter-spacing: 0;
@@ -42,6 +49,10 @@
             font-weight: bold;
             letter-spacing: calc(0.45em / 18);
             line-height: calc(28/18);
+
+            @include mixin.mq(tab) {
+                font-size: 14px;
+            }
 
             @include mixin.mq(sp) {
                 margin-top: 20px;

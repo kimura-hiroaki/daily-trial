@@ -69,6 +69,10 @@
             border: 1px solid #FFFFFF;
             transition: all 0.3s ease 0s;
 
+            @include mixin.mq(tab) {
+                width: 200px;
+            }
+
             @include mixin.mq(sp) {
                 display: none;
             }

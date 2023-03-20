@@ -41,6 +41,11 @@
         width: calc(100% * 666 / 1200);
         background: #FFFFFF;
 
+        @include mixin.mq(tab) {
+            padding-top: 64px;
+            padding-bottom: 61px;
+        }
+
         @include mixin.mq(sp) {
             padding: 0 20px;
             padding-top: 47px;
