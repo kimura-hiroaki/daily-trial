@@ -106,6 +106,7 @@
         padding-top: calc(100% * 520 / 1200);
         margin-left: auto;
         width: calc(100% * 726 / 1200);
+        box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
 
         @include mixin.mq(sp) {
             margin-top: 18px;
