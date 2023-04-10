@@ -6,15 +6,15 @@
 
            <nav class="footer-nav">
                <?php
-            wp_nav_menu(
-                array(
-                    "depth" => 1,
-                    "theme_location" => "footer",
-                    "container" => "",
-                    "menu_class" => "footer-list"
+                wp_nav_menu(
+                    array(
+                        "depth" => 1,
+                        "theme_location" => "footer",
+                        "container" => "",
+                        "menu_class" => "footer-list"
+                    )
                 )
-            )
-            ?>
+                ?>
            </nav>
 
        </div><!-- /inner -->
@@ -28,6 +28,12 @@
 
        </div><!-- /inner -->
    </footer><!-- /footer -->
+
+   <?php if (is_single()) : ?>
+   <!-- footer-sns -->
+   <?php get_template_part("template-parts/share_button"); ?>
+   <?php endif; ?>
+
    <div class="floating">
        <a href="#"><i class="fas fa-chevron-up"></i></a>
    </div>

@@ -1,4 +1,19 @@
 <?php
+//ウィジェット
+function my_widgets_init()
+{
+    register_sidebar(array(
+        'name' => 'サイドバー',     /* ←追加したいウィジェットの名前 */
+        'description' => 'サイドバーウィジェット',  /* ←追加したいウィジェットの概要 */
+        'id' => 'sidebar',           /* ←追加したいウィジェットのID */
+        'before_widget' => '<div id="%1$s" cladd="widget %2$s">', /* ←追加したいウィジェットを囲う開始タグ */
+        'after_widget' => '</div>', /* ←追加したいウィジェットを囲う閉じタグ */
+        'before_title' => '<div class="widget-title">',   /* ←追加したいウィジェットのタイトルを囲う開始タグ */
+        'after_title' => '</div>'    /* ←追加したいウィジェットのタイトルを囲う閉じタグ */
+    ));
+}
+add_action('widgets_init', 'my_widgets_init');
+
 function my_setup()
 {
     add_theme_support('post-thumbnails');
@@ -12,7 +27,9 @@ function my_script_init()
 {
     wp_enqueue_style("font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css", array(), "5.8.2", "all");
     wp_enqueue_style("my", get_template_directory_uri() . "/css/style.css", array(), filemtime(get_theme_file_path("css/style.css")), "all");
-    wp_enqueue_script("my", get_template_directory_uri() . "/js/script.js", array("jquery"), filemtime(get_theme_file_path("js/script.js")), true);
+    if (is_single()) :
+        wp_enqueue_script("my", get_template_directory_uri() . "/js/sns.js", array("jquery"), filemtime(get_theme_file_path("js/script.js")), true);
+    endif;
 }
 add_action("wp_enqueue_scripts", "my_script_init");
 
@@ -59,3 +76,31 @@ function my_archive_title($title)
     return $title;
 };
 add_filter('get_the_archive_title', 'my_archive_title');
+
+function my_the_post_category($anchor = true)
+{
+    $category = get_the_category();
+    if ($category[0]) {
+        if ($anchor) {
+            echo '<a href="' . get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '</a>';
+        } else {
+            echo $category[0]->cat_name;
+        }
+    }
+}
+
+function my_get_tag_items($id = 0)
+{
+    global $post;
+
+    if ($id == 0) {
+        $id = $post->ID;
+    }
+
+    $post_tags = get_the_tags();
+    if ($post_tags) {
+        foreach ($post_tags as $tag) {
+            echo '<div class="entry-tag-item"><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></div>';
+        }
+    }
+}
