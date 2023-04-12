@@ -104,3 +104,36 @@ function my_get_tag_items($id = 0)
         }
     }
 }
+
+/**
+ * 検索結果から固定ページを除外する
+ */
+function my_posts_search($search, $wp_query)
+{
+
+    // 検索結果ページ・メインクエリ・管理画面以外の3つの条件が揃った場合
+    if ($wp_query->is_search() && $wp_query->is_main_query() && !is_admin()) {
+
+        // 検索結果を投稿タイプに絞る
+        $search .= " AND post_type = 'post' ";
+
+        return $search;
+    }
+
+    return $search;
+}
+add_filter('posts_search', 'my_posts_search', 10, 2);
+
+function my_shortcode($attrs, $content = '')
+{
+    return '<div class="entry-btn"><a class="btn" href="' . $attrs['link'] . '">' . $content . '</a></div>';
+}
+
+add_shortcode('btn', 'my_shortcode');
+
+function my_searchform_shortcode($attrs, $content = '')
+{
+    return get_search_form(false);
+}
+
+add_shortcode('search_form', 'my_searchform_shortcode');
