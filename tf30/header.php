@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
+<html lang="ja">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/icon-home.png">
 
-    <!-- <title>TF-30</title>
-    <meta name="description" content=""> -->
-
-    <meta property="og:title" content="TF-30">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/">
-    <meta property="og:image" content="https://example.com/img/ogp.png">
-    <meta property="og:site_name" content="TF-30">
-    <meta property="og:description" content="">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>./img/icon-home.png">
     <?php wp_head(); ?>
 </head>
 
