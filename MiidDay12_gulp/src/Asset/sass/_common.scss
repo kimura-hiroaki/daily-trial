@@ -1,0 +1,92 @@
+@use "define";
+@use "mixin";
+
+// all
+body {
+    font-family: 'Noto Sans JP', sans-serif, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: define.$color_text;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+
+    @include mixin.mq(tab) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include mixin.mq(sp) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+a {
+    // inheritは親の要素を引き継ぐ
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.section_title_area {
+    height: 86px;
+}
+
+.section_title {
+    font-family: define.$font_english;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 14px;
+
+    &:after {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        content: '';
+        width: 60px;
+        height: 4px;
+        /*下線の太さ*/
+        background: define.$color_main;
+        /*下線の色*/
+    }
+
+    @include mixin.mq(sp) {
+        font-size: 26px;
+        padding-bottom: 8px;
+
+        &:after {
+            bottom: -8px;
+            width: 42px;
+            height: 3px;
+        }
+    }
+}
+
+.totop {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+    opacity: 1.0;
+
+    @include mixin.mq(sp) {
+        right: 16px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    a:hover {
+        opacity: 1.0;
+    }
+}

@@ -1,0 +1,84 @@
+@use "mixin";
+
+.card {
+    padding-top: 85px;
+    padding-bottom: 120px;
+    background-color: #EFEFEF;
+
+    @include mixin.mq(sp) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    &_wrap {
+        margin-top: 86px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mixin.mq(sp) {
+            margin-top: 42px;
+        }
+    }
+
+    // &_wrap_bottom {
+    //     margin-top: 24px;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    // }
+
+    &_item {
+        width: calc(100% / 3 - 24px * 2 / 3);
+        padding: 15px 15px 13px 16px;
+        border-radius: 4px;
+        background-color: #fff;
+
+        img {
+            display: block;
+        }
+
+        @include mixin.mq(pc) {
+            &:not(:nth-child(3n + 1)) {
+                margin-left: 24px;
+            }
+
+            &:nth-child(n + 4) {
+                margin-top: 25px;
+            }
+        }
+
+        @include mixin.mq(tab) {
+            width: calc(100% / 2 - 24px / 2);
+
+            &:not(:nth-child(2n + 1)) {
+                margin-left: 24px;
+            }
+
+            &:nth-child(n + 3) {
+                margin-top: 24px;
+            }
+        }
+
+        @include mixin.mq(sp) {
+            width: 100%;
+            margin-left: 0;
+
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+        }
+
+        &_title {
+            padding-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #6F7579;
+        }
+
+        &_text {
+            padding-top: 6px;
+            font-weight: bold;
+            color: #6F7579;
+            line-height: calc(24 / 16);
+        }
+    }
+}

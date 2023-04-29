@@ -1,0 +1,112 @@
+@use "mixin";
+@use "define";
+
+.question {
+    padding-top: 85px;
+    padding-bottom: 120px;
+    background-color: #EEEEEE;
+
+    &_wrap {
+        width: 900px;
+        max-width: 100%;
+        margin: 80px auto 0 auto;
+    }
+
+    &_accordion {
+        width: 100%;
+        border: 1px solid define.$color_main;
+        cursor: pointer;
+
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+
+        &_header {
+            width: 100%;
+            height: 40px;
+            background: define.$color_main;
+            display: flex;
+            position: relative;
+
+            &_logo {
+                color: #FFFFFF;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+                line-height: 40px;
+                margin-left: 20px;
+            }
+
+            &_title {
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: left;
+                line-height: 40px;
+                margin-left: 25px;
+            }
+
+            &_item {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                top: 50%;
+                right: 14px;
+                transform: translateY(-50%);
+
+                &_bar1,
+                &_bar2 {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    top: 6px;
+                    left: 0;
+                    background: #FFFFFF;
+                    border-radius: 20px;
+                }
+
+                &_bar2 {
+                    transform: rotateZ(90deg);
+                    transition: transform 0.3s ease 0s;
+                }
+
+                &.is-open &_bar2 {
+                    transform: rotateZ(0deg);
+                }
+            }
+        }
+
+        &_answer {
+            width: 100%;
+            background: #FFFFFF;
+            display: none;
+
+            &_wrap {
+                display: flex;
+            }
+
+            &_logo {
+                color: define.$color_main;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+                margin-top: 13px;
+                margin-left: 20px;
+            }
+
+            &_text {
+                color: define.$color_main;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: left;
+                line-height: 40px;
+                margin: 12px 30px 12px 25px;
+                line-height: 1.5;
+            }
+        }
+
+
+
+
+    }
+}
