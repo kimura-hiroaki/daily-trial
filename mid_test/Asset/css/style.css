@@ -619,13 +619,14 @@ a {
 @media (max-width: 767px) {
   .service_area {
     padding-top: 47px;
-    margin-bottom: 95px;
+    margin-bottom: 60px;
   }
 }
 .service_area_wrap {
   margin-top: 66px;
   display: flex;
   background: #FFFFFF;
+  box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
 }
 @media (max-width: 767px) {
   .service_area_wrap {
@@ -654,6 +655,9 @@ a {
   .service_area_card:not(:first-child) {
     margin-top: 0;
     padding-top: 46px;
+  }
+  .service_area_card:nth-child(3) {
+    padding-bottom: 35px;
   }
 }
 .service_area_card_image {
@@ -1257,6 +1261,7 @@ a {
   padding-top: 43.3333333333%;
   margin-left: auto;
   width: 60.5%;
+  box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
 }
 @media (max-width: 767px) {
   .access_map {
