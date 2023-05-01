@@ -1,0 +1,29 @@
+body {
+    display: block;
+    animation: none;
+    color: #000;
+    border: 0;
+    font-size: 20px;
+}
+
+.test {
+    color: #FFF;
+
+    .test-child {
+        color: #333;
+    }
+}
+
+::placeholder {
+    color: gray;
+}
+
+.image {
+    background-image: url(image@1x.jpg);
+}
+
+@media(min-resolution:2dppx) {
+    .image {
+        background-image: url(image@2x.jpg);
+    }
+}

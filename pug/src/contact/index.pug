@@ -1,0 +1,18 @@
+extend ../template/_page.pug
+append value
+    - const title = "お問い合わせ | DEMOタイトル";
+    - const description = "お問い合わせのディスクリプション";
+    - const path = "..";
+
+block mainVisual
+    .main-visual.is-top
+        .main-visual__content
+            .main-visual__text お問い合わせ
+
+block content
+    .section
+        .inner
+            h2.section__title お問い合わせ
+            .section__lead Contact
+            .section__body
+                p お問い合わせのコンテンツが入ります。

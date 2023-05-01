@@ -1,0 +1,36 @@
+body {
+	display: block;
+	border: 0;
+	color: #000;
+	font-size: 20px;
+	animation: none;
+}
+
+.test {
+	color: #FFF;
+}
+
+.test .test-child {
+	color: #333;
+}
+
+::-moz-placeholder {
+	color: gray;
+}
+
+::placeholder {
+	color: gray;
+}
+
+.image {
+	background-image: url(image@1x.jpg);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+
+.image {
+	background-image: url(image@2x.jpg);
+}
+
+}
+
