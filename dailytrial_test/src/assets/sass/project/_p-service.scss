@@ -1,0 +1,61 @@
+@use "../global" as global;
+
+.p-service {
+    padding-top: 120px;
+    position: relative;
+
+    &-bgbox {
+        position: absolute;
+        top: 150px;
+        z-index: -2;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__card {
+        margin-top: 32px;
+        width: calc(100% * 320 / 1100);
+        position: relative;
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__number {
+            position: absolute;
+            width: 100px;
+            height: 125px;
+            top: 0;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &__title {
+            p {
+                display: inline-block;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 7%;
+        left: 60%;
+    }
+}
+
+.p-card01 {
+    margin-top: 55px;
+}
+
+.p-card02 {
+    margin-top: 115px;
+}
+
+.p-card03 {
+    margin-top: 175px;
+}

@@ -1,0 +1,56 @@
+@use "../global" as global;
+
+.p-aboutus {
+    margin-top: 150px;
+    padding-top: 100px;
+    position: relative;
+
+    &-bgbox {
+        position: absolute;
+        top: 150px;
+        z-index: -2;
+    }
+
+    &__bgimage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 500px;
+        height: 800px;
+        background-image: url(../img/bg-company.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__card {
+        display: flex;
+        margin-top: 20px;
+
+        &__text {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: auto;
+            width: calc(100% * 380 / 1100);
+            font-size: 14px;
+            line-height: calc(24 / 14);
+        }
+
+        &__image {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            width: calc(100% * 680 / 1100);
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 7%;
+        left: 60%;
+    }
+}

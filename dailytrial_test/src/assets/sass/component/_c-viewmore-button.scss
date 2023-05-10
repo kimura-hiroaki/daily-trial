@@ -1,0 +1,48 @@
+@use "../global" as global;
+
+.c-viewmore-button {
+    &--link {
+        padding-right: 140px;
+        font-family: global.$ff-en;
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+        color: #FFFFFF;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 168px;
+            width: 95px;
+            height: 2px;
+            transform: translateY(-50%);
+            background: #FFFFFF;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 39%;
+            left: 244px;
+            width: 20px;
+            height: 2px;
+            transform: translateY(-50%) rotateZ(30deg);
+            background: #FFFFFF;
+        }
+
+        span::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #FFF400;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+}

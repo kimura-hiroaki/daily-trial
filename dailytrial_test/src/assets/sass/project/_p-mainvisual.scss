@@ -5,35 +5,43 @@
 
     &__bgimage {
         margin-left: 90px;
-
     }
 
     &__title {
         position: absolute;
         top: 50%;
         left: 50px;
+        font-family: global.$ff-en;
+        color: global.$main-color;
+        font-size: 60px;
+        font-style: italic;
+        line-height: 1.2;
 
-        &__text {
-            font-family: global.$ff-en;
-            color: global.$main-color;
-            font-size: 60px;
-            font-style: italic;
-            line-height: 1.2;
-            background-color: #FFFFFF;
+        &__top {
+            p {
+                display: inline-block;
+                background-color: #FFFFFF;
+            }
+        }
+
+        &__bottom {
+            margin-top: 15px;
+
+            p {
+                display: inline-block;
+                background-color: #FFFFFF;
+            }
         }
     }
 
     &__subtitle {
         position: absolute;
-        top: 70%;
+        top: 80%;
         left: 50px;
-
-        &__text {
-            color: #FFFFFF;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 1.4;
-            background-color: global.$main-color;
-        }
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+        background-color: global.$main-color;
     }
 }

@@ -8,3 +8,25 @@
 		@content;
 	}
 }
+
+
+// ---
+// font
+// ---
+@mixin font($size: null, $height: null, $space: null, $weight: null) {
+	@if $size {
+		font-size: calc($size / 16 * 1rem);
+	}
+
+	@if $height {
+		line-height: calc($height / $size);
+	}
+
+	@if $space {
+		letter-spacing: calc($space / 1000 * 1em);
+	}
+
+	@if $weight {
+		font-weight: $weight;
+	}
+}

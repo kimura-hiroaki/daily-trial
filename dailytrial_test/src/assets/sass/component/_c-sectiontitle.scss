@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+.c-section__title {
+    font-family: global.$ff-en;
+    font-size: 100px;
+    font-weight: 500;
+    font-style: italic;
+    color: global.$main-color;
+    line-height: 1;
+}
+
+.c-section__subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: global.$main-color;
+    line-height: 1;
+}
