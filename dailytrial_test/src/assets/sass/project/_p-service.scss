@@ -2,6 +2,7 @@
 
 .p-service {
     padding-top: 120px;
+    padding-bottom: 100px;
     position: relative;
 
     &-bgbox {
@@ -17,27 +18,47 @@
     &__card {
         margin-top: 32px;
         width: calc(100% * 320 / 1100);
-        position: relative;
 
         &__wrap {
             display: flex;
             justify-content: space-between;
         }
 
-        &__number {
-            position: absolute;
-            width: 100px;
-            height: 125px;
-            top: 0;
-            right: 0;
-            transform: translateY(-50%);
+        &__image {
+            position: relative;
+
+            &__number {
+                position: absolute;
+                width: 100px;
+                height: 125px;
+                top: 0;
+                right: 0;
+                transform: translateY(-50%);
+            }
+
+            &__title {
+                @include global.font(28, 41, 0, 700);
+                color: global.$main-color;
+                position: absolute;
+                top: 80%;
+                left: -5%;
+                transform: translateY(-50%);
+
+                p {
+                    display: inline-block;
+                    background-color: #FFFFFF;
+                }
+
+                &__text02 {
+                    margin-top: 10px;
+                }
+            }
+
         }
 
-        &__title {
-            p {
-                display: inline-block;
-                background-color: #FFFFFF;
-            }
+        &__text {
+            padding-top: 1rem;
+            @include global.font(14, 24, 0, 500);
         }
     }
 

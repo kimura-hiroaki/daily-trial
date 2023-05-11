@@ -1,0 +1,82 @@
+@use "../global" as global;
+
+.p-casestudy {
+    padding-top: 100px;
+    background: url(../img/bg-case.png);
+    position: relative;
+
+    &__card {
+        margin-top: 80px;
+        width: calc(100% * 320 / 1100);
+        position: relative;
+
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            :nth-child(n + 4) {
+                margin-top: 64px;
+            }
+        }
+
+        &__name {
+            margin-top: 1rem;
+            @include global.font(16, 24, 0, 700);
+            color: #FFFFFF;
+        }
+
+        &__category {
+            display: inline-block;
+            margin-top: calc(1rem * 12 / 16);
+            padding: 6px 16px 6px 16px;
+            @include global.font(14, 20, 0, 700);
+            color: #FFFFFF;
+            border: #FFFFFF solid 1px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            border: #FFFFFF solid 2px;
+            border-radius: 50%;
+            transition: right 0.3s ease;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 8px;
+            right: 25px;
+            width: 15px;
+            height: 15px;
+            border-top: #FFFFFF solid 2px;
+            border-right: #FFFFFF solid 2px;
+            transform: rotateZ(45deg);
+            transition: right 0.3s ease;
+        }
+
+        &:hover {
+            &::before {
+                right: 0;
+                border: global.$accent-color-yellow solid 2px;
+            }
+
+            &::after {
+                right: 10px;
+                border-top: global.$accent-color-yellow solid 2px;
+                border-right: global.$accent-color-yellow solid 2px;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 7%;
+        left: 60%;
+    }
+}
