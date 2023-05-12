@@ -1,0 +1,89 @@
+@use "../global" as global;
+
+.p-request {
+    display: flex;
+
+    &--download {
+        width: 50%;
+        padding-top: 56px;
+        padding-bottom: 50px;
+        text-align: center;
+        background: url(../img/img-download.png) no-repeat center center / cover;
+    }
+
+    &--contact {
+        width: 50%;
+        padding-top: 56px;
+        padding-bottom: 50px;
+        text-align: center;
+        background: url(../img/img-contact.png) no-repeat center center / cover;
+    }
+
+    &__title {
+        color: #FFFFFF;
+        @include global.font(60, 72, 0, 500);
+        font-family: global.$ff-en;
+        font-style: italic;
+    }
+
+    &__subtitle {
+        color: #FFFFFF;
+        @include global.font(16, 24, 0, 700);
+    }
+
+    &__button {
+        margin-top: 40px;
+
+        &--link {
+            display: inline-block;
+            @include global.font(24, 28, 0, 500);
+            font-family: global.$ff-en;
+            font-style: italic;
+            color: global.$accent-color-yellow;
+            padding: 35px 100px 35px 100px;
+            border: global.$accent-color-yellow solid 3px;
+            transition: all 0.3s ease;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 32px;
+                width: 20px;
+                height: 2px;
+                background: global.$accent-color-yellow;
+                transition: all 0.3s ease;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 45%;
+                right: 32px;
+                width: 10px;
+                height: 10px;
+                border-top: global.$accent-color-yellow solid 2px;
+                border-right: global.$accent-color-yellow solid 2px;
+                transform: rotateZ(45deg);
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                color: global.$text-color;
+                background: global.$accent-color-yellow;
+
+                &::after {
+                    right: 20px;
+                    background: global.$text-color;
+                }
+
+                &::before {
+                    right: 20px;
+                    border-top: global.$text-color solid 2px;
+                    border-right: global.$text-color solid 2px;
+                }
+            }
+        }
+    }
+}
