@@ -22,7 +22,7 @@
     <!-- title -->
     <title>Global Standard</title>
     <!-- javascript css -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="./Asset/css/animate.css"> -->
     <!-- css -->
     <!-- <link rel="stylesheet" href="./Asset/css/reset.css"> -->
@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    <!-- header -->
     <header class="p-header">
         <div class="p-header__wrap">
             <div class="p-header__logo">
@@ -37,15 +38,15 @@
             </div>
             <nav class="p-header__nav">
                 <ul class="p-header__nav__ul">
-                    <li class="p-header__nav__li"><a href="" class="p-header__nav--link">トップ</a></li>
+                    <li class="p-header__nav__li"><a href="#" class="p-header__nav--link">トップ</a></li>
                     <li class="p-header__nav__li u-header__nav--space">／</li>
-                    <li class="p-header__nav__li"><a href="" class="p-header__nav--link">当社について</a></li>
+                    <li class="p-header__nav__li"><a href="#aboutus" class="p-header__nav--link">当社について</a></li>
                     <li class="p-header__nav__li u-header__nav--space">／</li>
-                    <li class="p-header__nav__li"><a href="" class="p-header__nav--link">サービス</a></li>
+                    <li class="p-header__nav__li"><a href="#service" class="p-header__nav--link">サービス</a></li>
                     <li class="p-header__nav__li u-header__nav--space">／</li>
-                    <li class="p-header__nav__li"><a href="" class="p-header__nav--link">導入事例</a></li>
+                    <li class="p-header__nav__li"><a href="#casestudy" class="p-header__nav--link">導入事例</a></li>
                     <li class="p-header__nav__li u-header__nav--space">／</li>
-                    <li class="p-header__nav__li"><a href="" class="p-header__nav--link">お知らせ</a></li>
+                    <li class="p-header__nav__li"><a href="#news" class="p-header__nav--link">お知らせ</a></li>
                 </ul>
             </nav>
             <div class="p-header__buttons">
@@ -55,10 +56,50 @@
                 </div>
             </div>
         </div>
+        <div class="p-header__hamburgericon">
+            <div class="p-header__hamburgericon__bars">
+                <div class="p-header__hamburgericon__bar1"></div>
+                <div class="p-header__hamburgericon__bar2"></div>
+                <div class="p-header__hamburgericon__bar3"></div>
+            </div>
+        </div>
     </header>
+    <div class="p-drawer">
+        <div class="p-drawer__background"></div>
+        <div class="p-drawer__menu">
+            <nav class="p-drawer__nav">
+                <ul class="p-drawer__nav__ul">
+                    <li class="p-drawer__nav__li"><a href="#" class="p-drawer__nav--link">トップ</a></li>
+                    <li class="p-drawer__nav__li"><a href="#aboutus" class="p-drawer__nav--link">当社について</a></li>
+                    <li class="p-drawer__nav__li"><a href="#service" class="p-drawer__nav--link">サービス</a></li>
+                    <li class="p-drawer__nav__li"><a href="#casestudy" class="p-drawer__nav--link">導入事例</a></li>
+                    <li class="p-drawer__nav__li"><a href="#news" class="p-drawer__nav--link">お知らせ</a></li>
+                </ul>
+            </nav>
+            <div class="p-drawer__button__download">
+                <a href="#" class="p-drawer__button__download--link">資料ダウンロード</a>
+            </div>
+            <div class="p-drawer__button__contact">
+                <a href="#" class="p-drawer__button__contact--link">お問い合わせ</a>
+            </div>
+        </div>
+    </div>
     <main>
+        <!-- mainvisual -->
         <div class="p-mainvisual">
-            <div class="p-mainvisual__bgimage"><img src="./assets/img/img-mv01_pc.png" alt=""></div>
+            <div class="swiper p-mainvisual__bgimage">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide p-mainvisual__bgimage--1">
+                        <!-- <img src="./assets/img/img-mv01_pc.png" alt=""> -->
+                    </div>
+                    <div class="swiper-slide p-mainvisual__bgimage--2">
+                        <!-- <img src="./assets/img/img-mv02_pc.png" alt=""> -->
+                    </div>
+                    <div class="swiper-slide p-mainvisual__bgimage--3">
+                        <!-- <img src="./assets/img/img-mv03_pc.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
             <div class="p-mainvisual__title">
                 <div class="u-isPC">
                     <div class="p-mainvisual__title__top">
@@ -82,6 +123,7 @@
             </div>
             <div class="p-mainvisual__subtitle">世界で活躍できるグローバルな人材を育てる</div>
         </div>
+        <!-- about us -->
         <section class="p-aboutus">
             <div class="c-section-bgbox p-aboutus-bgbox"></div>
             <div class="p-aboutus__bgimage"></div>
@@ -112,6 +154,7 @@
                 </div>
             </div>
         </section>
+        <!-- service -->
         <section class="p-service">
             <div class="c-section-bgbox p-service-bgbox"></div>
             <div class="l-inner">
@@ -125,75 +168,82 @@
                 </div>
                 <div class="p-service__card__wrap">
                     <div class="p-service__card p-card01">
-                        <div class="p-service__card__image">
-                            <img src="./assets/img/img-service01.png" alt="service1">
-                            <div class="p-service__card__image__number"><img src="./assets/img/number01.png"
-                                    alt="number01">
-                            </div>
-                            <div class="p-service__card__image__title">
-                                <div class="p-service__card__image__title__text">
-                                    <p>ビジネス英語研修</p>
+                        <a href="">
+                            <div class="p-service__card__image">
+                                <img src="./assets/img/img-service01.png" alt="service1">
+                                <div class="p-service__card__image__number"><img src="./assets/img/number01.png"
+                                        alt="number01">
+                                </div>
+                                <div class="p-service__card__image__title">
+                                    <div class="p-service__card__image__title__text">
+                                        <p>ビジネス英語研修</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-service__card__text">
-                            ビジネス英会話はこれからの時代、すべてのビジネスパーソンが学ぶべき必須スキルと考えおります。海外にビジネス展開する際にはもちろんのこと、日本国内でも英会話コミュニケーションができることによってチャンスが掴める場面があります。
-                        </div>
+                            <div class="p-service__card__text">
+                                ビジネス英会話はこれからの時代、すべてのビジネスパーソンが学ぶべき必須スキルと考えおります。海外にビジネス展開する際にはもちろんのこと、日本国内でも英会話コミュニケーションができることによってチャンスが掴める場面があります。
+                            </div>
+                        </a>
                     </div>
                     <div class="p-service__card p-card02">
-                        <div class="p-service__card__image">
-                            <img src="./assets/img/img-service02.png" alt="service1">
-                            <div class="p-service__card__image__number"><img src="./assets/img/number02.png"
-                                    alt="number02">
-                            </div>
-                            <div class="p-service__card__image__title">
-                                <div class="p-service__card__image__title__text01">
-                                    <p>異文化</p>
+                        <a href="">
+                            <div class="p-service__card__image">
+                                <img src="./assets/img/img-service02.png" alt="service1">
+                                <div class="p-service__card__image__number"><img src="./assets/img/number02.png"
+                                        alt="number02">
                                 </div>
-                                <div class="p-service__card__image__title__text02">
-                                    <p>コミュニケーション研修</p>
+                                <div class="p-service__card__image__title">
+                                    <div class="p-service__card__image__title__text01">
+                                        <p>異文化</p>
+                                    </div>
+                                    <div class="p-service__card__image__title__text02">
+                                        <p>コミュニケーション研修</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-service__card__text">
-                            急速にグローバル化が進んでおり、ビジネスの場面に限らず様々な文化的背景を持つ者同士の交流はもはや日常的な光景となりました。
-                            言語や文化が異なる相手を理解することで世界が広がり、新たなビジネスチャンスに巡り会うことは少なくありません。
-                        </div>
+                            <div class="p-service__card__text">
+                                急速にグローバル化が進んでおり、ビジネスの場面に限らず様々な文化的背景を持つ者同士の交流はもはや日常的な光景となりました。<br>
+                                言語や文化が異なる相手を理解することで世界が広がり、新たなビジネスチャンスに巡り会うことは少なくありません。
+                            </div>
+                        </a>
                     </div>
                     <div class="p-service__card p-card03">
-                        <div class="p-service__card__image">
-                            <img src="./assets/img/img-service03.png" alt="service1">
-                            <div class="p-service__card__image__number"><img src="./assets/img/number03.png"
-                                    alt="number03">
-                            </div>
-                            <div class="p-service__card__image__title">
-                                <div class="p-service__card__image__title__text01">
-                                    <p>ビジネス留学</p>
+                        <a href="">
+                            <div class="p-service__card__image">
+                                <img src="./assets/img/img-service03.png" alt="service1">
+                                <div class="p-service__card__image__number"><img src="./assets/img/number03.png"
+                                        alt="number03">
                                 </div>
-                                <div class="p-service__card__image__title__text02">
-                                    <p>サポートプログラム</p>
+                                <div class="p-service__card__image__title">
+                                    <div class="p-service__card__image__title__text01">
+                                        <p>ビジネス留学</p>
+                                    </div>
+                                    <div class="p-service__card__image__title__text02">
+                                        <p>サポートプログラム</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-service__card__text">
-                            将来的に海外で働きたい方に向けた講座をご用意しております。一般的には3ヶ月〜1年の期間で基本的な英会話スキルと、海外でのビジネスマナー習得を目指します。
-                            通常の語学留学では得られないビジネスの場で通用するコミュニケーションスキル習得に重点をおいておりますので、海外でビジネス展開する際に自信を持って活動することができるようになります。
-                        </div>
+                            <div class="p-service__card__text">
+                                将来的に海外で働きたい方に向けた講座をご用意しております。一般的には3ヶ月〜1年の期間で基本的な英会話スキルと、海外でのビジネスマナー習得を目指します。<br>
+                                通常の語学留学では得られないビジネスの場で通用するコミュニケーションスキル習得に重点をおいておりますので、海外でビジネス展開する際に自信を持って活動することができるようになります。
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="c-viewmore-button p-service__button">
+                <div class="c-viewmore-button p-service__button u-button--black">
                     <a href="" class="c-viewmore-button--link">
                         <span></span>View more</a>
                 </div>
             </div>
         </section>
+        <!-- case study -->
         <section class="p-casestudy">
             <div class="l-inner">
                 <div class="p-casestudy__title">
-                    <div class="c-section__title u-text__white">
+                    <div class="c-section__title u-text--white">
                         <h2>CASE STUDY</h2>
                     </div>
-                    <div class="c-section__subtitle u-text__white">
+                    <div class="c-section__subtitle u-text--white">
                         <p>導入事例</p>
                     </div>
                 </div>
@@ -242,6 +292,7 @@
                 </div>
             </div>
         </section>
+        <!-- news -->
         <section class="p-news">
             <div class="c-section-bgbox p-news-bgbox"></div>
             <div class="l-inner">
@@ -255,34 +306,41 @@
                 </div>
                 <div class="p-news__article">
                     <div class="p-news__article__item">
-                        <div class="p-news__article__item__context">
-                            <div class="p-news__article__item__context__category">営業時間</div>
-                            <div class="p-news__article__item__context__date">2021.07.20</div>
-                        </div>
-                        <div class="p-news__article__item__title">お盆期間中の営業について</div>
+                        <a href="">
+                            <div class="p-news__article__item__context">
+                                <div class="p-news__article__item__context__category">営業時間</div>
+                                <div class="p-news__article__item__context__date">2021.07.20</div>
+                            </div>
+                            <div class="p-news__article__item__title">お盆期間中の営業について</div>
+                        </a>
                     </div>
                     <div class="p-news__article__item">
-                        <div class="p-news__article__item__context">
-                            <div class="p-news__article__item__context__category">その他</div>
-                            <div class="p-news__article__item__context__date">2021.06.01</div>
-                        </div>
-                        <div class="p-news__article__item__title">新型コロナウイルス対策ご協力のお願い</div>
+                        <a href="">
+                            <div class="p-news__article__item__context">
+                                <div class="p-news__article__item__context__category">その他</div>
+                                <div class="p-news__article__item__context__date">2021.06.01</div>
+                            </div>
+                            <div class="p-news__article__item__title">新型コロナウイルス対策ご協力のお願い</div>
+                        </a>
                     </div>
                     <div class="p-news__article__item">
-                        <div class="p-news__article__item__context">
-                            <div class="p-news__article__item__context__category">営業時間</div>
-                            <div class="p-news__article__item__context__date">2021.05.01</div>
-                        </div>
-                        <div class="p-news__article__item__title">オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について
-                        </div>
+                        <a href="">
+                            <div class="p-news__article__item__context">
+                                <div class="p-news__article__item__context__category">営業時間</div>
+                                <div class="p-news__article__item__context__date">2021.05.01</div>
+                            </div>
+                            <div class="p-news__article__item__title">オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="c-viewmore-button p-news__button">
+                <div class="c-viewmore-button p-news__button u-button--black">
                     <a href="" class="c-viewmore-button--link">
                         <span></span>View more</a>
                 </div>
             </div>
         </section>
+        <!-- request -->
         <section class="p-request">
             <div class="p-request--download">
                 <div class="p-request__title">DOWNLOAD</div>
@@ -298,6 +356,31 @@
             </div>
         </section>
     </main>
+    <!-- footer -->
+    <footer class="p-footer">
+        <div class="l-inner">
+            <div class="p-footer__logo">Global Standard</div>
+            <div class="p-footer__address">〒550-1000　大阪市西区土佐堀9-5-5</div>
+            <table class="p-footer__tel">
+                <tr>
+                    <th>TEL</th>
+                    <td>06-123-4567</td>
+                </tr>
+                <tr>
+                    <th>FAX</th>
+                    <td>06-123-4568</td>
+                </tr>
+            </table>
+            <div class="p-footer__copyright">©︎2021 Global Standard. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- script読み込み（後ろで初期化） -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- script実行 -->
+    <script src="./assets/js/drawer.js"></script>
+    <script src="./assets/js/slider.js"></script>
 </body>
 
 </html>

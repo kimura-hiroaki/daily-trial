@@ -1,9 +1,9 @@
 @use "../global" as global;
 
-.u-text__white {
+.u-text--white {
     color: #FFFFFF;
 }
 
-.u-text__black {
+.u-text--black {
     color: global.$text-color;
 }

@@ -1,13 +1,14 @@
 @use "../global" as global;
 
 .p-news {
-    padding-top: 165px;
-    padding-bottom: 165px;
+    padding-top: 177px;
+    padding-bottom: 160px;
     position: relative;
 
     &-bgbox {
         position: absolute;
-        top: 150px;
+        top: 591px;
+        height: 413px;
         z-index: -2;
     }
 
@@ -15,7 +16,7 @@
         background: #FFFFFF;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
         padding: 40px;
-        margin-top: 80px;
+        margin-top: 85px;
         width: 768px;
         max-width: 100%;
         margin-left: auto;
@@ -23,7 +24,7 @@
 
         &__item {
             padding-top: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
             border-bottom: #DDDDDD solid 1px;
 
             &__context {
@@ -34,7 +35,7 @@
                     color: global.$accent-color-red;
                     border: global.$accent-color-red solid 1px;
                     @include global.font(14, 24, 0, 500);
-                    padding: 8px 24px 8px 24px;
+                    padding: 5px 23px 5px 23px;
                     margin-right: auto;
                 }
 
@@ -46,7 +47,7 @@
             }
 
             &__title {
-                margin-top: 1rem;
+                margin-top: 14px;
                 @include global.font(16, 28, 0, 700);
             }
         }
@@ -54,7 +55,7 @@
 
     &__button {
         position: absolute;
-        top: 7%;
-        left: 60%;
+        top: 21.2%;
+        left: 70.5%;
     }
 }

@@ -1,0 +1,36 @@
+@use "../global" as global;
+
+.p-footer {
+    background: global.$text-color;
+    color: #FFFFFF;
+    padding-top: 116px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    &__logo {
+        @include global.font(52, 68, 0, 700);
+        font-family: global.$ff-logo;
+        font-style: italic;
+    }
+
+    &__address {
+        @include global.font(14, 24, 0, 500);
+        margin-top: 19px;
+    }
+
+    &__tel {
+        @include global.font(14, 20, 0, 500);
+        width: 240px;
+        margin: 0 auto;
+        text-align: left;
+
+        th {
+            width: 37px;
+        }
+    }
+
+    &__copyright {
+        @include global.font(14, 24, 0, 500);
+        margin-top: 74px;
+    }
+}

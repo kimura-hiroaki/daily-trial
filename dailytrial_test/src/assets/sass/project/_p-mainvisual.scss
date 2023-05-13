@@ -5,17 +5,39 @@
 
     &__bgimage {
         margin-left: 90px;
+        width: calc(100% - 90px);
+
+        &--1 {
+            width: 100%;
+            padding-top: calc(100% * 700 / 1190);
+            background: url(../img/img-mv01_pc.png) no-repeat center center / contain;
+        }
+
+        &--2 {
+            width: 100%;
+            padding-top: calc(100% * 700 / 1190);
+            background: url(../img/img-mv02_pc.png) no-repeat center center / contain;
+        }
+
+        &--3 {
+            width: 100%;
+            padding-top: calc(100% * 700 / 1190);
+            background: url(../img/img-mv03_pc.png) no-repeat center center / contain;
+        }
+
     }
 
     &__title {
         position: absolute;
-        top: 50%;
+        top: 73.5%;
         left: 50px;
         font-family: global.$ff-en;
         color: global.$main-color;
         font-size: 60px;
         font-style: italic;
         line-height: 1.2;
+        transform: translateY(-50%);
+        z-index: 1;
 
         &__top {
             p {
@@ -36,12 +58,13 @@
 
     &__subtitle {
         position: absolute;
-        top: 80%;
+        top: 87.3%;
         left: 50px;
         color: #FFFFFF;
         font-size: 20px;
         font-weight: bold;
         line-height: 1.4;
         background-color: global.$main-color;
+        z-index: 1;
     }
 }

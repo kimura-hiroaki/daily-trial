@@ -18,6 +18,7 @@ $lh-base: 1.8; // ベース行間
 
 // レイアウト
 $inner-width: 1100px; // インナー幅サイズ
+$pc-width: 1280px; // スマホサイズ
 $sp-width: 768px; // スマホサイズ
 
 // ブレークポイント
@@ -25,9 +26,9 @@ $breakpoints: (
   // スマホ以下の場合
   "sp": "screen and (max-width: #{$sp-width - 1px})",
   // タブレット以下の場合
-  "tab": "screen and (max-width: #{$inner-width - 1px})",
+  "tab": "screen and (max-width: #{$pc-width - 1px})",
   // タブレット以上の場合
-  "pc": "screen and (min-width: #{$inner-width})"
+  "pc": "screen and (min-width: #{$pc-width})"
 );
 
 // 重なり順の定義

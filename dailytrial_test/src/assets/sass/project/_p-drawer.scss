@@ -1,0 +1,85 @@
+@use "../global" as global;
+
+.p-drawer {
+    position: fixed;
+    top: -110%;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 40;
+    background: global.$main-color-deep;
+    transition: all 1s ease;
+
+    &.is-active {
+        top: 60px;
+    }
+
+    &__nav {
+        width: 300px;
+        margin: 0 auto;
+
+        &__li {
+            &:first-child {
+                margin-top: 60px;
+            }
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+        }
+
+        &--link {
+            display: block;
+            width: 100%;
+            @include global.font(16, 24, 0, 500);
+            color: #FFFFFF;
+            text-align: center;
+        }
+    }
+
+    &__button {
+        &__download {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 295px;
+            height: 68px;
+
+            &--link {
+                display: block;
+                text-align: center;
+                @include global.font(16, 68, 0, 500);
+                border: #FFFFFF solid 1px;
+                color: #FFFFFF;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: global.$main-color-deep;
+                }
+            }
+        }
+
+        &__contact {
+            margin-top: 32px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 295px;
+            height: 68px;
+
+            &--link {
+                display: block;
+                text-align: center;
+                @include global.font(16, 68, 0, 500);
+                border: #FFFFFF solid 1px;
+                color: global.$main-color;
+                background: #FFFFFF;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #FFFFFF;
+                    background: global.$main-color;
+                }
+            }
+        }
+    }
+}
