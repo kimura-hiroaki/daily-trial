@@ -48,7 +48,7 @@
             @include global.mq(tab) {
                 left: 156px;
                 width: 16px;
-                top: 52%;
+                top: 50%;
             }
         }
 
@@ -74,7 +74,7 @@
 
         &:hover {
             &::before {
-                left: 178px;
+                left: 180px;
             }
 
             &::after {
@@ -83,4 +83,39 @@
         }
     }
 
+    &--diffcolor {
+        color: global.$text-color;
+
+        @include global.mq(sp) {
+            color: global.$main-color;
+        }
+
+        a {
+            color: global.$text-color;
+
+            @include global.mq(sp) {
+                color: global.$main-color;
+            }
+
+            &::after {
+                background: global.$text-color;
+
+                @include global.mq(sp) {
+                    background: global.$main-color;
+                }
+            }
+
+            &::before {
+                background: global.$text-color;
+
+                @include global.mq(sp) {
+                    background: global.$main-color;
+                }
+            }
+
+            span::after {
+                background: global.$accent-color-yellow;
+            }
+        }
+    }
 }

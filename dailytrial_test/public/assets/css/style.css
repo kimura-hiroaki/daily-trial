@@ -167,7 +167,7 @@ a {
 	width: 100%;
 	height: 582px;
 	transform: skewY(10deg);
-	background: #888;
+	background: #EDF3F8;
 }
 
 .c-viewmore-button--link {
@@ -218,11 +218,31 @@ a {
 }
 
 .c-viewmore-button--link:hover::before {
-	left: 178px;
+	left: 180px;
 }
 
 .c-viewmore-button--link:hover::after {
 	width: 90px;
+}
+
+.c-viewmore-button--diffcolor {
+	color: #1A1A1A;
+}
+
+.c-viewmore-button--diffcolor a {
+	color: #1A1A1A;
+}
+
+.c-viewmore-button--diffcolor a::after {
+	background: #1A1A1A;
+}
+
+.c-viewmore-button--diffcolor a::before {
+	background: #1A1A1A;
+}
+
+.c-viewmore-button--diffcolor a span::after {
+	background: #FFF400;
 }
 
 .c-totop__button {
@@ -1025,26 +1045,6 @@ a {
 	color: #1A1A1A;
 }
 
-.u-button--black {
-	color: #1A1A1A;
-}
-
-.u-button--black a {
-	color: #1A1A1A;
-}
-
-.u-button--black a::after {
-	background: #1A1A1A;
-}
-
-.u-button--black a::before {
-	background: #1A1A1A;
-}
-
-.u-button--black a span::after {
-	background: #FFF400;
-}
-
 @media screen and (max-width: 1279px) {
 
 .l-inner {
@@ -1072,7 +1072,7 @@ a {
 }
 
 .c-viewmore-button--link::before {
-	top: 52%;
+	top: 50%;
 	left: 156px;
 	width: 16px;
 }
@@ -1163,6 +1163,22 @@ a {
 
 .c-section-bgbox {
 	height: 788px;
+}
+
+.c-viewmore-button--diffcolor {
+	color: #023E78;
+}
+
+.c-viewmore-button--diffcolor a {
+	color: #023E78;
+}
+
+.c-viewmore-button--diffcolor a::after {
+	background: #023E78;
+}
+
+.c-viewmore-button--diffcolor a::before {
+	background: #023E78;
 }
 
 .c-totop__button {

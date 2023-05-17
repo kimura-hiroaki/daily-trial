@@ -4,8 +4,7 @@
     width: 100%;
     height: 582px;
     transform: skewY(10deg);
-    //    background: #EDF3F8;
-    background: #888;
+    background: #EDF3F8;
 
     @include global.mq(sp) {
         height: 788px;
