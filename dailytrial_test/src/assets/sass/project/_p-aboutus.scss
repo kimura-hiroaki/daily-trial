@@ -6,9 +6,15 @@
     padding-bottom: 240px;
     position: relative;
 
+    @include global.mq(sp) {
+        margin-top: 0;
+        padding-top: 66px;
+        padding-bottom: 183px;
+    }
+
     &-bgbox {
         position: absolute;
-        top: 262px;
+        top: 200px;
         z-index: -2;
     }
 
@@ -20,17 +26,26 @@
         width: calc(100% * 500 / 1280);
         height: 800px;
         background-image: url(../img/bg-company.png);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-    }
 
-    &__content {
-        position: relative;
+        @include global.mq(sp) {
+            width: calc(100% * 295 / 335);
+            padding-top: calc(100% * 320 / 295);
+            top: -40px;
+            right: -20px;
+            height: auto;
+        }
     }
 
     &__card {
         display: flex;
-        margin-top: 27px;
+        margin-top: 28px;
+
+        @include global.mq(sp) {
+            display: block;
+            margin-top: 62px;
+        }
 
         &__text {
             margin-top: auto;
@@ -39,6 +54,10 @@
             width: calc(100% * 380 / 1100);
             font-size: 14px;
             line-height: calc(24 / 14);
+
+            @include global.mq(sp) {
+                width: 100%;
+            }
         }
 
         &__image {
@@ -46,12 +65,28 @@
             margin-bottom: auto;
             margin-left: auto;
             width: calc(100% * 680 / 1100);
+
+            @include global.mq(sp) {
+                margin-top: 70px;
+                width: 100%;
+                position: relative;
+            }
         }
     }
 
     &__button {
         position: absolute;
-        top: 7%;
-        left: 74%;
+        top: 156px;
+        left: 70.5%;
+
+        @include global.mq(tab) {
+            top: 130px;
+        }
+
+        @include global.mq(sp) {
+            position: static;
+            margin-top: 35px;
+            text-align: right;
+        }
     }
 }

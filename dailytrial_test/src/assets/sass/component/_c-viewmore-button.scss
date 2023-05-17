@@ -10,6 +10,11 @@
         color: #FFFFFF;
         position: relative;
 
+        @include global.mq(tab) {
+            padding-right: 97px;
+            font-size: 20px;
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -20,6 +25,12 @@
             transform: translateY(-50%);
             background: #FFFFFF;
             transition: all 0.3s ease;
+
+            @include global.mq(tab) {
+                left: 105px;
+                width: 65px;
+                top: 68%;
+            }
         }
 
         &::before {
@@ -33,6 +44,12 @@
             background: #FFFFFF;
             z-index: 1;
             transition: all 0.3s ease;
+
+            @include global.mq(tab) {
+                left: 156px;
+                width: 16px;
+                top: 52%;
+            }
         }
 
         span::after {
@@ -42,18 +59,26 @@
             right: -3px;
             width: 54px;
             height: 54px;
-            border: 3px solid #FFF400;
+            border: 3px solid global.$accent-color-yellow;
             border-radius: 50%;
             transform: translateY(-50%);
+
+            @include global.mq(tab) {
+                top: 44%;
+                right: 0px;
+                width: 42px;
+                height: 42px;
+                border: 2px solid global.$accent-color-yellow;
+            }
         }
 
         &:hover {
             &::before {
-                left: 301px;
+                left: 178px;
             }
 
             &::after {
-                width: 150px;
+                width: 90px;
             }
         }
     }

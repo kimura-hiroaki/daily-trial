@@ -5,11 +5,21 @@
     padding-bottom: 160px;
     position: relative;
 
+    @include global.mq(sp) {
+        padding-top: 66px;
+        padding-bottom: 204px;
+    }
+
     &-bgbox {
         position: absolute;
         top: 591px;
         height: 413px;
         z-index: -2;
+
+        @include global.mq(sp) {
+            top: 206px;
+            height: 592px;
+        }
     }
 
     &__article {
@@ -22,10 +32,20 @@
         margin-left: auto;
         margin-right: auto;
 
+        @include global.mq(sp) {
+            margin-top: 64px;
+            padding: 24px 20px 40px 20px;
+        }
+
         &__item {
             padding-top: 20px;
             padding-bottom: 30px;
             border-bottom: #DDDDDD solid 1px;
+
+            @include global.mq(sp) {
+                padding-top: 16px;
+                padding-bottom: 32px;
+            }
 
             &__context {
                 display: flex;
@@ -37,6 +57,11 @@
                     @include global.font(14, 24, 0, 500);
                     padding: 5px 23px 5px 23px;
                     margin-right: auto;
+
+                    @include global.mq(sp) {
+                        @include global.font(12, 24, 0, 500);
+                        padding: 2px 19px 2px 19px;
+                    }
                 }
 
                 &__date {
@@ -49,13 +74,28 @@
             &__title {
                 margin-top: 14px;
                 @include global.font(16, 28, 0, 700);
+
+                @include global.mq(sp) {
+                    margin-top: 16px;
+                    @include global.font(14, 20, 0, 700);
+                }
             }
         }
     }
 
     &__button {
         position: absolute;
-        top: 21.2%;
+        top: 218px;
         left: 70.5%;
+
+        @include global.mq(tab) {
+            top: 190px;
+        }
+
+        @include global.mq(sp) {
+            position: static;
+            margin-top: 35px;
+            text-align: right;
+        }
     }
 }

@@ -1,0 +1,14 @@
+@use "../global" as global;
+
+.c-totop__button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 20px;
+
+    @include global.mq(sp) {
+        bottom: 23px;
+        right: 10px;
+    }
+}

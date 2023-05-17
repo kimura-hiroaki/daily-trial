@@ -27,7 +27,7 @@ $breakpoints: (
   "sp": "screen and (max-width: #{$sp-width - 1px})",
   // タブレット以下の場合
   "tab": "screen and (max-width: #{$pc-width - 1px})",
-  // タブレット以上の場合
+  // PC以上の場合
   "pc": "screen and (min-width: #{$pc-width})"
 );
 

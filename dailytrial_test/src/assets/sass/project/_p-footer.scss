@@ -6,11 +6,21 @@
     padding-top: 116px;
     padding-bottom: 20px;
     text-align: center;
+    position: relative;
+
+    @include global.mq(sp) {
+        padding-top: 67px;
+        padding-bottom: 12px;
+    }
 
     &__logo {
         @include global.font(52, 68, 0, 700);
         font-family: global.$ff-logo;
         font-style: italic;
+
+        @include global.mq(sp) {
+            @include global.font(40, 53, 0, 700);
+        }
     }
 
     &__address {
@@ -32,5 +42,10 @@
     &__copyright {
         @include global.font(14, 24, 0, 500);
         margin-top: 74px;
+
+        @include global.mq(sp) {
+            margin-top: 33px;
+            @include global.font(12, 24, 0, 500);
+        }
     }
 }

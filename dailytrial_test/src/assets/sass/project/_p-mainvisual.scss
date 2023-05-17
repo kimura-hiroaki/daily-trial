@@ -7,51 +7,118 @@
         margin-left: 90px;
         width: calc(100% - 90px);
 
+        @include global.mq(sp) {
+            margin-left: 40px;
+            width: calc(100% - 40px);
+        }
+
         &--1 {
             width: 100%;
             padding-top: calc(100% * 700 / 1190);
             background: url(../img/img-mv01_pc.png) no-repeat center center / contain;
+
+            @include global.mq(sp) {
+                padding-top: calc(100% * 607 / 335);
+                background: url(../img/img-mv01_sp.png) no-repeat center center / contain;
+            }
         }
 
         &--2 {
             width: 100%;
             padding-top: calc(100% * 700 / 1190);
             background: url(../img/img-mv02_pc.png) no-repeat center center / contain;
+
+            @include global.mq(sp) {
+                padding-top: calc(100% * 607 / 335);
+                background: url(../img/img-mv02_sp.png) no-repeat center center / contain;
+            }
         }
 
         &--3 {
             width: 100%;
             padding-top: calc(100% * 700 / 1190);
             background: url(../img/img-mv03_pc.png) no-repeat center center / contain;
+
+            @include global.mq(sp) {
+                padding-top: calc(100% * 607 / 335);
+                background: url(../img/img-mv03_sp.png) no-repeat center center / cover;
+            }
         }
 
     }
 
     &__title {
         position: absolute;
-        top: 73.5%;
+        top: 62%;
         left: 50px;
         font-family: global.$ff-en;
         color: global.$main-color;
         font-size: 60px;
         font-style: italic;
         line-height: 1.2;
-        transform: translateY(-50%);
         z-index: 1;
+
+        @include global.mq(tab) {
+            font-size: 40px;
+            top: 63.8%;
+            left: 20px;
+        }
 
         &__top {
             p {
                 display: inline-block;
                 background-color: #FFFFFF;
             }
+
+            &--sp {
+                p {
+                    display: inline-block;
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+
+        &__mid {
+            &--sp {
+                margin-top: 8px;
+
+                p {
+                    display: inline-block;
+                    background-color: #FFFFFF;
+                }
+            }
         }
 
         &__bottom {
-            margin-top: 15px;
+            margin-top: 17px;
 
             p {
                 display: inline-block;
                 background-color: #FFFFFF;
+            }
+
+            &--sp {
+                margin-top: 8px;
+
+                p {
+                    display: inline-block;
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+
+        &__sub {
+            color: #FFFFFF;
+            @include global.font(20, 29, 0, 700);
+            margin-top: 18px;
+
+            p {
+                display: inline-block;
+                background-color: global.$main-color;
+            }
+
+            @include global.mq(tab) {
+                @include global.font(16, 24, 0, 700);
             }
         }
     }
@@ -60,11 +127,6 @@
         position: absolute;
         top: 87.3%;
         left: 50px;
-        color: #FFFFFF;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.4;
-        background-color: global.$main-color;
-        z-index: 1;
+
     }
 }

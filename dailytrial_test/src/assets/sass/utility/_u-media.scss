@@ -1,7 +1,17 @@
+@use "../global" as global;
+
 .u-isPC {
     display: block;
+
+    @include global.mq(sp) {
+        display: none;
+    }
 }
 
 .u-isSP {
     display: none;
+
+    @include global.mq(sp) {
+        display: block;
+    }
 }

@@ -3,12 +3,22 @@
 .p-request {
     display: flex;
 
+    @include global.mq(sp) {
+        display: block;
+    }
+
     &--download {
         width: 50%;
         padding-top: 56px;
         padding-bottom: 50px;
         text-align: center;
         background: url(../img/img-download.png) no-repeat center center / cover;
+
+        @include global.mq(sp) {
+            width: 100%;
+            padding-top: 45px;
+            padding-bottom: 26px;
+        }
     }
 
     &--contact {
@@ -17,6 +27,12 @@
         padding-bottom: 50px;
         text-align: center;
         background: url(../img/img-contact.png) no-repeat center center / cover;
+
+        @include global.mq(sp) {
+            width: 100%;
+            padding-top: 45px;
+            padding-bottom: 26px;
+        }
     }
 
     &__title {
@@ -24,11 +40,19 @@
         @include global.font(60, 72, 0, 500);
         font-family: global.$ff-en;
         font-style: italic;
+
+        @include global.mq(sp) {
+            @include global.font(40, 48, 0, 500);
+        }
     }
 
     &__subtitle {
         color: #FFFFFF;
         @include global.font(16, 24, 0, 700);
+
+        @include global.mq(sp) {
+            margin-top: 5px;
+        }
     }
 
     &__button {
@@ -45,6 +69,11 @@
             transition: all 0.3s ease;
             position: relative;
 
+            @include global.mq(sp) {
+                @include global.font(16, 19, 0, 500);
+                padding: 26px 110px 26px 110px;
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -53,13 +82,18 @@
                 width: 20px;
                 height: 2px;
                 background: global.$accent-color-yellow;
+                transform: translateY(-50%);
                 transition: all 0.3s ease;
+
+                @include global.mq(sp) {
+                    right: 20px;
+                }
             }
 
             &::before {
                 content: "";
                 position: absolute;
-                top: 45%;
+                top: 41px;
                 right: 32px;
                 width: 10px;
                 height: 10px;
@@ -67,6 +101,11 @@
                 border-right: global.$accent-color-yellow solid 2px;
                 transform: rotateZ(45deg);
                 transition: all 0.3s ease;
+
+                @include global.mq(sp) {
+                    top: 31px;
+                    right: 20px;
+                }
             }
 
             &:hover {
