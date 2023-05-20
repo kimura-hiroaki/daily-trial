@@ -1,0 +1,119 @@
+@use "../global" as global;
+
+.p-members {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 183px;
+
+    @include global.mq(sp) {
+        padding-top: 60px;
+        padding-bottom: 156px;
+    }
+
+    &-bgbox {
+        position: absolute;
+        top: 874px;
+        height: 574px;
+        z-index: -2;
+
+        @include global.mq(sp) {
+            top: 982px;
+            height: 1168px;
+        }
+    }
+
+    &__title {
+        @include global.font(24, 36, 0, 700);
+        text-align: center;
+    }
+
+    &__card {
+        margin-top: 60px;
+        width: 688px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+        @include global.mq(sp) {
+            display: block;
+            margin-top: 60px;
+        }
+
+        &__profile {
+            width: calc(100% - 40px - 240px);
+            margin-right: auto;
+            order: 1;
+
+            @include global.mq(sp) {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            &__post {
+                align-items: center;
+                display: flex;
+
+                &__position {
+                    @include global.font(14, 29, 0, 700);
+                }
+
+                &__name {
+                    @include global.font(20, 29, 0, 700);
+                    margin-left: 20px;
+                }
+            }
+
+            &__text {
+                @include global.font(14, 24, 0, 500);
+                margin-top: 29px;
+
+                @include global.mq(sp) {
+                    margin-top: 18px;
+                }
+            }
+
+            &__sns {
+                margin-top: 30px;
+                display: flex;
+
+                @include global.mq(sp) {
+                    margin-top: 18px;
+                }
+
+                :not(:first-child) {
+                    margin-left: 24px;
+                }
+
+                &__twitter,
+                &__facebook,
+                &__instagram {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        &__image {
+            width: 240px;
+            margin-left: auto;
+            order: 2;
+
+            @include global.mq(sp) {
+                margin-right: auto;
+            }
+        }
+
+        &__wrap {
+            @include global.mq(sp) {
+                margin-top: 40px;
+
+                :first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+
+}

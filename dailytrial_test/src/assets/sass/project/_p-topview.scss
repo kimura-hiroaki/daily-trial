@@ -1,0 +1,74 @@
+@use "../global" as global;
+
+.p-topview {
+    position: relative;
+
+    &__bgimage {
+        width: 100%;
+        background: url(../img/mv-company_pc.png) no-repeat center / cover;
+        height: 250px;
+
+        @include global.mq(sp) {
+            background: url(../img/mv-company_sp.png) no-repeat center / cover;
+        }
+    }
+
+    &__bgmask {
+        position: absolute;
+        top: 0;
+        left: -77%;
+        width: 100%;
+        transform: skewX(-30deg);
+        background: rgba(2, 62, 120, 0.8);
+        height: 250px;
+        overflow-x: hidden;
+
+        @include global.mq(sp) {
+            top: 0;
+            left: -75%;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 28%;
+        left: 17.2%;
+
+        @include global.mq(sp) {
+            top: 36%;
+            left: 5.5%;
+        }
+
+        &__main {
+            @include global.font(60, 72, 0, 500);
+            font-family: global.$ff-en;
+            font-style: italic;
+            color: global.$main-color;
+
+            @include global.mq(sp) {
+                @include global.font(32, 38, 0, 500);
+            }
+
+            p {
+                display: inline-block;
+                background: #FFFFFF;
+            }
+        }
+
+        &__sub {
+            margin-top: 9px;
+            @include global.font(20, 29, 0, 700);
+            color: global.$main-color;
+
+            @include global.mq(sp) {
+                margin-top: 8px;
+                @include global.font(16, 24, 0, 700);
+            }
+
+            p {
+                display: inline-block;
+                background: #FFFFFF;
+            }
+        }
+    }
+}

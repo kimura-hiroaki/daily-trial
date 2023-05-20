@@ -1029,6 +1029,295 @@ a {
 	letter-spacing: 0em;
 }
 
+.p-topview {
+	position: relative;
+}
+
+.p-topview__bgimage {
+	width: 100%;
+	height: 250px;
+	background: url(../img/mv-company_pc.png) no-repeat center/cover;
+}
+
+.p-topview__bgmask {
+	position: absolute;
+	top: 0;
+	left: -77%;
+	width: 100%;
+	height: 250px;
+	overflow-x: hidden;
+	transform: skewX(-30deg);
+	background: rgba(2, 62, 120, 0.8);
+}
+
+.p-topview__title {
+	position: absolute;
+	top: 28%;
+	left: 17.2%;
+}
+
+.p-topview__title__main {
+	color: #023E78;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 3.75rem;
+	line-height: 1.2;
+	font-family: "Fira Sans", sans-serif;
+	letter-spacing: 0em;
+}
+
+.p-topview__title__main p {
+	display: inline-block;
+	background: #FFFFFF;
+}
+
+.p-topview__title__sub {
+	margin-top: 9px;
+	color: #023E78;
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.45;
+	letter-spacing: 0em;
+}
+
+.p-topview__title__sub p {
+	display: inline-block;
+	background: #FFFFFF;
+}
+
+.p-mission {
+	margin-top: 82px;
+	padding-bottom: 160px;
+}
+
+.p-mission__bgimage {
+	background: url(../img/img-company01_pc.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.p-vision {
+	margin-top: 60px;
+	padding-bottom: 256px;
+}
+
+.p-vision__bgimage {
+	background: url(../img/img-company02_pc.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.p-philosophy {
+	position: relative;
+	padding-bottom: 40px;
+}
+
+.p-philosophy__bgimage {
+	width: 100%;
+	height: 353px;
+}
+
+.p-philosophy__title {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #FFFFFF;
+}
+
+.p-philosophy__title__main {
+	font-style: italic;
+	font-weight: 500;
+	font-size: 6.25rem;
+	line-height: 1.21;
+	font-family: "Fira Sans", sans-serif;
+	letter-spacing: 0em;
+}
+
+.p-philosophy__title__sub {
+	margin-top: -2px;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.p-philosophy__article {
+	position: absolute;
+	top: 293px;
+	left: 50%;
+	width: 688px;
+	max-width: 100%;
+	padding: 32px 40px;
+	transform: translateX(-50%);
+	background: #FFFFFF;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+.p-philosophy__article__title {
+	color: #023E78;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.p-philosophy__article__text {
+	margin-top: 30px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.7142857143;
+	letter-spacing: 0em;
+}
+
+.p-aboutcompany {
+	position: relative;
+	padding: 80px 0;
+}
+
+.p-aboutcompany__bgimage {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 980px;
+	background: url(../img/bg-company.png) no-repeat center center/cover;
+}
+
+.p-aboutcompany__card {
+	width: 768px;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 60px 40px 80px 40px;
+	border: #707070 solid 1px;
+	background: #FFFFFF;
+}
+
+.p-aboutcompany__card__title {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.p-aboutcompany__card__table {
+	-moz-text-align-last: left;
+	width: 100%;
+	margin-top: 59px;
+	border-collapse: collapse;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-align-last: left;
+	table-layout: fixed;
+}
+
+.p-aboutcompany__card__table tr th {
+	width: 200px;
+	padding-left: 31px;
+	border-top: #023E78 solid 1px;
+	border-bottom: #023E78 solid 1px;
+}
+
+.p-aboutcompany__card__table tr td {
+	width: calc(100% - 200px);
+	padding: 24px 35px;
+	border-top: #E8EAEC solid 1px;
+	border-bottom: #E8EAEC solid 1px;
+}
+
+.p-members {
+	position: relative;
+	padding-top: 120px;
+	padding-bottom: 183px;
+}
+
+.p-members-bgbox {
+	z-index: -2;
+	position: absolute;
+	top: 874px;
+	height: 574px;
+}
+
+.p-members__title {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.p-members__card {
+	display: flex;
+	width: 688px;
+	max-width: 100%;
+	margin-top: 60px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.p-members__card__profile {
+	order: 1;
+	width: calc(100% - 40px - 240px);
+	margin-right: auto;
+}
+
+.p-members__card__profile__post {
+	display: flex;
+	align-items: center;
+}
+
+.p-members__card__profile__post__position {
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 2.0714285714;
+	letter-spacing: 0em;
+}
+
+.p-members__card__profile__post__name {
+	margin-left: 20px;
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.45;
+	letter-spacing: 0em;
+}
+
+.p-members__card__profile__text {
+	margin-top: 29px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.7142857143;
+	letter-spacing: 0em;
+}
+
+.p-members__card__profile__sns {
+	display: flex;
+	margin-top: 30px;
+}
+
+.p-members__card__profile__sns :not(:first-child) {
+	margin-left: 24px;
+}
+
+.p-members__card__profile__sns__twitter,
+.p-members__card__profile__sns__facebook,
+.p-members__card__profile__sns__instagram {
+	width: 32px;
+	height: 32px;
+}
+
+.p-members__card__image {
+	order: 2;
+	width: 240px;
+	margin-left: auto;
+}
+
 .u-isPC {
 	display: block;
 }
@@ -1432,6 +1721,175 @@ a {
 	font-size: 0.75rem;
 	line-height: 2;
 	letter-spacing: 0em;
+}
+
+.p-topview__bgimage {
+	background: url(../img/mv-company_sp.png) no-repeat center/cover;
+}
+
+.p-topview__bgmask {
+	top: 0;
+	left: -75%;
+}
+
+.p-topview__title {
+	top: 36%;
+	left: 5.5%;
+}
+
+.p-topview__title__main {
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 1.1875;
+	letter-spacing: 0em;
+}
+
+.p-topview__title__sub {
+	margin-top: 8px;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.p-mission {
+	margin-top: 60px;
+	padding-bottom: 95px;
+}
+
+.p-mission__bgimage {
+	background: url(../img/img-company01_sp.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.p-vision {
+	margin-top: 60px;
+	padding-bottom: 178px;
+}
+
+.p-vision__bgimage {
+	background: url(../img/img-company02_sp.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.p-philosophy {
+	padding-bottom: 100px;
+}
+
+.p-philosophy-inner {
+	max-width: 100%;
+}
+
+.p-philosophy__bgimage {
+	height: 281px;
+}
+
+.p-philosophy__title__main {
+	font-weight: 500;
+	font-size: 3.25rem;
+	line-height: 1.2115384615;
+	letter-spacing: 0em;
+}
+
+.p-philosophy__title__sub {
+	margin-top: 1px;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.p-philosophy__article {
+	top: 242px;
+	max-width: calc(100% - 40px);
+	padding: 20px;
+}
+
+.p-philosophy__article__title {
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.45;
+	letter-spacing: 0em;
+}
+
+.p-philosophy__article__text {
+	margin-top: 18px;
+}
+
+.p-aboutcompany {
+	padding: 60px 0;
+}
+
+.p-aboutcompany__bgimage {
+	height: 728px;
+}
+
+.p-aboutcompany__card {
+	width: 100%;
+	padding: 39px 19px;
+}
+
+.p-aboutcompany__card__table {
+	margin-top: 40px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.p-aboutcompany__card__table tr th {
+	width: 100px;
+	padding-left: 0;
+}
+
+.p-aboutcompany__card__table tr td {
+	word-wrap: break-word;
+	width: calc(100% - 100px);
+	padding: 16px 0 16px 24px;
+}
+
+.p-members {
+	padding-top: 60px;
+	padding-bottom: 156px;
+}
+
+.p-members-bgbox {
+	top: 982px;
+	height: 1168px;
+}
+
+.p-members__card {
+	display: block;
+	margin-top: 60px;
+}
+
+.p-members__card__profile {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.p-members__card__profile__text {
+	margin-top: 18px;
+}
+
+.p-members__card__profile__sns {
+	margin-top: 18px;
+}
+
+.p-members__card__image {
+	margin-right: auto;
+}
+
+.p-members__card__wrap {
+	margin-top: 40px;
+}
+
+.p-members__card__wrap :first-child {
+	margin-top: 0;
 }
 
 .u-isPC {

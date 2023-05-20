@@ -1,0 +1,25 @@
+@use "../global" as global;
+
+.p-vision {
+    margin-top: 60px;
+    padding-bottom: 256px;
+
+    @include global.mq(sp) {
+        margin-top: 60px;
+        padding-bottom: 178px;
+    }
+
+    &__bgimage {
+        background: url(../img/img-company02_pc.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include global.mq(sp) {
+            background: url(../img/img-company02_sp.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

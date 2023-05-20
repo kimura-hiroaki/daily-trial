@@ -1,0 +1,25 @@
+@use "../global" as global;
+
+.p-mission {
+    margin-top: 82px;
+    padding-bottom: 160px;
+
+    @include global.mq(sp) {
+        margin-top: 60px;
+        padding-bottom: 95px;
+    }
+
+    &__bgimage {
+        background: url(../img/img-company01_pc.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include global.mq(sp) {
+            background: url(../img/img-company01_sp.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

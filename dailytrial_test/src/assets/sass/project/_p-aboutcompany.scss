@@ -1,0 +1,85 @@
+@use "../global" as global;
+
+.p-aboutcompany {
+    position: relative;
+    padding: 80px 0;
+
+    @include global.mq(sp) {
+        padding: 60px 0;
+    }
+
+    &__bgimage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 980px;
+        background: url(../img/bg-company.png) no-repeat center center / cover;
+        z-index: -1;
+
+        @include global.mq(sp) {
+            height: 728px;
+        }
+    }
+
+    &__card {
+        width: 768px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background: #FFFFFF;
+        border: #707070 solid 1px;
+        padding: 60px 40px 80px 40px;
+
+        @include global.mq(sp) {
+            padding: 39px 19px;
+            width: 100%;
+        }
+
+        &__title {
+            @include global.font(24, 36, 0, 700);
+            text-align: center;
+        }
+
+        &__table {
+            width: 100%;
+            margin-top: 59px;
+            @include global.font(16, 24, 0, 500);
+            text-align-last: left;
+            border-collapse: collapse;
+            table-layout: fixed;
+
+            @include global.mq(sp) {
+                margin-top: 40px;
+                @include global.font(14, 20, 0, 500);
+            }
+
+            tr {
+                th {
+                    width: 200px;
+                    padding-left: 31px;
+                    border-top: global.$main-color solid 1px;
+                    border-bottom: global.$main-color solid 1px;
+
+                    @include global.mq(sp) {
+                        width: 100px;
+                        padding-left: 0;
+                    }
+                }
+
+                td {
+                    width: calc(100% - 200px);
+                    padding: 24px 35px;
+                    border-top: #E8EAEC solid 1px;
+                    border-bottom: #E8EAEC solid 1px;
+
+                    @include global.mq(sp) {
+                        width: calc(100% - 100px);
+                        word-wrap: break-word;
+                        padding: 16px 0 16px 24px;
+                    }
+                }
+            }
+        }
+    }
+}
