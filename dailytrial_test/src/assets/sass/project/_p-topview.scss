@@ -5,11 +5,22 @@
 
     &__bgimage {
         width: 100%;
-        background: url(../img/mv-company_pc.png) no-repeat center / cover;
         height: 250px;
 
-        @include global.mq(sp) {
-            background: url(../img/mv-company_sp.png) no-repeat center / cover;
+        &--aboutus {
+            background: url(../img/mv-company_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-company_sp.png) no-repeat center / cover;
+            }
+        }
+
+        &--service {
+            background: url(../img/mv-service_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-service_sp.png) no-repeat center / cover;
+            }
         }
     }
 

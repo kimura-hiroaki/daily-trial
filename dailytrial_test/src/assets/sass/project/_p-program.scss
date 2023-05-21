@@ -1,0 +1,184 @@
+@use "../global" as global;
+
+.p-program {
+    position: relative;
+    padding-top: 100px;
+
+    &-bgbox {
+        position: absolute;
+        top: 200px;
+        z-index: -2;
+    }
+
+    &__inner {
+        width: 1180px;
+        max-width: calc(100% - 50px * 2);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        text-align: center;
+        @include global.font(28, 40, 0, 700);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__card {
+        position: relative;
+        padding-bottom: 60px;
+
+        &__wrap {
+            margin-top: 136px;
+        }
+
+        &__article {
+            position: relative;
+            width: calc(100% * 590 / 1100);
+            background: rgba($color: #FFFFFF, $alpha: 0.9);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+            padding: 80px 40px 60px 40px;
+            margin-top: 60px;
+
+            &__number {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 40px;
+                transform: translateY(-50%);
+                @include global.font(100, 121, 0, 500);
+                font-style: italic;
+                font-family: global.$ff-en;
+                color: global.$main-color;
+            }
+
+            &__title {
+                &__main {
+                    @include global.font(40, 60, 0, 700);
+                }
+
+                &__sub {
+                    @include global.font(16, 19, 0, 500);
+                    font-style: italic;
+                    font-family: global.$ff-en;
+                    color: global.$main-color;
+                }
+            }
+
+            &__text {
+                margin-top: 60px;
+                @include global.font(14, 24, 0, 500);
+            }
+
+            &__table {
+                margin-top: 60px;
+                text-align-last: left;
+                border-collapse: collapse;
+                table-layout: fixed;
+
+                tr {
+                    border-top: #CCCCCC solid 1px;
+                    border-bottom: #CCCCCC solid 1px;
+
+                    th {
+                        width: 80px;
+                        @include global.font(14, 24, 0, 700);
+                    }
+
+                    td {
+                        width: calc(100% - 80px);
+                        @include global.font(14, 24, 0, 500);
+                        padding: 34px 0;
+                    }
+                }
+            }
+
+            &__button {
+                margin-top: 60px;
+                text-align: center;
+
+                &--link {
+                    display: inline-block;
+                    @include global.font(16, 24, 0, 500);
+                    padding: 24px 80px;
+                    position: relative;
+                    border: global.$main-color solid 1px;
+                    color: global.$main-color;
+                    transition: all 0.3s ease;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 20px;
+                        width: 20px;
+                        height: 2px;
+                        transform: translateY(-50%);
+                        background: global.$main-color;
+                        transition: all 0.3s ease;
+
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 31px;
+                        right: 20px;
+                        width: 10px;
+                        height: 10px;
+                        border-top: global.$main-color solid 2px;
+                        border-right: global.$main-color solid 2px;
+                        transform: rotateZ(45deg);
+                        transition: all 0.3s ease;
+
+                    }
+
+                    &:hover {
+                        background: global.$main-color;
+                        color: #FFFFFF;
+
+                        &::before {
+                            border-top: #FFFFFF solid 2px;
+                            border-right: #FFFFFF solid 2px;
+                            right: 10px;
+                        }
+
+                        &::after {
+                            background: #FFFFFF;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__image {
+            position: absolute;
+            z-index: -1;
+            width: calc(100% * 560 / 1100);
+            bottom: 0;
+            right: 0;
+        }
+
+        &--right {
+            margin-left: 90px;
+        }
+
+        &--left {
+            margin-right: 90px;
+
+            .p-program__card__article {
+                margin-left: auto;
+
+                &__number {
+                    left: auto;
+                    right: 40px;
+                }
+            }
+
+            .p-program__card__image {
+                left: 0;
+            }
+        }
+    }
+}

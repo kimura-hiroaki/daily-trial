@@ -1,0 +1,109 @@
+@use "../global" as global;
+
+.p-introduction {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background: url(../img/bg-service-flow.png) no-repeat center center / cover;
+    height: 553px;
+
+    &__title {
+        @include global.font(24, 36, 0, 700);
+        text-align: center;
+    }
+
+    &__chart {
+        &__step {
+            display: flex;
+        }
+
+        &__textarea {
+            display: flex;
+        }
+    }
+
+    &__step {
+        width: 25%;
+        display: flex;
+        align-items: end;
+
+        &__text {
+            @include global.font(20, 20, 0, 500);
+            font-style: italic;
+            font-family: global.$ff-en;
+            color: global.$accent-color-yellow;
+        }
+
+        &__number {
+            @include global.font(40, 40, 0, 500);
+            font-style: italic;
+            font-family: global.$ff-en;
+            color: global.$accent-color-yellow;
+        }
+    }
+
+    &__card {
+        width: 25%;
+        height: 210px;
+        padding: 43px;
+        padding-right: 25px;
+        position: relative;
+
+        ::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 105px 0 105px 20px;
+            z-index: 1;
+        }
+
+        &:nth-child(1) {
+            background: #EDF3F8;
+
+            ::after {
+                border-color: transparent transparent transparent #EDF3F8;
+            }
+        }
+
+        &:nth-child(2) {
+            background: #DDE8F0;
+
+            ::after {
+                border-color: transparent transparent transparent #DDE8F0;
+            }
+        }
+
+        &:nth-child(3) {
+            background: #C7DBE9;
+
+            ::after {
+                border-color: transparent transparent transparent #C7DBE9;
+            }
+        }
+
+        &:nth-child(4) {
+            background: #B0D0E5;
+
+            ::after {
+                border-color: transparent transparent transparent #B0D0E5;
+            }
+        }
+
+        &__title {
+            @include global.font(20, 29, 0, 700);
+            color: global.$main-color;
+        }
+
+        &__text {
+            margin-top: 20px;
+            @include global.font(14, 24, 0, 500);
+
+            span {
+                color: global.$accent-color-red;
+            }
+        }
+    }
+}
