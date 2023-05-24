@@ -1,0 +1,93 @@
+@use "../global" as global;
+
+.p-qa {
+    padding-top: 159px;
+    padding-bottom: 160px;
+
+    @include global.mq(sp) {
+        padding-top: 60px;
+        padding-bottom: 96px;
+    }
+
+    &__title {
+        @include global.font(24, 36, 0, 700);
+        text-align: center;
+    }
+
+    &__card {
+        margin-top: 60px;
+        width: 688px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include global.mq(sp) {
+            margin-top: 40px;
+        }
+    }
+
+    &__accordion {
+        border-bottom: #DDDDDD solid 1px;
+        position: relative;
+
+        &__question {
+            @include global.font(20, 29, 0, 700);
+            padding: 32px 0 31px 0;
+
+            @include global.mq(sp) {
+                @include global.font(16, 24, 0, 700);
+                width: 80%;
+                padding: 16px 0;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                top: 45px;
+                right: 12px;
+                width: 21px;
+                height: 2px;
+                background: global.$text-color;
+                transform: translateY(50%);
+                transition: transform 0.3s ease;
+
+                @include global.mq(sp) {
+                    top: 26px;
+                    right: 8px;
+                }
+            }
+
+            &::before {
+                transform: translateY(50%) rotateZ(90deg);
+                transition: transform 0.3s ease;
+            }
+
+            &.is-active {
+                color: global.$accent-color-red;
+
+                &::after {
+                    transform: translateY(50%) rotateZ(45deg);
+                    background: global.$accent-color-red;
+                }
+
+                &::before {
+                    transform: translateY(50%) rotateZ(135deg);
+                    background: global.$accent-color-red;
+                }
+            }
+        }
+
+        &__answer {
+            @include global.font(14, 24, 0, 500);
+            padding: 0 60px 30px 40px;
+            display: none;
+            margin-top: -2px;
+
+            @include global.mq(sp) {
+                padding: 3px 0 14px 0;
+            }
+        }
+
+    }
+}
