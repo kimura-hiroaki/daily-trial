@@ -1,0 +1,150 @@
+@use "../global" as global;
+
+.p-single {
+    &__info {
+        display: flex;
+        align-items: center;
+
+        &__category {
+            margin-right: auto;
+
+            &--link {
+                display: inline-block;
+                @include global.font(14, 20, 0, 500);
+                padding: 8px 24px;
+                border: global.$accent-color-red solid 1px;
+                color: global.$accent-color-red;
+
+                @include global.mq(sp) {
+                    @include global.font(12, 18, 0, 500);
+                    padding: 4px 12px;
+                }
+            }
+        }
+
+        &__date {
+            margin-left: auto;
+            @include global.font(14, 24, 0, 500);
+            color: #888888;
+        }
+    }
+
+    &__title {
+        @include global.font(24, 32, 0, 700);
+        margin-top: 20px;
+
+        @include global.mq(sp) {
+            @include global.font(20, 28, 0, 700);
+            margin-top: 8px;
+        }
+    }
+
+    &__view {
+        margin-top: 40px;
+    }
+
+    &__letter {
+        margin-top: 40px;
+
+        @include global.mq(sp) {
+            margin-top: 24px;
+        }
+
+        &__header {
+            &--h2 {
+                @include global.font(20, 29, 0, 700);
+                padding-top: 7px;
+                padding-bottom: 10px;
+                padding-left: 26px;
+                background: #F8F8F8;
+                position: relative;
+                color: global.$main-color;
+                margin-bottom: 20px;
+                border-left: 6px solid global.$main-color;
+            }
+
+            &--h3 {
+                @include global.font(18, 27, 0, 700);
+                padding-bottom: 6px;
+                position: relative;
+                color: global.$main-color;
+                margin-bottom: 20px;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: global.$main-color;
+                }
+            }
+
+            &--h4 {
+                @include global.font(16, 24, 0, 700);
+                color: global.$main-color;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__text {
+            @include global.font(14, 24, 0, 500);
+            margin-bottom: 40px;
+        }
+
+        &__list {
+            margin-bottom: 40px;
+            align-items: center;
+            margin-left: 40px;
+
+            @include global.mq(sp) {
+                margin-left: 0;
+            }
+
+            &__item {
+                @include global.font(14, 24, 0, 500);
+                list-style: none;
+                position: relative;
+                padding-left: 14px;
+
+                &::before {
+                    position: absolute;
+                    content: "・";
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        &__excerpt {
+            @include global.font(14, 24, 0, 500);
+            margin-left: 40px;
+            margin-bottom: 40px;
+            padding: 35px;
+            position: relative;
+            background: #F8F8F8;
+            border-left: global.$main-color solid 4px;
+
+            @include global.mq(sp) {
+                margin-left: 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: 18px;
+                width: 82px;
+                height: 163px;
+                background: url(../img/quote.png) no-repeat center center / contain;
+                z-index: 0;
+            }
+
+            p {
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+}

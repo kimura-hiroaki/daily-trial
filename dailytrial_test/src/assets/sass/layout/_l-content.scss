@@ -1,0 +1,41 @@
+@use "../global" as global;
+
+.l-content {
+  padding-top: 82px;
+  padding-bottom: 160px;
+
+  @include global.mq(sp) {
+    padding-top: 58px;
+    padding-bottom: 100px;
+  }
+
+  &-inner {
+    display: flex;
+
+    @include global.mq(sp) {
+      display: block;
+    }
+  }
+
+  &-main {
+    width: calc(100% * 760 / 1100);
+    margin-right: auto;
+
+    @include global.mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &-aside {
+    width: calc(100% * 300 / 1100);
+    margin-left: auto;
+
+    @include global.mq(sp) {
+      width: 100%;
+
+      @include global.mq(sp) {
+        margin-top: 103px;
+      }
+    }
+  }
+}

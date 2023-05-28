@@ -147,6 +147,7 @@
 
             @include global.mq(sp) {
                 height: 150px;
+                padding-left: 20px;
             }
 
             ::before {

@@ -22,6 +22,14 @@
                 background: url(../img/mv-service_sp.png) no-repeat center / cover;
             }
         }
+
+        &--category {
+            background: url(../img/mv-news_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-news_pc.png) no-repeat center / cover;
+            }
+        }
     }
 
     &__bgmask {

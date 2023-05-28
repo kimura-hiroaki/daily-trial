@@ -14,3 +14,18 @@
 		max-width: calc(100% - 20px * 2);
 	}
 }
+
+.l-inner-2culum {
+	width: global.$inner-width;
+	max-width: calc(100% - 90px * 2);
+	margin-left: auto;
+	margin-right: auto;
+
+	@include global.mq('tab') {
+		max-width: calc(100% - 20px * 2);
+	}
+
+	@include global.mq('sp') {
+		max-width: calc(100% - 20px * 2);
+	}
+}

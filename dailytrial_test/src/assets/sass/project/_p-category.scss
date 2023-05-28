@@ -1,0 +1,108 @@
+@use "../global" as global;
+
+.p-category__list {
+    &__title {
+        @include global.font(32, 40, 0, 700);
+
+        @include global.mq(sp) {
+            @include global.font(20, 29, 0, 700);
+        }
+    }
+
+    &__card {
+        display: flex;
+
+        &--link {
+            display: block;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+
+                @include global.mq(sp) {
+                    margin-top: 22px;
+                }
+            }
+        }
+
+        &__wrap {
+            margin-top: 28px;
+
+            @include global.mq(sp) {
+                margin-top: 20px;
+            }
+        }
+
+        &__image {
+            width: calc(100% * 250 / 760);
+            margin-right: auto;
+
+            @include global.mq(sp) {
+                width: calc(100% * 120 / 335);
+
+                img {
+                    width: 100%;
+                    height: calc(100vw * 90 / 375);
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__article {
+            width: calc(100% * 490 / 760);
+            margin-left: auto;
+
+            @include global.mq(sp) {
+                width: calc(100% * 203 / 335);
+            }
+
+            &__info {
+                display: flex;
+                margin-top: 12px;
+                align-items: center;
+
+                @include global.mq(sp) {
+                    margin-top: 0px;
+                }
+
+                &__type {
+                    @include global.font(14, 24, 0, 500);
+                    padding: 5px 23px;
+                    color: global.$accent-color-red;
+                    border: global.$accent-color-red solid 1px;
+
+                    @include global.mq(sp) {
+                        @include global.font(12, 20, 0, 500);
+                        padding: 2px 11px;
+                    }
+                }
+
+                &__new {
+                    @include global.font(16, 24, 0, 500);
+                    margin-left: 12px;
+                    color: global.$accent-color-red;
+
+                    @include global.mq(sp) {
+                        @include global.font(14, 24, 0, 500);
+                        margin-left: 8px;
+                    }
+                }
+
+                &__date {
+                    @include global.font(14, 24, 0, 500);
+                    color: #888888;
+                    margin-left: auto;
+                }
+            }
+
+            &__title {
+                @include global.font(16, 28, 0, 700);
+                margin-top: 14px;
+
+                @include global.mq(sp) {
+                    margin-top: 6px;
+                    @include global.font(14, 20, 0, 700);
+                }
+            }
+        }
+    }
+}

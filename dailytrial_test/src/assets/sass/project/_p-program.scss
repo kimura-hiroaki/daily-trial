@@ -202,7 +202,8 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        top: 31px;
+                        // top: 31px;
+                        top: 30px;
                         right: 20px;
                         width: 10px;
                         height: 10px;
@@ -225,11 +226,19 @@
                             border-top: #FFFFFF solid 2px;
                             border-right: #FFFFFF solid 2px;
                             right: 10px;
+
+                            @include global.mq(sp) {
+                                right: 6px;
+                            }
                         }
 
                         &::after {
                             background: #FFFFFF;
                             right: 10px;
+
+                            @include global.mq(sp) {
+                                right: 6px;
+                            }
                         }
                     }
                 }
