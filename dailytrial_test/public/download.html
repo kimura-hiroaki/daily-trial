@@ -87,7 +87,7 @@
     <main>
         <!-- mainvisual -->
         <div class="p-topview">
-            <div class="p-topview__bgimage p-topview__bgimage--category"></div>
+            <div class="p-topview__bgimage p-topview__bgimage--download"></div>
             <div class="p-topview__bgmask"></div>
             <div class="p-topview__title">
                 <div class="p-topview__title__main">
@@ -126,10 +126,10 @@
                     </div>
                 </section>
                 <section class="l-download-contact p-download-contact">
-                    <div class="p-download-contact--input">
+                    <div class="p-download-contact__form">
                         <div class="p-download-contact__title">資料ダウンロード</div>
                         <div class="download_form">
-                            <form action="#" method="post">
+                            <form id="js-dl-form" action="#" method="post">
                                 <dl class="download_form_dl">
                                     <div class="download_box">
                                         <dt class="download_box_label label_company">
@@ -190,7 +190,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="p-download-contact--ok">
+                    <div class="p-download-contact__message">
                         <div class="p-download-contact__thanks">資料請求いただき<br>ありがとうございました！</div>
                         <div class="p-download-contact__text--1">資料は以下のリンクよりダウンロードください。</div>
                         <p class="p-download-contact__text--2">→
@@ -250,6 +250,7 @@
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/scroll.js"></script>
     <script src="./assets/js/accordion.js"></script>
+    <script src="./assets/js/form.js"></script>
 </body>
 
 </html>

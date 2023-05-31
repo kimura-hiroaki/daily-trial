@@ -172,6 +172,25 @@ a {
 	margin-left: auto;
 }
 
+.l-download {
+	padding-top: 82px;
+	padding-bottom: 120px;
+}
+
+.l-download-inner {
+	display: flex;
+}
+
+.l-download-explanation {
+	width: 46.3636363636%;
+	margin-right: auto;
+}
+
+.l-download-contact {
+	width: 50%;
+	margin-left: auto;
+}
+
 .c-section__title {
 	color: #023E78;
 	font-style: italic;
@@ -1074,6 +1093,26 @@ a {
 
 .p-topview__bgimage--category {
 	background: url(../img/mv-news_pc.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--category {
+	background: url(../img/mv-news_pc.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--news {
+	background: url(../img/mv-news_pc.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--casestudy {
+	background: url(../img/mv-company_pc.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--download {
+	background: url(../img/mv-download_pc.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--contact {
+	background: url(../img/mv-contact_pc.png) no-repeat center/cover;
 }
 
 .p-topview__bgmask {
@@ -2176,10 +2215,10 @@ a {
 
 .p-single__letter__header--h2 {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 	padding-top: 7px;
 	padding-bottom: 10px;
-	padding-left: 26px;
+	padding-left: 20px;
 	border-left: 6px solid #023E78;
 	background: #F8F8F8;
 	color: #023E78;
@@ -2191,7 +2230,7 @@ a {
 
 .p-single__letter__header--h3 {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 	padding-bottom: 6px;
 	color: #023E78;
 	font-weight: 700;
@@ -2211,7 +2250,7 @@ a {
 }
 
 .p-single__letter__header--h4 {
-	margin-bottom: 16px;
+	margin-bottom: 14px;
 	color: #023E78;
 	font-weight: 700;
 	font-size: 1rem;
@@ -2220,7 +2259,7 @@ a {
 }
 
 .p-single__letter__text {
-	margin-bottom: 40px;
+	margin-bottom: 38px;
 	font-weight: 500;
 	font-size: 0.875rem;
 	line-height: 1.7142857143;
@@ -2243,6 +2282,14 @@ a {
 	list-style: none;
 }
 
+.p-single__letter__list__item:first-child {
+	margin-top: -2px;
+}
+
+.p-single__letter__list__item:not(:first-child) {
+	margin-top: 12px;
+}
+
 .p-single__letter__list__item::before {
 	position: absolute;
 	top: 0;
@@ -2252,9 +2299,11 @@ a {
 
 .p-single__letter__excerpt {
 	position: relative;
+	margin-right: 74px;
 	margin-bottom: 40px;
 	margin-left: 40px;
-	padding: 35px;
+	padding: 30px;
+	padding-left: 31px;
 	border-left: #023E78 solid 4px;
 	background: #F8F8F8;
 	font-weight: 500;
@@ -2367,7 +2416,6 @@ a {
 	top: 50%;
 	right: 10px;
 	transform: translateY(-50%);
-	border-radius: 12px 12px 12px 12px;
 }
 
 .p-single-program__case__card__company__logo img {
@@ -2377,6 +2425,7 @@ a {
 	height: 8.75vw;
 	max-height: 112px;
 	object-fit: cover;
+	border-radius: 12px;
 }
 
 .p-single-program__case__card__company__industry {
@@ -2469,8 +2518,7 @@ a {
 .p-single-program__case__button--link {
 	display: inline-block;
 	position: relative;
-	width: 400px;
-	height: 72px;
+	padding: 0 80px;
 	border: 1px solid #023E78;
 	color: #023E78;
 	font-weight: 500;
@@ -2519,6 +2567,665 @@ a {
 .p-single-program__case__button--link:hover::after {
 	right: 11px;
 	background: #FFFFFF;
+}
+
+.p-download-explanation__title {
+	font-weight: 700;
+	font-size: 1.75rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.p-download-explanation__image {
+	width: 310px;
+	max-width: 100%;
+	margin-top: 23px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.p-download-explanation__text {
+	margin-top: 19px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.7142857143;
+	letter-spacing: 0em;
+}
+
+.p-download-contact {
+	padding: 40px;
+	border-radius: 12px 12px 12px 12px;
+	background: #EDF3F8;
+}
+
+.p-download-contact__title {
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.46875;
+	letter-spacing: 0em;
+}
+
+.p-download-contact__thanks {
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.p-download-contact__text--1 {
+	margin-top: 40px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.p-download-contact__text--2 {
+	margin-top: 14px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.p-download-contact__text--3 {
+	margin-top: 40px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 2;
+	letter-spacing: 0em;
+}
+
+.p-download-contact__text--link {
+	margin-left: 8px;
+	color: #023E78;
+	text-decoration: underline;
+}
+
+.p-download-contact__form {
+	display: block;
+}
+
+.p-download-contact__message {
+	display: none;
+}
+
+.download_form {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.download_box {
+	align-items: center;
+}
+
+.download_box:not(:first-child) {
+	margin-top: 32px;
+}
+
+.download_box_label {
+	width: 100%;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.download_box_label .is_reqired {
+	position: relative;
+}
+
+.download_box_label .is_reqired::after {
+	position: absolute;
+	top: 50%;
+	right: -44px;
+	width: 36px;
+	height: 18px;
+	transform: translateY(-50%);
+	border-radius: 2px;
+	background: #E61264;
+	content: "必須";
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 0.625rem;
+	line-height: 1.8;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.download_box_text {
+	width: 100%;
+	height: 44px;
+	margin-top: 12px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	background: #FFFFFF;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.download_box_text [type=text] {
+	width: 100%;
+	padding: 7px 0px 11px 16px;
+}
+
+.download_box_text [type=text]::-moz-placeholder {
+	color: #CCCCCC;
+}
+
+.download_box_text [type=text]::placeholder {
+	color: #CCCCCC;
+}
+
+.download_box_text [type=text]:hover,
+.download_box_text [type=text]:active,
+.download_box_text [type=text]:focus,
+.download_box_text [type=text]:focus-visible {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.download_box_text [type=email] {
+	width: 100%;
+	padding: 7px 0px 11px 16px;
+}
+
+.download_box_text [type=email]::-moz-placeholder {
+	color: #CCCCCC;
+}
+
+.download_box_text [type=email]::placeholder {
+	color: #CCCCCC;
+}
+
+.download_box_text [type=email]:hover,
+.download_box_text [type=email]:active,
+.download_box_text [type=email]:focus,
+.download_box_text [type=email]:focus-visible {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.download_policy {
+	margin-top: 42px;
+	text-align: center;
+}
+
+.download_policy_label {
+	position: relative;
+	padding-left: 42px;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	vertical-align: middle;
+}
+
+.download_policy_label_input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.download_policy_label span {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 32px;
+	height: 32px;
+	transform: translateY(-50%);
+	border: 1px solid #1A1A1A;
+	background: #FFF;
+}
+
+.download_policy_label span::after {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 24px;
+	height: 12px;
+	transform: rotate(-45deg);
+	border-bottom: 2px solid #1A1A1A;
+	border-left: 2px solid #1A1A1A;
+	content: "";
+	opacity: 0;
+}
+
+.download_policy_label a {
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-decoration: underline;
+}
+
+.download_policy_label:hover span {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.download_policy_label:active span {
+	border: 1px solid #3B69FF;
+	background: rgba(73, 115, 255, 0.2);
+}
+
+.download_policy [type=checkbox]:checked + span::after {
+	opacity: 1;
+}
+
+.download_submit {
+	margin-top: 40px;
+}
+
+.download_submit [type=submit] {
+	display: block;
+	width: 336px;
+	max-width: 100%;
+	height: 72px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #B2B2B2;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 4.5;
+	letter-spacing: 0em;
+	cursor: default;
+}
+
+.download_submit [type=submit].is-active {
+	border: 1px solid #023E78;
+	background: #FFFFFF;
+	color: #023E78;
+	cursor: pointer;
+}
+
+.download_submit [type=submit].is-active:hover {
+	border: 1px solid #023E78;
+	background: #023E78;
+	color: #FFFFFF;
+}
+
+.contact_message {
+	display: none;
+	font-weight: 500;
+}
+
+.contact_message.is-error {
+	color: #F00;
+}
+
+.p-contact {
+	padding-top: 80px;
+	padding-bottom: 160px;
+}
+
+.p-contact--inner {
+	width: 53.75%;
+	min-width: 335px;
+	max-width: 688px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.p-contact__text {
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.7142857143;
+	letter-spacing: 0em;
+}
+
+.p-contact__title {
+	margin-top: 80px;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.p-contact__form {
+	display: block;
+}
+
+.p-contact__message {
+	display: none;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.7142857143;
+	letter-spacing: 0em;
+}
+
+.p-contact__message__text {
+	margin-top: 16px;
+	margin-right: 8px;
+}
+
+.p-contact__message__text--link {
+	color: #023E78;
+	text-decoration: underline;
+}
+
+.contact_form {
+	width: 100%;
+	margin-top: 60px;
+}
+
+.contact_box {
+	align-items: center;
+}
+
+.contact_box:not(:first-child) {
+	margin-top: 32px;
+}
+
+.contact_box_label {
+	width: 100%;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.contact_box_label .is_reqired {
+	position: relative;
+}
+
+.contact_box_label .is_reqired::after {
+	position: absolute;
+	top: 50%;
+	right: -44px;
+	width: 36px;
+	height: 18px;
+	transform: translateY(-50%);
+	border-radius: 2px;
+	background: #E61264;
+	content: "必須";
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 0.625rem;
+	line-height: 1.8;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.contact_box_text {
+	width: 100%;
+	height: 44px;
+	margin-top: 12px;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	background: #FFFFFF;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.contact_box_text [type=text] {
+	width: 100%;
+	padding: 7px 0px 11px 16px;
+}
+
+.contact_box_text [type=text]::-moz-placeholder {
+	color: #CCCCCC;
+}
+
+.contact_box_text [type=text]::placeholder {
+	color: #CCCCCC;
+}
+
+.contact_box_text [type=text]:hover,
+.contact_box_text [type=text]:active,
+.contact_box_text [type=text]:focus,
+.contact_box_text [type=text]:focus-visible {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.contact_box_text [type=email] {
+	width: 100%;
+	padding: 7px 0px 11px 16px;
+}
+
+.contact_box_text [type=email]::-moz-placeholder {
+	color: #CCCCCC;
+}
+
+.contact_box_text [type=email]::placeholder {
+	color: #CCCCCC;
+}
+
+.contact_box_text [type=email]:hover,
+.contact_box_text [type=email]:active,
+.contact_box_text [type=email]:focus,
+.contact_box_text [type=email]:focus-visible {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.contact_box_select {
+	position: relative;
+	width: 100%;
+	height: 44px;
+	margin-top: 12px;
+	border: 1px solid #DDDDDD;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.contact_box_select select {
+	width: 100%;
+	padding: 9px 0px 9px 16px;
+}
+
+.contact_box_select select option {
+	color: #1A1A1A;
+}
+
+.contact_box_select select option:first-child {
+	color: #CCCCCC;
+}
+
+.contact_box_select:hover {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.contact_box_select::after {
+	position: absolute;
+	top: 46%;
+	right: 15px;
+	width: 8px;
+	height: 8px;
+	transform: translateY(-50%) rotate(-45deg);
+	border-bottom: 2px solid #1A1A1A;
+	border-left: 2px solid #1A1A1A;
+	content: "";
+}
+
+.contact_textareabox {
+	width: 100%;
+	margin-top: 32px;
+}
+
+.contact_textareabox_label {
+	width: 128px;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.contact_textareabox_label .is_reqired {
+	position: relative;
+}
+
+.contact_textareabox_label .is_reqired::after {
+	position: absolute;
+	top: 50%;
+	right: -44px;
+	width: 36px;
+	height: 18px;
+	transform: translateY(-50%);
+	border-radius: 2px;
+	background: #E61264;
+	content: "必須";
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 0.625rem;
+	line-height: 1.8;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.contact_textareabox_text {
+	margin-top: 12px;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.contact_textareabox_text textarea {
+	width: 100%;
+	height: 240px;
+	padding: 9px 0px 9px 16px;
+	border: 1px solid #DDDDDD;
+	resize: vertical;
+}
+
+.contact_textareabox_text textarea::-moz-placeholder {
+	color: #CCCCCC;
+}
+
+.contact_textareabox_text textarea::placeholder {
+	color: #CCCCCC;
+}
+
+.contact_textareabox_text textarea:hover,
+.contact_textareabox_text textarea:active,
+.contact_textareabox_text textarea:focus,
+.contact_textareabox_text textarea:focus-visible {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.contact_policy {
+	margin-top: 42px;
+	text-align: center;
+}
+
+.contact_policy_label {
+	position: relative;
+	padding-left: 42px;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	vertical-align: middle;
+}
+
+.contact_policy_label_input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.contact_policy_label span {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 32px;
+	height: 32px;
+	transform: translateY(-50%);
+	border: 1px solid #1A1A1A;
+	background: #FFF;
+}
+
+.contact_policy_label span::after {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 24px;
+	height: 12px;
+	transform: rotate(-45deg);
+	border-bottom: 2px solid #1A1A1A;
+	border-left: 2px solid #1A1A1A;
+	content: "";
+	opacity: 0;
+}
+
+.contact_policy_label a {
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+	text-decoration: underline;
+}
+
+.contact_policy_label:hover span {
+	border: 1px solid #3B69FF;
+	box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+}
+
+.contact_policy_label:active span {
+	border: 1px solid #3B69FF;
+	background: rgba(73, 115, 255, 0.2);
+}
+
+.contact_policy [type=checkbox]:checked + span::after {
+	opacity: 1;
+}
+
+.contact_submit {
+	margin-top: 40px;
+}
+
+.contact_submit [type=submit] {
+	display: block;
+	width: 208px;
+	max-width: 100%;
+	height: 72px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #B2B2B2;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 4.5;
+	letter-spacing: 0em;
+	cursor: default;
+}
+
+.contact_submit [type=submit].is-active {
+	border: 1px solid #023E78;
+	background: #FFFFFF;
+	color: #023E78;
+	cursor: pointer;
+}
+
+.contact_submit [type=submit].is-active:hover {
+	border: 1px solid #023E78;
+	background: #023E78;
+	color: #FFFFFF;
+}
+
+.contact_message {
+	display: none;
+	font-weight: 500;
+}
+
+.contact_message.is-error {
+	color: #F00;
 }
 
 .u-isPC {
@@ -2765,6 +3472,8 @@ a {
 	height: 18.1333333333vw;
 	max-height: 68px;
 	object-fit: cover;
+	border-radius: 4px;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
 }
 
 .p-single-program__case__card__company__industry {
@@ -2829,6 +3538,24 @@ a {
 
 .l-content-aside {
 	width: 100%;
+}
+
+.l-download {
+	padding-top: 58px;
+	padding-bottom: 100px;
+}
+
+.l-download-inner {
+	display: block;
+}
+
+.l-download-explanation {
+	width: 100%;
+}
+
+.l-download-contact {
+	width: 100%;
+	margin-top: 60px;
 }
 
 .c-section-bgbox {
@@ -3113,7 +3840,27 @@ a {
 }
 
 .p-topview__bgimage--category {
-	background: url(../img/mv-news_pc.png) no-repeat center/cover;
+	background: url(../img/mv-news_sp.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--category {
+	background: url(../img/mv-news_sp.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--news {
+	background: url(../img/mv-news_sp.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--casestudy {
+	background: url(../img/mv-company_sp.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--download {
+	background: url(../img/mv-download_sp.png) no-repeat center/cover;
+}
+
+.p-topview__bgimage--contact {
+	background: url(../img/mv-contact_sp.png) no-repeat center/cover;
 }
 
 .p-topview__bgmask {
@@ -3667,8 +4414,12 @@ a {
 	letter-spacing: 0em;
 }
 
-.p-single__letter {
+.p-single__view {
 	margin-top: 24px;
+}
+
+.p-single__letter {
+	margin-top: 40px;
 }
 
 .p-single__letter__list {
@@ -3676,7 +4427,10 @@ a {
 }
 
 .p-single__letter__excerpt {
+	margin-right: 0;
 	margin-left: 0;
+	padding: 32px;
+	padding-left: 28px;
 }
 
 .p-single-program {
@@ -3699,6 +4453,10 @@ a {
 
 .p-single-program__type__item {
 	width: 294px;
+}
+
+.p-single-program__case {
+	margin-top: 60px;
 }
 
 .p-single-program__case__title {
@@ -3727,6 +4485,11 @@ a {
 
 .p-single-program__case__button--link {
 	width: 295px;
+	height: 72px;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 4.5;
+	letter-spacing: 0em;
 }
 
 .p-single-program__case__button--link::after {
@@ -3745,6 +4508,235 @@ a {
 
 .p-single-program__case__button--link:hover::after {
 	right: 6px;
+}
+
+.p-download-explanation__title {
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.4;
+	letter-spacing: 0em;
+}
+
+.p-download-contact {
+	padding: 40px 20px;
+}
+
+.p-download-contact__title {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.p-download-contact__thanks {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
+.download_box:not(:first-child) {
+	margin-top: 21px;
+}
+
+.download_box {
+	display: block;
+}
+
+.download_box_label {
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.download_box_text {
+	margin-top: 8px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.download_box_text [type=text] {
+	padding: 11px 0px 11px 14px;
+}
+
+.download_box_text [type=email] {
+	padding: 11px 0px 11px 14px;
+}
+
+.download_policy {
+	margin-top: 42px;
+}
+
+.download_policy_label {
+	padding-left: 38px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.download_policy_label span {
+	width: 28px;
+	height: 28px;
+}
+
+.download_policy_label span::after {
+	width: 20px;
+	height: 10px;
+}
+
+.download_policy_label a {
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.download_submit {
+	margin-top: 29px;
+}
+
+.download_submit [type=submit] {
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 5.1428571429;
+	letter-spacing: 0em;
+}
+
+.p-contact {
+	padding-top: 60px;
+	padding-bottom: 100px;
+}
+
+.p-contact__title {
+	margin-top: 60px;
+}
+
+.contact_form {
+	margin-top: 40px;
+}
+
+.contact_box:not(:first-child) {
+	margin-top: 21px;
+}
+
+.contact_box {
+	display: block;
+}
+
+.contact_box_label {
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_box_label .is_reqired::after {
+	top: 51%;
+	right: -60px;
+}
+
+.contact_box_text {
+	margin-top: 8px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_box_text [type=text] {
+	padding: 11px 0px 11px 16px;
+}
+
+.contact_box_text [type=email] {
+	padding: 11px 0px 11px 16px;
+}
+
+.contact_box_select {
+	margin-top: 8px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_box_select {
+	width: 100%;
+	height: 38px;
+	margin-top: 6px;
+	margin-left: 0;
+	font-size: 14px;
+}
+
+.contact_textareabox {
+	margin-top: 21px;
+}
+
+.contact_textareabox_label {
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_textareabox_text {
+	margin-top: 8px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_textareabox_text textarea {
+	padding: 11px 0px 11px 16px;
+}
+
+.contact_textareabox_text textarea {
+	height: 160px;
+}
+
+.contact_policy {
+	margin-top: 42px;
+}
+
+.contact_policy_label {
+	padding-left: 38px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_policy_label span {
+	width: 28px;
+	height: 28px;
+}
+
+.contact_policy_label span::after {
+	width: 20px;
+	height: 10px;
+}
+
+.contact_policy_label a {
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	letter-spacing: 0em;
+}
+
+.contact_submit {
+	margin-top: 29px;
+}
+
+.contact_submit [type=submit] {
+	width: 295px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 5.1428571429;
+	letter-spacing: 0em;
 }
 
 .u-isPC {

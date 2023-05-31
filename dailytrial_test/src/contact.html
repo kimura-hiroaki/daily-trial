@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,700;1,500;1,700&family=Noto+Sans+JP:wght@500;700&family=Roboto:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet">
     <!-- title -->
-    <title>資料ダウンロード-Global Standard</title>
+    <title>お問い合わせ-Global Standard</title>
     <!-- javascript css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="./Asset/css/animate.css"> -->
@@ -87,14 +87,14 @@
     <main>
         <!-- mainvisual -->
         <div class="p-topview">
-            <div class="p-topview__bgimage p-topview__bgimage--category"></div>
+            <div class="p-topview__bgimage p-topview__bgimage--contact"></div>
             <div class="p-topview__bgmask"></div>
             <div class="p-topview__title">
                 <div class="p-topview__title__main">
-                    <p>DOWNLOAD</p>
+                    <p>CONTACT</p>
                 </div>
                 <div class="p-topview__title__sub">
-                    <p>資料ダウンロード</p>
+                    <p>お問い合わせ</p>
                 </div>
             </div>
         </div>
@@ -110,98 +110,107 @@
                 <span class="p-breadcrumb__text">記事のタイトルが入ります</span>
             </div>
         </div>
-        <!-- download -->
-        <div class="l-download">
-            <div class="l-inner-2culum l-download-inner">
-                <section class="l-download-explanation p-download-explanation">
-                    <div class="p-download-explanation__title">世界で活躍できるグローバルな人材を育てる３つの研修プログラムをご用意しております。</div>
-                    <div class="p-download-explanation__image"><img src="./assets/img/pamphlet.png" alt=""></div>
-                    <div class="p-download-explanation__text">
-                        急速にグローバルに活躍できる企業が生き残る時代と移り変わりました。<br>
-                        ビジネス英語や経営学を効率よく学びながら、世界各国から集まるビジネスパーソンと交流し、世界レベルでの人脈を構築する研修をご用意しております。<br>
-                        <br>
-                        英語に苦手意識のある方でもご安心ください。<br>
-                        ビジネスで必要なコミュニケーションが取れるようになるまで実績豊富な講師陣がサポートいたします。<br>
-                        まずはこちらの資料をごらんください。
+        <!-- contact -->
+        <section class="p-contact">
+            <div class="p-contact--inner">
+                <div class="p-contact-form">
+                    <div class="p-contact__text">研修のお申し込み、その他お問い合わせは、下記のフォームからお問い合わせ内容をご記入ください。<br>
+                        2日以内に担当者からメールにてご連絡いたします。
                     </div>
-                </section>
-                <section class="l-download-contact p-download-contact">
-                    <div class="p-download-contact--input">
-                        <div class="p-download-contact__title">資料ダウンロード</div>
-                        <div class="download_form">
-                            <form action="#" method="post">
-                                <dl class="download_form_dl">
-                                    <div class="download_box">
-                                        <dt class="download_box_label label_company">
-                                            <label for="your_company">会社名</label>
-                                        </dt>
-                                        <dd class="download_box_text">
-                                            <input type="text" name="" id="your_company" placeholder="例）○○株式会社">
-                                        </dd>
-                                    </div>
-                                    <div class="download_box">
-                                        <dt class="download_box_label label_department">
-                                            <label for="your_department">部署</label>
-                                        </dt>
-                                        <dd class="download_box_text">
-                                            <input type="text" name="" id="your_department" placeholder="例）人事部">
-                                        </dd>
-                                    </div>
-                                    <div class="download_box">
-                                        <dt class="download_box_label label_name">
-                                            <label for="your_name" class="is_reqired">お名前</label>
-                                        </dt>
-                                        <dd class="download_box_text">
-                                            <input type="text" name="" id="your_name" required placeholder="例）鈴木　一郎">
-                                        </dd>
-                                    </div>
-                                    <div class="download_box">
-                                        <dt class="download_box_label label_ruby">
-                                            <label for="your_ruby" class="is_reqired">お名前（フリガナ）</label>
-                                        </dt>
-                                        <dd class="download_box_text">
-                                            <input type="text" name="" id="your_ruby" required placeholder="例）スズキ　イチロウ">
-                                        </dd>
-                                    </div>
-                                    <div class="download_box">
-                                        <dt class="download_box_label label_email">
-                                            <label for="your_email" class="is_reqired">メールアドレス</label>
-                                        </dt>
-                                        <dd class="download_box_text">
-                                            <input type="email" name="" id="your_email" required
-                                                placeholder="例）info@example.com">
-                                        </dd>
-                                    </div>
-                                </dl>
-                                <div class="download_policy">
-                                    <p>
-                                        <label for="policy" class="download_policy_label">
-                                            <input class="contact_policy_label_input" type="checkbox" name=""
-                                                id="policy" required>
-                                            <span></span>
-                                            <a class="download_policy_note" href="#" target="_blank">個人情報保護方針</a>
-                                            に同意します。
-                                        </label>
-                                    </p>
+                    <div class="p-contact__title">お問い合わせ</div>
+                    <div class="contact_form">
+                        <form id="js-form" action="#" method="post">
+                            <dl class="contact_form_dl">
+                                <div class="contact_box">
+                                    <dt class="contact_box_label label_company">
+                                        <label for="your_company">会社名</label>
+                                    </dt>
+                                    <dd class="contact_box_text">
+                                        <input type="text" name="" id="your_company" placeholder="例）○○株式会社">
+                                    </dd>
                                 </div>
-                                <div class="download_submit">
-                                    <button class="download_submit_btn" type="submit">資料をダウンロードする</button>
+                                <div class="contact_box">
+                                    <dt class="contact_box_label label_name">
+                                        <label for="your_name" class="is_reqired">お名前</label>
+                                    </dt>
+                                    <dd class="contact_box_text">
+                                        <input type="text" name="" id="your_name" required placeholder="例）鈴木　一郎">
+                                    </dd>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="contact_box">
+                                    <dt class="contact_box_label label_ruby">
+                                        <label for="your_ruby" class="is_reqired">お名前（フリガナ）</label>
+                                    </dt>
+                                    <dd class="contact_box_text">
+                                        <input type="text" name="" id="your_ruby" required placeholder="例）スズキ　イチロウ">
+                                    </dd>
+                                </div>
+                                <div class="contact_box">
+                                    <dt class="contact_box_label label_tel">
+                                        <label for="your_tel" class="is_reqired">電話番号</label>
+                                    </dt>
+                                    <dd class="contact_box_text">
+                                        <input type="tel" name="" id="your_tel" required placeholder="例）0312345678">
+                                    </dd>
+                                </div>
+                                <div class="contact_box">
+                                    <dt class="contact_box_label label_email">
+                                        <label for="your_email" class="is_reqired">メールアドレス</label>
+                                    </dt>
+                                    <dd class="contact_box_text">
+                                        <input type="email" name="" id="your_email" required
+                                            placeholder="例）info@example.com">
+                                    </dd>
+                                </div>
+                                <div class="contact_box">
+                                    <dt class="contact_box_label"><label for="prefecture" class="is_reqired">ご用件</label>
+                                    </dt>
+                                    <dd class="contact_box_select">
+                                        <select name="" id="prefecture">
+                                            <option value="">ご選択ください</option>
+                                            <option value="WEB DESIGN">WEB DESIGN</option>
+                                            <option value="WEB CODING">WEB CODING</option>
+                                            <option value="CMS CUSTOMIZE">CMS CUSTOMIZE</option>
+                                        </select>
+                                    </dd>
+                                </div>
+                                <div class="contact_textareabox">
+                                    <dt class="contact_textareabox_label label_textarea">
+                                        <label for="textarea" class="is_reqired">ご用件の詳細</label>
+                                    </dt>
+                                    <dd class="contact_textareabox_text">
+                                        <textarea name="" id="textarea" required placeholder="ご自由にご記入ください。"></textarea>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <div class="contact_policy">
+                                <p>
+                                    <label for="policy" class="contact_policy_label">
+                                        <input class="contact_policy_label_input" type="checkbox" name="" id="policy"
+                                            required>
+                                        <span></span>
+                                        <a class="contact_policy_note" href="#" target="_blank">個人情報保護方針</a>
+                                        に同意します。
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="contact_submit">
+                                <button class="contact_submit_btn" type="submit">送信</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="p-download-contact--ok">
-                        <div class="p-download-contact__thanks">資料請求いただき<br>ありがとうございました！</div>
-                        <div class="p-download-contact__text--1">資料は以下のリンクよりダウンロードください。</div>
-                        <p class="p-download-contact__text--2">→
-                            <a href="" class="p-download-contact__text--link">資料のダウンロードリンクはこちら</a>
-                        </p>
-                        <div class="p-download-contact__text--3">
-                            また、ご入力いただいたメールアドレスの方へもダウンロードリンクを送付しておりますので、ご確認いただけますと幸いです。</div>
+                </div>
+                <div class="p-contact__message">
+                    <div class="p-contact__message__thanks">
+                        お問い合わせありがとうございました。<br>
+                        2日以内に担当者からメールにてご連絡いたしますので、しばらくお待ちいただけますと幸いです。
                     </div>
-                </section>
+                    <p class="p-contact__message__text">→
+                        <a href="" class="p-contact__message__text--link">トップへ戻る</a>
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- request -->
         <section class="p-request">
             <div class="p-request--download">
@@ -250,6 +259,7 @@
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/scroll.js"></script>
     <script src="./assets/js/accordion.js"></script>
+    <script src="./assets/js/form.js"></script>
 </body>
 
 </html>

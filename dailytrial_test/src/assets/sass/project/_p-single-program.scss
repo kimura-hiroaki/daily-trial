@@ -51,6 +51,9 @@
     &__case {
         margin-top: 80px;
 
+        @include global.mq(sp) {
+            margin-top: 60px;
+        }
 
         &__title {
             display: flex;
@@ -136,7 +139,6 @@
                     top: 50%;
                     right: 10px;
                     transform: translateY(-50%);
-                    border-radius: 12px 12px 12px 12px;
 
                     img {
                         width: calc(100vw * 160 / 1280);
@@ -144,6 +146,7 @@
                         height: calc(100vw * 112 / 1280);
                         max-height: 112px;
                         object-fit: cover;
+                        border-radius: 12px;
 
                         @include global.mq(tab) {
                             width: calc(100vw * 90 / 375);
@@ -151,6 +154,8 @@
                             height: calc(100vw * 68 / 375);
                             max-height: 68px;
                             object-fit: cover;
+                            border-radius: 4px;
+                            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
                         }
                     }
                 }
@@ -258,15 +263,16 @@
             &--link {
                 display: inline-block;
                 text-align: center;
-                width: 400px;
-                height: 72px;
+                padding: 0 80px;
                 @include global.font(16, 72, 0, 500);
                 border: 1px solid global.$main-color;
                 color: global.$main-color;
                 position: relative;
 
                 @include global.mq(sp) {
+                    @include global.font(16, 72, 0, 500);
                     width: 295px;
+                    height: 72px;
                 }
 
                 &::after {

@@ -1,0 +1,38 @@
+@use "../global" as global;
+
+.l-download {
+    padding-top: 82px;
+    padding-bottom: 120px;
+
+    @include global.mq(sp) {
+        padding-top: 58px;
+        padding-bottom: 100px;
+    }
+
+    &-inner {
+        display: flex;
+
+        @include global.mq(sp) {
+            display: block;
+        }
+    }
+
+    &-explanation {
+        width: calc(100% * 510 / 1100);
+        margin-right: auto;
+
+        @include global.mq(sp) {
+            width: 100%;
+        }
+    }
+
+    &-contact {
+        width: calc(100% * 550 / 1100);
+        margin-left: auto;
+
+        @include global.mq(sp) {
+            margin-top: 60px;
+            width: 100%;
+        }
+    }
+}

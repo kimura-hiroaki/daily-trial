@@ -27,7 +27,47 @@
             background: url(../img/mv-news_pc.png) no-repeat center / cover;
 
             @include global.mq(sp) {
-                background: url(../img/mv-news_pc.png) no-repeat center / cover;
+                background: url(../img/mv-news_sp.png) no-repeat center / cover;
+            }
+        }
+
+        &--category {
+            background: url(../img/mv-news_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-news_sp.png) no-repeat center / cover;
+            }
+        }
+
+        &--news {
+            background: url(../img/mv-news_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-news_sp.png) no-repeat center / cover;
+            }
+        }
+
+        &--casestudy {
+            background: url(../img/mv-company_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-company_sp.png) no-repeat center / cover;
+            }
+        }
+
+        &--download {
+            background: url(../img/mv-download_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-download_sp.png) no-repeat center / cover;
+            }
+        }
+
+        &--contact {
+            background: url(../img/mv-contact_pc.png) no-repeat center / cover;
+
+            @include global.mq(sp) {
+                background: url(../img/mv-contact_sp.png) no-repeat center / cover;
             }
         }
     }
